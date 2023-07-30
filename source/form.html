@@ -41,7 +41,7 @@
         <p class="program-selection__description">Заполните анкету, и мы подберем программу питания для вашего кота</p>
         <form class="program-selection__form form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="form__fieldset">
-            <h2 class="visually-hidden">Данные вашего кота.</h2>
+            <legend class="visually-hidden"><h2>Данные вашего кота.</h2></legend>
             <div class="form__field field">
               <label class="field__label" for="cat-name">ИМЯ:*</label>
               <input class="field__input" type="text" name="cat-name" id="cat-name" placeholder="Укажите имя кота" value="Барсик" required>
@@ -56,7 +56,7 @@
             </div>
           </fieldset>
           <fieldset class="form__radio-group radio-group" role="radiogroup">
-            <h2 class="visually-hidden">Желаемая цель.</h2>
+            <legend class="visually-hidden"><h2>Желаемая цель.</h2></legend>
             <div class="radio-group__item">
               <label class="radio-group__label">
                 <input class="radio-group__input" type="radio" name="goal" value="weight-loss" checked>
@@ -77,7 +77,7 @@
             </div>
           </fieldset>
           <fieldset class="form__fieldset">
-            <h2 class="form__title">Контактные данные (владельца кота)</h2>
+            <legend><h2 class="form__title">Контактные данные (владельца кота)</h2></legend>
             <div class="form__field field">
               <label class="field__label" for="email">E-mail:*</label>
               <input class="field__input" type="email" name="email" id="email" placeholder="Укажите эл.почту" value="kuklachev@gmail.com" required>
@@ -88,12 +88,12 @@
             </div>
           </fieldset>
           <fieldset class="form__fieldset">
-            <h2 class="form__title">Комментарий</h2>
+            <legend><h2 class="form__title">Комментарий</h2></legend>
             <label class="visually-hidden" for="comment">Поле для комментария:</label>
             <textarea class="form__comment" name="comment" id="comment" cols="30" rows="10"></textarea>
           </fieldset>
           <fieldset class="form__fieldset">
-            <h2 class="form__title">Дополнительно</h2>
+            <legend><h2 class="form__title">Дополнительно</h2></legend>
             <label class="form__label">
               <input class="form__checkbox" type="checkbox" name="sweetener" checked>
               сахарозаменитель

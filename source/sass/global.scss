@@ -1,0 +1,21 @@
+// Класс-хелпер для доступного скрытия элементов на странице
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
+// Переменные
+:root {
+  --background-basic: #ffffff;
+  --background-secondary: #f2f2f2;
+  --background-ternary: #eaeaea;
+  --background-input: #e7e7e7;
+  --accent-color: #68b738;
+  --text-basic: #000000;
+  --text-secondary: #444444;
+  --text-special: #111111;
+  --text-products: #222222;
+  --border-color: #cdcdcd;
+  --slider-control: #666666;
+  --status-error: #ff8282;
+}

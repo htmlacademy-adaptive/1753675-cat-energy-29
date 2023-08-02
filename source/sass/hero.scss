@@ -5,3 +5,20 @@
   background-repeat: no-repeat;
   background-size: contain;
 }
+
+.hero__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: var(--background-basic);
+}
+
+.hero__decription {
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--background-basic);
+}

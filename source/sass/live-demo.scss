@@ -1,3 +1,23 @@
 .live-demo {
   background-color: var(--background-ternary);
 }
+
+.live-demo__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: var(--text-basic);
+}
+
+.live-demo__total {
+  font-family: "Oswald", sans-serif;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--text-basic);
+}
+
+.live-demo__sum {
+  font-weight: 400;
+}

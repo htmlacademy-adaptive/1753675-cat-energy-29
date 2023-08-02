@@ -1,0 +1,11 @@
+.field__input {
+  padding-block: 13px;
+  padding-inline-start: 15px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 1px solid var(--background-input);
+  color: var(--text-secondary);
+}

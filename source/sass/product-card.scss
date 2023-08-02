@@ -1,0 +1,18 @@
+.product-card__link {
+  text-decoration: none;
+}
+
+.product-card__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-products);
+}
+
+.product-card__characteristics {
+  font-size: 12px;
+  line-height: 16px;
+}

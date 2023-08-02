@@ -1,0 +1,17 @@
+.contacts__wrapper {
+  background-color: var(--background-basic);
+}
+
+.contacts__description {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--text-special);
+}
+
+.contacts__address {
+  line-height: 20px;
+  font-style: normal;
+}

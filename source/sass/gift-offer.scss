@@ -1,7 +1,14 @@
 .gift-offer {
+  color: var(--background-basic);
   background-color: var(--accent-color);
   background-image: url("../img/background/gift-background.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+.gift-offer__description {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
 }

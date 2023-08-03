@@ -1,16 +1,19 @@
 .hero {
-  background-color: var(--accent-color);
   background-image: url("../img/background/hero-background.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: contain;
+  padding-block: 27px 20px;
+  padding-inline: 20px;
 }
 
 .hero__title {
+  margin: 0;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
+  text-align: center;
   color: var(--background-basic);
 }
 
@@ -20,5 +23,6 @@
   line-height: 14px;
   font-weight: 400;
   text-transform: uppercase;
+  text-align: center;
   color: var(--background-basic);
 }

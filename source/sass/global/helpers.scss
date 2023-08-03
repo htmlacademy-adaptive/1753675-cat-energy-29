@@ -1,0 +1,5 @@
+// Класс-хелпер для доступного скрытия элементов на странице
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}

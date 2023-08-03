@@ -2,24 +2,22 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Cat Energy | Главная</title>
   </head>
   <body class="page__body">
     <header class="main-header">
-      <a class="main-header__logo-header logo-header">
-        <span class="visually-hidden">Логотип Cat Energy.</span>
-        <svg class="logo-header__picture" width="33" height="38">
-          <!-- Здесь будет svg логотип-картинка -->
-        </svg>
-        <svg class="logo-header__text" width="101" height="18">
-          <!-- Здесь будет svg логотип-текст -->
-        </svg>
-      </a>
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">
+      <div class="main-header__wrapper">
+        <a class="main-header__logo-header logo-header">
+          <img class="logo-header__picture" src="img/logo-picture.svg" width="33" height="38" alt="Кот - супергерой в плаще.">
+          <img class="logo-header__text" src="img/logo-text.svg" width="101" height="18" alt="Шрифтовое начертание логотипа Cat Energy.">
+        </a>
+        <button class="toggle-navigation" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
+      </div>
+      <nav class="main-navigation">
         <ul class="main-navigation__menu site-menu">
           <li class="site-menu__item site-menu__item--current">
             <a class="site-menu__link">Главная</a>
@@ -37,21 +35,23 @@
       <section class="hero">
         <h1 class="hero__title">Функциональное питание для котов</h1>
         <p class="hero__decription">Занялся собой? Займись котом!</p>
-        <img class="hero__product-image" src="#" width="280" height="270" alt="Демонстрационная упаковка питания для котов Cat Energy.">
+        <img class="hero__product-image" src="img/hero-product.png" width="280" height="270" alt="Демонстрационная упаковка питания для котов Cat Energy.">
         <a class="hero__button button button--primary button--small-text" href="form.html">подобрать программу</a>
       </section>
       <section class="programs">
         <h2 class="visually-hidden">Продукты питания исходя из потребностей вашего кота.</h2>
-        <article class="programs__program-case program-case">
-          <h3 class="program-case__title">похудение</h3>
-          <p class="program-case__decription">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="program-case__link" href="catalog.html">каталог slim</a>
-        </article>
-        <article class="programs__program-case program-case">
-          <h3 class="program-case__title">Набор массы</h3>
-          <p class="program-case__decription">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="program-case__link" href="catalog.html">каталог pro</a>
-        </article>
+        <div class="programs__container">
+          <article class="programs__program-case program-case">
+            <h3 class="program-case__title">похудение</h3>
+            <p class="program-case__decription">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+            <a class="program-case__link" href="catalog.html">каталог slim</a>
+          </article>
+          <article class="programs__program-case program-case">
+            <h3 class="program-case__title">Набор массы</h3>
+            <p class="program-case__decription">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+            <a class="program-case__link" href="catalog.html">каталог pro</a>
+          </article>
+        </div>
       </section>
       <section class="features">
         <h2 class="features__title">Как это работает</h2>

@@ -1,4 +1,11 @@
+.features {
+  padding-block: 20px 49px;
+}
+
 .features__title {
+  margin: 0;
+  margin-block-end: 40px;
+  margin-inline-start: 20px;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   line-height: 40px;
@@ -7,8 +14,19 @@
 }
 
 .features__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
   list-style: none;
   padding: 0;
+  padding-inline: 20px;
   margin: 0;
 }
 
+.features__item {
+  padding-inline-start: 80px;
+}
+
+.features__decription {
+  margin: 0;
+}

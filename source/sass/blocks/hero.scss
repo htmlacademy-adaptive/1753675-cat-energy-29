@@ -1,8 +1,8 @@
 .hero {
-  background-image: url("../img/background/hero-background.jpg"), linear-gradient(to bottom, var(--accent-color) 302px, var(--background-basic) 302px);
+  background-image: url("../img/background/hero-background.jpg"), linear-gradient(to bottom, var(--section-green) 63%, var(--background-basic) 63%);
   background-position: top;
   background-repeat: no-repeat;
-  background-size: 320px 302px;
+  background-size: 320px, 100%;
   padding-block-start: 27px;
 }
 

@@ -1,8 +1,13 @@
 .program-case {
+  padding-block: 30px 3px;
+  padding-inline: 20px 33px;
   background-color: var(--background-secondary);
 }
 
 .program-case__title {
+  margin: 0;
+  margin-block-end: 29px;
+  margin-inline-start: 70px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 37px;
@@ -11,7 +16,16 @@
   color: var(--text-basic);
 }
 
+.program-case__decription {
+  margin: 0;
+  padding-block-end: 23px;
+  border-bottom: 1px solid var(--border-color-3);
+}
+
 .program-case__link {
+  display: inline-block;
+  margin-block: 9px 12px;
+  padding-block: 10px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 16px;

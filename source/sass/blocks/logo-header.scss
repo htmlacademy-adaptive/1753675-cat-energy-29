@@ -3,7 +3,17 @@
   cursor: pointer;
 }
 
+.logo-header__picture {
+  display: block;
+  padding-block: 10px;
+  padding-inline: 10px;
+  margin-inline-start: -10px;
+}
+
 .logo-header__text {
+  display: block;
+  padding-block: 14px;
+  padding-inline: 10px;
   position: absolute;
   top: 50%;
   left: 50%;

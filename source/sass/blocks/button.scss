@@ -1,7 +1,10 @@
 .button {
   box-sizing: border-box;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 280px;
+  min-height: 40px;
   padding-block: 7px;
   padding-inline: 44px;
   font-family: "Oswald", sans-serif;

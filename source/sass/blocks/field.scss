@@ -1,4 +1,16 @@
+.field {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+  max-width: 280px;
+}
+
+.field__label {
+  flex-shrink: 0;
+}
+
 .field__input {
+  flex-grow: 1;
   padding-block: 13px;
   padding-inline-start: 15px;
   font-family: "Oswald", sans-serif;

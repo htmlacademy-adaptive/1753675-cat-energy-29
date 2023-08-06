@@ -1,5 +1,7 @@
 .catalog {
   padding-block: 27px 25px;
+  border-top: 1px solid var(--border-color-2);
+  border-bottom: 1px solid var(--border-color-2);
 }
 
 .catalog__title {
@@ -19,7 +21,6 @@
   margin: 0;
   margin-inline: -20px;
   border-top: 1px solid var(--border-color-2);
-  border-bottom: 1px solid var(--border-color-2);
 }
 
 .catalog__product-card {
@@ -31,7 +32,7 @@
 }
 
 .catalog__show-more {
-  padding-block: 78px 25px;
+  padding-block-start: 78px;
   padding-inline: 20px;
   text-align: center;
   border-top: 1px solid var(--border-color-2);

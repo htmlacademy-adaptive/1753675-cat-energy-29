@@ -1,0 +1,13 @@
+.main-navigation {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--text-basic);
+}
+
+.main-navigation__menu {
+  text-align: center;
+  border-bottom: 1px solid var(--border-color-2);
+}

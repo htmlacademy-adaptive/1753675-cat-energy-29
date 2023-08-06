@@ -1,0 +1,44 @@
+.hero {
+  background-image: url("../img/background/hero-background.jpg"), linear-gradient(to bottom, var(--section-green) 63%, var(--background-basic) 63%);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: 320px, 100%;
+  padding-block-start: 27px;
+}
+
+.hero__title {
+  max-width: 250px;
+  margin: 0;
+  margin-block-end: 25px;
+  margin-inline: auto;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--background-basic);
+}
+
+.hero__decription {
+  max-width: 250px;
+  margin: 0;
+  margin-block-end: 29px;
+  margin-inline: auto;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--background-basic);
+}
+
+.hero__product-image {
+  display: block;
+  margin-inline: auto;
+  margin-block-end: 3px;
+}
+
+.hero__button {
+  margin-inline: auto;
+}

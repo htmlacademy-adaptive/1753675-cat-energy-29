@@ -1,0 +1,27 @@
+.product-item {
+  padding-block: 13px 19px;
+  padding-inline: 20px;
+}
+
+.product-item__title {
+  margin: 0;
+  margin-block-end: 13px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--text-basic);
+}
+
+.product-item__attributes {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-block-end: 15px;
+  line-height: 14px;
+}
+
+.product-item__value {
+  margin: 0;
+}

@@ -1,0 +1,25 @@
+.field {
+  display: flex;
+  align-items: center;
+  column-gap: 13px;
+  max-width: 280px;
+}
+
+.field__label {
+  flex-shrink: 0;
+}
+
+.field__input {
+  box-sizing: border-box;
+  width: 100%;
+  flex-grow: 1;
+  padding-block: 13px;
+  padding-inline-start: 15px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border: 1px solid var(--background-input);
+  color: var(--text-secondary);
+}

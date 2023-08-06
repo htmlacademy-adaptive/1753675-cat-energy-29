@@ -1,0 +1,26 @@
+.additional-catalog {
+  padding-block-start: 25px;
+}
+
+.additional-catalog__title {
+  margin: 0;
+  padding-block-end: 36px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--text-products);
+}
+
+.additional-catalog__products {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-inline: -20px;
+  border-top: 1px solid var(--border-color-2);
+  border-bottom: 1px solid var(--border-color-2);
+}
+
+.additional-catalog__product-item + .additional-catalog__product-item {
+  border-top: 1px solid var(--border-color-2);
+}

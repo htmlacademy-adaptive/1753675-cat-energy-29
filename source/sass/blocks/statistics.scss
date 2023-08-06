@@ -1,0 +1,31 @@
+.statistics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 32px;
+  margin: 0;
+}
+
+.statistics__item {
+  min-width: 124px;
+  padding-block-start: 14px;
+}
+
+.statistics__value {
+  padding-block-end: 8px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--text-basic);
+}
+
+.statistics__description {
+  max-width: 77px;
+  margin: 0;
+  margin-inline: auto;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+}

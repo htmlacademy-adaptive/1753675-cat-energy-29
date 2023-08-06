@@ -1,0 +1,34 @@
+.live-demo {
+  padding-block: 25px 40px;
+  background-color: var(--background-ternary);
+}
+
+.live-demo__title {
+  margin: 0;
+  margin-block-end: 40px;
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: var(--text-basic);
+}
+
+.live-demo__decription {
+  margin: 0;
+  margin-block-end: 20px;
+}
+
+.live-demo__statistics {
+  margin-block-end: 20px;
+}
+
+.live-demo__total {
+  margin: 0;
+  margin-block-end: 20px;
+  font-family: "Oswald", sans-serif;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-basic);
+}

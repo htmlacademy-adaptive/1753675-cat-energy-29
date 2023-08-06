@@ -1,0 +1,6 @@
+@mixin pseudo($width, $height, $color: transparent) {
+  content: "";
+  width: $width;
+  height: $height;
+  background-color: $color;
+}

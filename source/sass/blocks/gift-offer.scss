@@ -1,0 +1,32 @@
+.gift-offer {
+  padding-block: 35px;
+  color: var(--background-basic);
+}
+
+.gift-offer__description {
+  box-sizing: border-box;
+  min-height: 290px;
+  margin: 0;
+  padding-block: 186px 43px;
+  padding-inline: 58px;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-color: var(--accent-color);
+  background-image: url("../img/background/gift-background.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+  &::before {
+    @include pseudo(78px, 80px);
+    background-image: url("../img/icon-gift.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

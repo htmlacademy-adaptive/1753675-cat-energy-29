@@ -1,0 +1,24 @@
+.site-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  // Модификатор отвечающий за закрытие меню
+  &--closed {
+    display: none;
+  }
+}
+
+.site-menu__item {
+  padding-block: 12px;
+  border-top: 1px solid var(--border-color-2);
+}
+
+.site-menu__link {
+  display: inline-block;
+  padding-block: 10px;
+  padding-inline: 10px;
+  text-decoration: none;
+  color: var(--text-basic);
+  cursor: pointer;
+}

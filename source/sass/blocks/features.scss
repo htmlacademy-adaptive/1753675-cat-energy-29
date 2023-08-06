@@ -23,6 +23,58 @@
 
 .features__item {
   padding-inline-start: 80px;
+  position: relative;
+
+  &--icon-leaf::before,
+  &--icon-mixture::before,
+  &--icon--cutlery::before,
+  &--icon-scales::before {
+    @include pseudo(60px, 60px, var(--accent-color));
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--icon-leaf::after,
+  &--icon-mixture::after,
+  &--icon--cutlery::after,
+  &--icon-scales::after {
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--icon-leaf::after {
+    width: 30px;
+    height: 32px;
+    background-image: url("../img/features/icon-leaf.svg");
+    left: 15px;
+  }
+
+  &--icon-mixture::after {
+    width: 26px;
+    height: 29px;
+    background-image: url("../img/features/icon-mixture.svg");
+    left: 17px;
+  }
+
+  &--icon--cutlery::after {
+    width: 25px;
+    height: 30px;
+    background-image: url("../img/features/icon-cutlery.svg");
+    left: 17px;
+  }
+
+  &--icon-scales::after {
+    width: 26px;
+    height: 31px;
+    background-image: url("../img/features/icon-scales.svg");
+    left: 17px;
+  }
 }
 
 .features__decription {

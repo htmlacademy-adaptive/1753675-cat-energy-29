@@ -36,6 +36,24 @@
   padding-inline: 20px;
   text-align: center;
   border-top: 1px solid var(--border-color-2);
+  position: relative;
+
+  &::before,
+  &::after {
+    @include pseudo(30px, 2px, var(--border-color-3));
+    position: absolute;
+    left: 50%;
+  }
+
+  &::before {
+    top: 39px;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    top: 39px;
+    transform: translateX(-50%) rotate(90deg);
+  }
 }
 
 .catalog__heading {

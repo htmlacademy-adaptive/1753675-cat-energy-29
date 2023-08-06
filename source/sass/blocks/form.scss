@@ -63,3 +63,49 @@
 .form__button {
   margin-block-end: 21px;
 }
+
+.form__label {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.form__control {
+  box-sizing: border-box;
+  position: relative;
+  width: 30px;
+  height: 30px;
+
+  &--radio {
+    border-radius: 50%;
+    border: 1px solid var(--border-color-1);
+    top: 0;
+    left: 0;
+  }
+
+  &--checkbox {
+    border: 1px solid var(--border-color-1);
+    top: 0;
+    left: 0;
+  }
+}
+
+.form__radio:checked + .form__control::after {
+  @include pseudo(13px, 13px, var(--accent-color));
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form__checkbox:checked + .form__control::after {
+  @include pseudo(18px, 14px);
+  background-image: url("../img/check-mark.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

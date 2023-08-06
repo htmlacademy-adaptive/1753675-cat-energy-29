@@ -10,6 +10,8 @@
 }
 
 .field__input {
+  box-sizing: border-box;
+  width: 100%;
   flex-grow: 1;
   padding-block: 13px;
   padding-inline-start: 15px;

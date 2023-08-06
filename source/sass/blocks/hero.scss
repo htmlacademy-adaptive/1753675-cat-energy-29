@@ -7,8 +7,10 @@
 }
 
 .hero__title {
+  max-width: 250px;
   margin: 0;
   margin-block-end: 25px;
+  margin-inline: auto;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   line-height: 36px;
@@ -18,8 +20,10 @@
 }
 
 .hero__decription {
+  max-width: 250px;
   margin: 0;
   margin-block-end: 29px;
+  margin-inline: auto;
   font-family: "Oswald", sans-serif;
   font-size: 14px;
   line-height: 14px;

@@ -2,6 +2,35 @@
   padding-block: 30px 3px;
   padding-inline: 20px 33px;
   background-color: var(--background-secondary);
+  position: relative;
+
+  &--slim::before,
+  &--pro::before {
+    @include pseudo(50px, 50px, var(--accent-color));
+    border-radius: 50%;
+    position: absolute;
+    top: 24px;
+  }
+
+  &--slim::after {
+    @include pseudo(36px, 50px);
+    background-image: url("../img/programs/cat-slim.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 21px;
+    left: 27px;
+  }
+
+  &--pro::after {
+    @include pseudo(67px, 28px);
+    background-image: url("../img/programs/cat-mass.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 35px;
+    left: 13px;
+  }
 }
 
 .program-case__title {
@@ -26,6 +55,7 @@
   display: inline-block;
   margin-block: 9px 12px;
   padding-block: 10px;
+  padding-inline-end: 47px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 16px;
@@ -33,4 +63,16 @@
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text-basic);
+  position: relative;
+
+  &::after {
+    @include pseudo(32px, 10px);
+    background-image: url("../img/icon_arrow.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }

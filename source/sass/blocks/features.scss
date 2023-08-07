@@ -1,3 +1,5 @@
+@use "../global/mixins.scss" as mixin;
+
 .features {
   padding-block: 20px 49px;
 }
@@ -29,8 +31,7 @@
   &--icon-mixture::before,
   &--icon--cutlery::before,
   &--icon-scales::before {
-    @include pseudo(60px, 60px, var(--accent-color));
-    position: absolute;
+    @include mixin.pseudo(60px, 60px, var(--accent-color));
     left: 0;
     top: 50%;
     transform: translateY(-50%);

@@ -1,3 +1,5 @@
+@use "../global/mixins.scss" as mixin;
+
 .form__fieldset {
   display: flex;
   flex-direction: column;
@@ -91,20 +93,18 @@
 }
 
 .form__radio:checked + .form__control::after {
-  @include pseudo(13px, 13px, var(--accent-color));
+  @include mixin.pseudo(13px, 13px, var(--accent-color));
   border-radius: 50%;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .form__checkbox:checked + .form__control::after {
-  @include pseudo(18px, 14px);
+  @include mixin.pseudo(18px, 14px);
   background-image: url("../img/check-mark.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

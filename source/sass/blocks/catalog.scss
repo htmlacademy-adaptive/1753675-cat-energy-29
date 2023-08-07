@@ -1,3 +1,5 @@
+@use "../global/mixins.scss" as mixin;
+
 .catalog {
   padding-block: 27px 25px;
   border-top: 1px solid var(--border-color-2);
@@ -40,8 +42,7 @@
 
   &::before,
   &::after {
-    @include pseudo(30px, 2px, var(--border-color-3));
-    position: absolute;
+    @include mixin.pseudo(30px, 2px, var(--border-color-3));
     left: 50%;
   }
 

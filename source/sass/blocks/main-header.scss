@@ -1,3 +1,5 @@
+@use "../global/mixins.scss" as mixin;
+
 .main-header__wrapper {
   min-height: 65px;
   display: flex;
@@ -32,8 +34,7 @@
 
 .main-header__toggle::before,
 .main-header__toggle::after {
-  @include pseudo(100%, 2px, var(--text-basic));
-  position: absolute;
+  @include mixin.pseudo(100%, 2px, var(--text-basic));
   transition: transform 0.3s, opacity 0.3s;
 }
 

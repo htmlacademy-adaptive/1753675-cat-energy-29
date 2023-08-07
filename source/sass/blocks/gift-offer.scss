@@ -1,3 +1,5 @@
+@use "../global/mixins.scss" as mixin;
+
 .gift-offer {
   padding-block: 35px;
   color: var(--background-basic);
@@ -20,11 +22,10 @@
   position: relative;
 
   &::before {
-    @include pseudo(78px, 80px);
+    @include mixin.pseudo(78px, 80px);
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
     top: 59px;
     left: 50%;
     transform: translateX(-50%);

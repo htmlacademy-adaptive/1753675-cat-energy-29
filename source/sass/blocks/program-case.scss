@@ -1,3 +1,5 @@
+@use "../global/mixins.scss" as mixin;
+
 .program-case {
   padding-block: 30px 3px;
   padding-inline: 20px 33px;
@@ -6,28 +8,25 @@
 
   &--slim::before,
   &--pro::before {
-    @include pseudo(50px, 50px, var(--accent-color));
+    @include mixin.pseudo(50px, 50px, var(--accent-color));
     border-radius: 50%;
-    position: absolute;
     top: 24px;
   }
 
   &--slim::after {
-    @include pseudo(36px, 50px);
+    @include mixin.pseudo(36px, 50px);
     background-image: url("../img/programs/cat-slim.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
     top: 21px;
     left: 27px;
   }
 
   &--pro::after {
-    @include pseudo(67px, 28px);
+    @include mixin.pseudo(67px, 28px);
     background-image: url("../img/programs/cat-mass.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
     top: 35px;
     left: 13px;
   }
@@ -66,11 +65,10 @@
   position: relative;
 
   &::after {
-    @include pseudo(32px, 10px);
+    @include mixin.pseudo(32px, 10px);
     background-image: url("../img/icon_arrow.svg");
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);

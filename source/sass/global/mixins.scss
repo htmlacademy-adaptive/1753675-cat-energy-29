@@ -1,6 +1,2 @@
-@mixin pseudo($width, $height, $color: transparent) {
-  content: "";
-  width: $width;
-  height: $height;
-  background-color: $color;
-}
+@forward "mixins/media-mixins.scss";
+@forward "mixins/utils-mixins.scss";

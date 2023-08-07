@@ -1,11 +1,20 @@
-@use "../global/mixins.scss" as mixin;
+@use "../global/mixins" as mixin;
+
+.main-header {
+  padding-inline: 20px;
+
+  @include mixin.tablet {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 30px;
+  }
+}
 
 .main-header__wrapper {
   min-height: 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 20px;
   position: relative;
 }
 
@@ -29,6 +38,10 @@
   &--opened::after {
     transform: rotate(180deg) translate(0, 8px);
     opacity: 0;
+  }
+
+  @include mixin.tablet {
+    display: none;
   }
 }
 

@@ -1,9 +1,15 @@
+@use "../global/mixins" as mixin;
+
 .hero {
-  background-image: url("../img/background/hero-background.jpg"), linear-gradient(to bottom, var(--section-green) 63%, var(--background-basic) 63%);
+  background-image: url("../img/background/hero-background.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
   background-position: top;
   background-repeat: no-repeat;
-  background-size: 320px, 100%;
+  background-size: 325px auto, 100% 64%;
   padding-block-start: 27px;
+
+  @include mixin.tablet {
+    background: var(--background-basic);
+  }
 }
 
 .hero__title {
@@ -17,6 +23,16 @@
   font-weight: 400;
   text-align: center;
   color: var(--background-basic);
+
+  @include mixin.tablet {
+    max-width: 420px;
+    margin-block-end: 40px;
+    margin-inline-start: 100px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+    color: var(--text-basic);
+  }
 }
 
 .hero__decription {
@@ -31,6 +47,15 @@
   text-transform: uppercase;
   text-align: center;
   color: var(--background-basic);
+
+  @include mixin.tablet {
+    max-width: 300px;
+    margin-inline-start: 100px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: var(--text-basic);
+  }
 }
 
 .hero__product-image {

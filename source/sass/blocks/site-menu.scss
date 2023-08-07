@@ -1,11 +1,20 @@
+@use "../global/mixins" as mixin;
+
 .site-menu {
+  display: none;
   list-style: none;
   padding: 0;
   margin: 0;
 
   // Модификатор отвечающий за закрытие меню
-  &--closed {
-    display: none;
+  &--opened {
+    display: block;
+  }
+
+  @include mixin.tablet {
+    display: flex;
+    gap: 23px;
+    margin-inline-end: -10px;
   }
 }
 
@@ -21,4 +30,9 @@
   text-decoration: none;
   color: var(--text-basic);
   cursor: pointer;
+
+  @include mixin.tablet {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

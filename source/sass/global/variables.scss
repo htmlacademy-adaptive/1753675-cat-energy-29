@@ -1,10 +1,12 @@
+// Цвета
 :root {
   --background-basic: #ffffff;
   --background-secondary: #f2f2f2;
   --background-ternary: #eaeaea;
   --background-input: #e7e7e7;
   --accent-color: #68b738;
-  --section-green: #62a63a;
+  --hero-green-1: #64a73c;
+  --hero-green-2: #62a63a;
   --text-basic: #000000;
   --text-secondary: #444444;
   --text-special: #111111;
@@ -15,3 +17,7 @@
   --slider-control: #666666;
   --status-error: #ff8282;
 }
+
+// Размеры вьюпорта
+$tablet-width: 768px;
+$desktop-width: 1200px;

@@ -1,4 +1,7 @@
+@use "../global/mixins" as mixin;
+
 .product-card {
+  box-sizing: border-box;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -6,6 +9,15 @@
   grid-template-columns: repeat(2, 1fr);
   padding-block: 19px 25px;
   padding-inline: 20px;
+
+  @include mixin.tablet {
+    grid-template-columns: 250px;
+    justify-content: center;
+    max-width: 324px;
+    padding-block: 0 40px;
+    padding-inline: 37px;
+    background-image: linear-gradient(to top, var(--background-secondary) 90%, var(--background-basic) 90%);
+  }
 }
 
 .product-card__link {
@@ -23,12 +35,25 @@
   text-transform: uppercase;
   text-decoration: none;
   color: var(--text-products);
+
+  @include mixin.tablet {
+    max-width: 140px;
+    margin-inline: auto;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
 .product-card__characteristics {
   margin: 0;
   font-size: 12px;
   line-height: 16px;
+
+  @include mixin.tablet {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 .product-card__image {
@@ -38,11 +63,19 @@
 
 .product-card__wrapper {
   align-self: flex-start;
+
+  @include mixin.tablet {
+    justify-self: stretch;
+  }
 }
 
 .product-card__attributes {
   display: flex;
   justify-content: space-between;
+
+  @include mixin.tablet {
+    border-bottom: 1px solid var(--border-color-2);
+  }
 }
 
 .product-card__value {

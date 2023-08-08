@@ -11,6 +11,12 @@
     @include mixin.pseudo(50px, 50px, var(--accent-color));
     border-radius: 50%;
     top: 24px;
+
+    @include mixin.tablet {
+      @include mixin.pseudo(200px, 200px, var(--accent-color));
+      top: 92px;
+      right: 63px;
+    }
   }
 
   &--slim::after {
@@ -20,6 +26,12 @@
     background-size: contain;
     top: 21px;
     left: 27px;
+
+    @include mixin.tablet {
+      @include mixin.pseudo(140px, 194px);
+      top: 81px;
+      left: 475px;
+    }
   }
 
   &--pro::after {
@@ -29,6 +41,17 @@
     background-size: contain;
     top: 35px;
     left: 13px;
+
+    @include mixin.tablet {
+      @include mixin.pseudo(268px, 112px);
+      top: 135px;
+      left: 411px;
+    }
+  }
+
+  @include mixin.tablet {
+    padding-block: 77px 53px;
+    padding-inline: 52px 290px;
   }
 }
 
@@ -42,12 +65,25 @@
   font-weight: 400;
   text-transform: uppercase;
   color: var(--text-basic);
+
+  @include mixin.tablet {
+    font-size: 36px;
+    line-height: 36px;
+    margin-inline-start: 0;
+  }
 }
 
 .program-case__decription {
   margin: 0;
   padding-block-end: 23px;
   border-bottom: 1px solid var(--border-color-3);
+
+  @include mixin.tablet {
+    max-width: 340px;
+    font-size: 16px;
+    line-height: 24px;
+    border-bottom: none;
+  }
 }
 
 .program-case__link {
@@ -72,5 +108,10 @@
     right: 0;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  @include mixin.tablet {
+    font-size: 20px;
+    line-height: 24px;
   }
 }

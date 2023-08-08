@@ -1,6 +1,14 @@
+@use "../global/mixins" as mixin;
+
 .product-item {
   padding-block: 13px 19px;
   padding-inline: 20px;
+
+  @include mixin.tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .product-item__title {
@@ -20,8 +28,16 @@
   margin: 0;
   margin-block-end: 15px;
   line-height: 14px;
+
+  @include mixin.tablet {
+    gap: 50px;
+  }
 }
 
 .product-item__value {
   margin: 0;
+}
+
+.product-item__button {
+  width: 100%;
 }

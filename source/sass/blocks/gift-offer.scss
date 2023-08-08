@@ -5,11 +5,15 @@
   color: var(--background-basic);
 }
 
-.gift-offer__description {
+.gift-offer__content {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   min-height: 290px;
   margin: 0;
-  padding-block: 186px 43px;
+  padding-block: 59px 43px;
   padding-inline: 58px;
   font-size: 16px;
   line-height: 20px;
@@ -19,15 +23,28 @@
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 
-  &::before {
-    @include mixin.pseudo(78px, 80px);
-    background-image: url("../img/icon-gift.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 59px;
-    left: 50%;
-    transform: translateX(-50%);
+  @include mixin.tablet {
+    flex-direction: row;
+    min-height: 200px;
+    padding-block: 57px;
+    padding-inline: 77px;
+  }
+}
+
+.gift-offer__illustration {
+  display: block;
+  width: 78px;
+  height: 80px;
+  background-image: url("../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.gift-offer__description {
+  max-width: 180px;
+
+  @include mixin.tablet {
+    text-align: left;
   }
 }

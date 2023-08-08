@@ -1,3 +1,5 @@
+@use "../global/mixins" as mixin;
+
 .main-navigation {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
@@ -10,4 +12,8 @@
 .main-navigation__menu {
   text-align: center;
   border-bottom: 1px solid var(--border-color-2);
+
+  @include mixin.tablet {
+    border-bottom: none;
+  }
 }

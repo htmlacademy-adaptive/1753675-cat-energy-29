@@ -66,4 +66,8 @@
 
 .hero__button {
   margin-inline: auto;
+
+  @include mixin.tablet {
+    margin-inline-start: 100px;
+  }
 }

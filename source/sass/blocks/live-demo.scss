@@ -1,6 +1,13 @@
+@use "../global/mixins" as mixin;
+
 .live-demo {
   padding-block: 25px 40px;
   background-color: var(--background-ternary);
+
+  @include mixin.tablet {
+    padding-block: 45px 101px;
+    background-image: linear-gradient(to top, var(--background-ternary) 462px, var(--background-basic) 462px);
+  }
 }
 
 .live-demo__title {
@@ -11,15 +18,35 @@
   line-height: 40px;
   font-weight: 400;
   color: var(--text-basic);
+
+  @include mixin.tablet {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .live-demo__decription {
   margin: 0;
   margin-block-end: 20px;
+
+  @include mixin.tablet {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .live-demo__statistics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px 32px;
+  margin: 0;
   margin-block-end: 20px;
+
+  @include mixin.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .live-demo__total {
@@ -31,4 +58,60 @@
   text-transform: uppercase;
   text-align: center;
   color: var(--text-basic);
+
+  @include mixin.tablet {
+    max-width: 180px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+.live-demo__item {
+  min-width: 124px;
+  padding-block-start: 14px;
+}
+
+.live-demo__value {
+  padding-block-end: 8px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--text-basic);
+
+  @include mixin.tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.live-demo__declaration {
+  max-width: 77px;
+  margin: 0;
+  margin-inline: auto;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+
+  @include mixin.tablet {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.live-demo__summary {
+  @include mixin.tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.live-demo__sum {
+  @include mixin.tablet {
+    display: block;
+    margin-block-start: 9px;
+  }
 }

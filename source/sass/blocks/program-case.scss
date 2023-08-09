@@ -13,7 +13,8 @@
     top: 24px;
 
     @include mixin.tablet {
-      @include mixin.pseudo(200px, 200px, var(--accent-color));
+      width: 200px;
+      height: 200px;
       top: 92px;
       right: 63px;
     }
@@ -28,7 +29,8 @@
     left: 27px;
 
     @include mixin.tablet {
-      @include mixin.pseudo(140px, 194px);
+      width: 140px;
+      height: 194px;
       top: 81px;
       left: 475px;
     }
@@ -43,7 +45,8 @@
     left: 13px;
 
     @include mixin.tablet {
-      @include mixin.pseudo(268px, 112px);
+      width: 268px;
+      height: 112px;
       top: 135px;
       left: 411px;
     }

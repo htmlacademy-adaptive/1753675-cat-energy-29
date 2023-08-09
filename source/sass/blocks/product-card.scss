@@ -2,22 +2,6 @@
 
 .product-card {
   box-sizing: border-box;
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  row-gap: 13px;
-  grid-template-columns: repeat(2, 1fr);
-  padding-block: 19px 25px;
-  padding-inline: 20px;
-
-  @include mixin.tablet {
-    grid-template-columns: 250px;
-    justify-content: center;
-    max-width: 324px;
-    padding-block: 0 40px;
-    padding-inline: 37px;
-    background-image: linear-gradient(to top, var(--background-secondary) 90%, var(--background-basic) 90%);
-  }
 }
 
 .product-card__link {
@@ -59,6 +43,26 @@
 .product-card__image {
   display: block;
   object-fit: contain;
+}
+
+.product-card__container {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  row-gap: 13px;
+  grid-template-columns: repeat(2, 1fr);
+  padding-block: 19px 25px;
+  padding-inline: 20px;
+
+  @include mixin.tablet {
+    grid-template-columns: 250px;
+    justify-content: center;
+    max-width: 324px;
+    padding-block: 0 40px;
+    padding-inline: 37px;
+    // Временно стоит градиент, поменяю на background-color после подгрузки адаптивной графики
+    background-image: linear-gradient(to top, var(--background-secondary) 90%, var(--background-basic) 90%);
+  }
 }
 
 .product-card__wrapper {

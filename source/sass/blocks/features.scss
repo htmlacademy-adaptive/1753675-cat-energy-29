@@ -48,7 +48,8 @@
     transform: translateY(-50%);
 
     @include mixin.tablet {
-      @include mixin.pseudo(80px, 80px, var(--accent-color));
+      width: 80px;
+      height: 80px;
       top: 40px;
     }
   }

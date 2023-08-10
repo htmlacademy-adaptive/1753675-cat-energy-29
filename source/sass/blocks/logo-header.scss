@@ -16,6 +16,12 @@
   padding-block: 10px;
   padding-inline: 10px;
   margin-inline-start: -10px;
+
+  @include mixin.tablet {
+    padding-block: 0;
+    padding-inline: 0;
+    margin-inline-start: 0;
+  }
 }
 
 .logo-header__text {

@@ -2,15 +2,18 @@
 
 .contacts__wrapper {
   display: flex;
+  justify-content: space-between;
   padding-block: 26px;
   padding-inline: 20px;
   background-color: var(--background-secondary);
 
+  &--main {
+    background-color: var(--background-basic);
+  }
+
   @include mixin.tablet {
     padding-block: 60px;
     padding-inline: 70px;
-    justify-content: space-between;
-    background-color: var(--background-basic);
   }
 }
 

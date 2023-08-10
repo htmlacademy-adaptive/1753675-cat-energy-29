@@ -1,8 +1,14 @@
+@use "../global/mixins" as mixin;
+
 .field {
   display: flex;
   align-items: center;
   column-gap: 13px;
   max-width: 280px;
+
+  @include mixin.tablet {
+    max-width: 100%;
+  }
 }
 
 .field__label {
@@ -22,4 +28,8 @@
   text-transform: uppercase;
   border: 1px solid var(--background-input);
   color: var(--text-secondary);
+
+  @include mixin.tablet {
+    font-size: 20px;
+  }
 }

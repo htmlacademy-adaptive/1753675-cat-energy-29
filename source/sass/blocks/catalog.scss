@@ -4,6 +4,11 @@
   padding-block: 27px 25px;
   border-top: 1px solid var(--border-color-2);
   border-bottom: 1px solid var(--border-color-2);
+
+  @include mixin.tablet {
+    padding-block: 65px 70px;
+    border: none;
+  }
 }
 
 .catalog__title {
@@ -16,6 +21,7 @@
   color: var(--text-basic);
 
   @include mixin.tablet {
+    margin-block-end: 84px;
     font-size: 60px;
     line-height: 60px;
   }

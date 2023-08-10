@@ -2,6 +2,12 @@
 
 .product-card {
   box-sizing: border-box;
+
+  @include mixin.tablet {
+    display: flex;
+    align-items: flex-end;
+    min-height: 511px;
+  }
 }
 
 .product-card__link {
@@ -35,6 +41,9 @@
   line-height: 16px;
 
   @include mixin.tablet {
+    display: grid;
+    row-gap: 10px;
+    padding-block: 20px 15px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -43,9 +52,14 @@
 .product-card__image {
   display: block;
   object-fit: contain;
+
+  @include mixin.tablet {
+    margin-block-start: -65px;
+  }
 }
 
 .product-card__container {
+  box-sizing: border-box;
   display: grid;
   align-items: center;
   justify-items: center;
@@ -57,11 +71,12 @@
   @include mixin.tablet {
     grid-template-columns: 250px;
     justify-content: center;
+    align-items: flex-end;
     max-width: 324px;
+    min-height: 430px;
     padding-block: 0 40px;
     padding-inline: 37px;
-    // Временно стоит градиент, поменяю на background-color после подгрузки адаптивной графики
-    background-image: linear-gradient(to top, var(--background-secondary) 90%, var(--background-basic) 90%);
+    background-color: var(--background-secondary);
   }
 }
 
@@ -78,7 +93,7 @@
   justify-content: space-between;
 
   @include mixin.tablet {
-    border-bottom: 1px solid var(--border-color-2);
+    border-bottom: 1px solid var(--border-color-1);
   }
 }
 
@@ -88,4 +103,5 @@
 
 .product-card__button {
   grid-column: 1/-1;
+  width: 100%;
 }

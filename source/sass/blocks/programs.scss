@@ -1,6 +1,13 @@
+@use "../global/mixins" as mixin;
+
 .programs__wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   padding-block-start: 20px;
+
+  @include mixin.tablet {
+    row-gap: 30px;
+    padding-block-start: 0;
+  }
 }

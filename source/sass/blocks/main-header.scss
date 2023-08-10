@@ -6,6 +6,8 @@
   @include mixin.tablet {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-block-start: 25px;
     padding-inline: 30px;
   }
 }

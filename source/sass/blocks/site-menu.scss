@@ -23,6 +23,7 @@
   border-top: 1px solid var(--border-color-2);
 
   @include mixin.tablet {
+    padding-block: 0;
     border-top: none;
   }
 }

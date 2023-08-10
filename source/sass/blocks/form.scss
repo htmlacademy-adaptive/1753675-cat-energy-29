@@ -1,6 +1,23 @@
 @use "../global/mixins" as mixin;
 
+.form {
+  @include mixin.tablet {
+    display: grid;
+    row-gap: 65px;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "cat-data cat-data"
+      "goal goal"
+      "owner owner"
+      "comment comment"
+      "add-goods add-goods"
+      "button footnote";
+  }
+}
+
 .form__fieldset {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   row-gap: 14px;
@@ -14,7 +31,14 @@
   text-transform: uppercase;
   border: none;
 
-  &--radio {
+  &--cat-data {
+    @include mixin.tablet {
+      grid-area: cat-data;
+      padding-block-end: 7px;
+    }
+  }
+
+  &--goal {
     row-gap: 13px;
     margin-block-end: 26px;
     margin-inline: -20px;
@@ -22,21 +46,86 @@
     padding-inline: 20px;
     border-top: 1px solid var(--border-color-3);
     border-bottom: 1px solid var(--border-color-3);
+
+    @include mixin.tablet {
+      grid-area: goal;
+      margin-block-end: 0;
+      margin-inline: 0;
+      border: 1px solid var(--border-color-3);
+    }
   }
 
-  &--checkbox {
+  &--owner-data {
+    @include mixin.tablet {
+      grid-area: owner;
+      padding-block-end: 0;
+    }
+  }
+
+  &--additionals {
     margin-block-end: 10px;
+
+    @include mixin.tablet {
+      grid-area: add-goods;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 32px;
+      margin-block-end: 0;
+      padding-block-end: 0;
+    }
+  }
+
+  @include mixin.tablet {
+    font-size: 20px;
+  }
+}
+
+.form__wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    @include mixin.pseudo(100%, 2px, var(--accent-color));
+    top: 16px;
+    right: -70px;
+    z-index: -1;
+
+    @include mixin.tablet {
+      width: 200%;
+    }
+  }
+
+  @include mixin.tablet {
+    grid-column: 1/-1;
   }
 }
 
 .form__legend {
+  max-width: 187px;
+  padding-inline-end: 20px;
   margin: 0;
   margin-block-end: 37px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
+  background-color: var(--background-basic);
   color: var(--text-basic);
+
+  @include mixin.tablet {
+    max-width: max-content;
+    padding-inline: 40px;
+    margin-inline-start: -40px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.form__comment {
+  @include mixin.tablet {
+    grid-area: comment;
+  }
 }
 
 .form__text-input {
@@ -53,9 +142,14 @@
   text-transform: uppercase;
   color: var(--text-secondary);
   border: 1px solid var(--background-input);
+
+  @include mixin.tablet {
+    margin-block-end: 0;
+  }
 }
 
 .form__footnote {
+  max-width: 175px;
   margin: 0;
   line-height: 16px;
   text-align: center;
@@ -64,6 +158,10 @@
 
 .form__button {
   margin-block-end: 21px;
+
+  @include mixin.tablet {
+    margin-block-end: 0;
+  }
 }
 
 .form__label {

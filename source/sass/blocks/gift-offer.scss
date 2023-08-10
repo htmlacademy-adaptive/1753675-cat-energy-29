@@ -3,6 +3,10 @@
 .gift-offer {
   padding-block: 35px;
   color: var(--background-basic);
+
+  @include mixin.tablet {
+    padding-block: 75px 70px;
+  }
 }
 
 .gift-offer__content {

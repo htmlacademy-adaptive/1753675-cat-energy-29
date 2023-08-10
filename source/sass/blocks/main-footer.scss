@@ -3,12 +3,17 @@
 .main-footer {
   padding-block: 30px 40px;
   background-color: var(--background-secondary);
+
+  @include mixin.tablet {
+    padding-block: 45px 55px;
+  }
 }
 
 .main-footer__wrapper {
   @include mixin.tablet {
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 }
 

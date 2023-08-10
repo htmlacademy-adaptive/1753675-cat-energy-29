@@ -9,6 +9,7 @@
 
   @include mixin.tablet {
     background: var(--background-basic);
+    padding-block-start: 65px;
   }
 }
 
@@ -50,6 +51,7 @@
 
   @include mixin.tablet {
     max-width: 300px;
+    margin-block-end: 50px;
     margin-inline-start: 100px;
     font-size: 20px;
     line-height: 20px;

@@ -1,7 +1,7 @@
 // Псевдоэлементы
-@mixin pseudo($width: 0, $height: 0, $color: transparent) {
+@mixin pseudo($width: 0, $height: 0, $color: transparent, $position: absolute) {
   content: "";
-  position: absolute;
+  position: $position;
   width: $width;
   height: $height;
   background-color: $color;

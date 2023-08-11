@@ -1,67 +1,82 @@
 @use "../global/mixins" as mixin;
 
 .program-case {
-  padding-block: 30px 3px;
+  padding-block: 21px 12px;
   padding-inline: 20px 33px;
   background-color: var(--background-secondary);
   position: relative;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: max-content;
+  justify-items: start;
 
   &--slim::before,
   &--pro::before {
-    @include mixin.pseudo(50px, 50px, var(--accent-color));
+    @include mixin.pseudo(50px, 50px, var(--accent-color), initial);
+    grid-column: 1/2;
+    grid-row: 1/2;
     border-radius: 50%;
-    top: 24px;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     @include mixin.tablet {
+      grid-column: 2/3;
+      grid-row: 1/4;
       width: 200px;
       height: 200px;
-      top: 92px;
-      right: 63px;
+    }
+  }
+
+  &--slim::after,
+  &--pro::after {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    place-self: center;
+    position: initial;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include mixin.tablet {
+      grid-column: 2/3;
+      grid-row: 1/4;
     }
   }
 
   &--slim::after {
     @include mixin.pseudo(36px, 50px);
+    margin-block-start: -3px;
     background-image: url("../img/programs/cat-slim.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 21px;
-    left: 27px;
 
     @include mixin.tablet {
       width: 140px;
       height: 194px;
-      top: 81px;
-      left: 475px;
+      margin-block-start: -60px;
     }
   }
 
   &--pro::after {
     @include mixin.pseudo(67px, 28px);
+    margin-inline-start: -5px;
     background-image: url("../img/programs/cat-mass.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    top: 35px;
-    left: 13px;
 
     @include mixin.tablet {
       width: 268px;
       height: 112px;
-      top: 135px;
-      left: 411px;
+      margin-block-start: -20px;
     }
   }
 
   @include mixin.tablet {
+    grid-template-columns: 1fr max-content;
     padding-block: 77px 53px;
-    padding-inline: 52px 290px;
+    padding-inline: 52px 63px;
   }
 }
 
 .program-case__title {
+  grid-column: 2/3;
   margin: 0;
-  margin-block-end: 29px;
-  margin-inline-start: 70px;
+  margin-inline-start: 20px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 37px;
@@ -70,6 +85,8 @@
   color: var(--text-basic);
 
   @include mixin.tablet {
+    grid-column: 1/2;
+    grid-row: 1/2;
     font-size: 36px;
     line-height: 36px;
     margin-inline-start: 0;
@@ -77,12 +94,16 @@
 }
 
 .program-case__decription {
+  grid-column: 1/-1;
   margin: 0;
-  padding-block-end: 23px;
+  padding-block: 23px;
   border-bottom: 1px solid var(--border-color-3);
 
   @include mixin.tablet {
+    grid-column: 1/2;
+    grid-row: 2/3;
     max-width: 340px;
+    padding-block: 24px 42px;
     font-size: 16px;
     line-height: 24px;
     border-bottom: none;
@@ -90,8 +111,9 @@
 }
 
 .program-case__link {
+  grid-column: 1/-1;
   display: inline-block;
-  margin-block: 9px 12px;
+  margin-block-start: 11px;
   padding-block: 10px;
   padding-inline-end: 47px;
   font-family: "Oswald", sans-serif;
@@ -114,6 +136,9 @@
   }
 
   @include mixin.tablet {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin-block-start: 0;
     font-size: 20px;
     line-height: 24px;
   }

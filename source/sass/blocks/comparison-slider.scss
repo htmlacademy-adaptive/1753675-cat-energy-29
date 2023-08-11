@@ -15,27 +15,20 @@
 }
 
 .comparison-slider__image {
-  position: absolute;
-  top: 0;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 
   &--before {
     background-image: url("../img/slider/cat-before.png");
-    left: 0;
-    z-index: 2;
   }
 
   &--after {
     background-image: url("../img/slider/cat-after.png");
-    background-position-x: -11px;
-    transform: scaleX(-1);
-    right: 0;
-    z-index: 1;
+    background-position-x: -140px;
 
     @include mixin.tablet {
-      background-position-x: -20px;
+      background-position-x: -280px;
     }
   }
 }

@@ -42,14 +42,14 @@
 
 .features__item {
   box-sizing: border-box;
-  padding-inline-start: 80px;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
   position: relative;
 
   &::before {
-    @include mixin.pseudo(60px, 60px, var(--accent-color));
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
+    @include mixin.pseudo(60px, 60px, var(--accent-color), initial);
+    flex-shrink: 0;
     background-position: center;
     background-repeat: no-repeat;
 
@@ -95,6 +95,7 @@
   @include mixin.tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
     max-width: 250px;
     min-height: 280px;
     padding-inline-start: 0;
@@ -106,7 +107,8 @@
   margin: 0;
 
   @include mixin.tablet {
-    margin-block-start: 151px;
+    grid-row: 2/3;
+    grid-column: 1/-1;
     font-size: 16px;
     line-height: 24px;
   }

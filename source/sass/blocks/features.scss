@@ -7,6 +7,11 @@
     padding-block: 45px 47px;
     border-bottom: 1px solid var(--border-color-2);
   }
+
+  @include mixin.desktop {
+    padding-block: 71px 0;
+    border-bottom: none;
+  }
 }
 
 .features__title {
@@ -22,6 +27,10 @@
     font-size: 60px;
     line-height: 60px;
   }
+
+  @include mixin.desktop {
+    margin-block-end: 32px;
+  }
 }
 
 .features__list {
@@ -35,8 +44,14 @@
 
   @include mixin.tablet {
     flex-direction: row;
-    gap: 37px 137px;
+    row-gap: 37px;
+    column-gap: 137px;
     counter-reset: numbering 0;
+  }
+
+  @include mixin.tablet {
+    column-gap: 95px;
+    justify-content: space-between;
   }
 }
 
@@ -88,7 +103,7 @@
       line-height: 280px;
       color: var(--background-secondary);
       z-index: -1;
-      top: -38px;
+      top: 0;
       right: 0;
     }
   }
@@ -102,6 +117,10 @@
     min-height: 280px;
     padding-inline-start: 0;
     counter-increment: numbering 1;
+  }
+
+  @include mixin.desktop {
+    max-width: 230px;
   }
 }
 

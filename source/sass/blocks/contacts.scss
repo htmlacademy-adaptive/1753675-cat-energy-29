@@ -1,6 +1,11 @@
 @use "../global/mixins" as mixin;
 
+.contacts {
+  position: relative;
+}
+
 .contacts__wrapper {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   padding-block: 26px;
@@ -14,6 +19,15 @@
   @include mixin.tablet {
     padding-block: 60px;
     padding-inline: 70px;
+  }
+
+  @include mixin.desktop {
+    min-width: 565px;
+    padding-inline: 80px;
+    position: absolute;
+    z-index: 1;
+    top: 95px;
+    left: 110px;
   }
 }
 

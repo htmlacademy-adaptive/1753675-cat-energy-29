@@ -1,14 +1,27 @@
 @use "../global/mixins" as mixin;
 
 .main-header {
-  padding-inline: 20px;
+  box-sizing: border-box;
 
+  @include mixin.tablet {
+    padding-block-start: 25px;
+  }
+
+  @include mixin.desktop {
+    width: 100%;
+    padding-block-start: 55px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.main-header__container {
   @include mixin.tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-block-start: 25px;
-    padding-inline: 30px;
+    padding-inline: 0;
   }
 }
 

@@ -36,7 +36,8 @@
   border-top: 1px solid var(--border-color-2);
 
   @include mixin.tablet {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
+    justify-items: center;
     gap: 60px;
     border: none;
     margin-inline: 0;

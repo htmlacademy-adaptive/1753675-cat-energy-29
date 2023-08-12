@@ -2,6 +2,7 @@
 
 .show-more {
   box-sizing: border-box;
+  max-width: 324px;
   text-align: center;
   border-top: 1px solid var(--border-color-2);
 
@@ -13,6 +14,9 @@
 
 .show-more__wrapper {
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-block-start: 78px;
   padding-inline: 20px;
   position: relative;
@@ -39,15 +43,13 @@
 
   @include mixin.tablet {
     min-height: 429px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding-block: 160px 40px;
     border: 2px solid var(--background-secondary);
   }
 }
 
 .show-more__heading {
+  display: block;
   margin-block-end: 8px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -66,6 +68,7 @@
 
 .show-more__description {
   margin: 0;
+  margin-block-end: 21px;
 
   @include mixin.tablet {
     max-width: 65%;
@@ -75,4 +78,5 @@
 
 .show-more__button {
   margin-block-start: auto;
+  width: 100%;
 }

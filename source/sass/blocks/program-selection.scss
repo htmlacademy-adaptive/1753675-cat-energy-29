@@ -6,6 +6,7 @@
 
   @include mixin.tablet {
     padding-block: 65px 60px;
+    border-top: none;
   }
 }
 

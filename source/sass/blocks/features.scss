@@ -58,6 +58,7 @@
       grid-column: 1 / 2;
       width: 80px;
       height: 80px;
+      margin-block-start: 40px;
     }
   }
 
@@ -94,6 +95,7 @@
 
   @include mixin.tablet {
     display: grid;
+    align-items: start;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: max-content;
     max-width: 250px;
@@ -109,6 +111,7 @@
   @include mixin.tablet {
     grid-row: 2/3;
     grid-column: 1/-1;
+    margin-block-start: 31px;
     font-size: 16px;
     line-height: 24px;
   }

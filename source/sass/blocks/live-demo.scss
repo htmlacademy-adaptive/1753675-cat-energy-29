@@ -20,6 +20,7 @@
   color: var(--text-basic);
 
   @include mixin.tablet {
+    margin-block-end: 60px;
     font-size: 60px;
     line-height: 60px;
   }
@@ -30,6 +31,7 @@
   margin-block-end: 20px;
 
   @include mixin.tablet {
+    margin-block-end: 55px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -37,13 +39,13 @@
 
 .live-demo__statistics {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px 32px;
   margin: 0;
-  margin-block-end: 20px;
+  margin-block-end: 34px;
 
   @include mixin.tablet {
+    margin-block-end: 0;
     font-size: 20px;
     line-height: 20px;
   }
@@ -68,12 +70,21 @@
 }
 
 .live-demo__item {
+  box-sizing: border-box;
   min-width: 124px;
-  padding-block-start: 14px;
+  padding-block: 14px 18px;
+  border: 1px solid var(--border-color-1);
+  border-radius: 5px;
+  position: relative;
+
+  @include mixin.tablet {
+    min-width: 162px;
+    padding-block: 15px 20px;
+    padding-inline: 30px;
+  }
 }
 
 .live-demo__value {
-  padding-block-end: 8px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 24px;
@@ -88,16 +99,24 @@
 }
 
 .live-demo__declaration {
-  max-width: 77px;
+  max-width: 87px;
   margin: 0;
   margin-inline: auto;
+  padding-inline: 14px;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--background-ternary);
 
   @include mixin.tablet {
+    max-width: 142px;
     font-size: 14px;
     line-height: 14px;
+    background-color: var(--background-basic);
   }
 }
 
@@ -106,6 +125,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-block-end: 104px;
   }
 }
 

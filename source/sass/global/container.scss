@@ -1,6 +1,26 @@
+@use "../global/mixins" as mixin;
+
 .container {
   box-sizing: border-box;
   width: 100%;
   margin-inline: auto;
   padding-inline: 20px;
+
+  @include mixin.phone-wide {
+    padding-inline: 30px;
+  }
+
+  @include mixin.tablet {
+    max-width: 708px;
+    padding-inline: 0;
+  }
+
+  @include mixin.desktop {
+    max-width: 1140px;
+  }
+
+  @include mixin.desktop-wide {
+    max-width: 1220px;
+  }
 }
+

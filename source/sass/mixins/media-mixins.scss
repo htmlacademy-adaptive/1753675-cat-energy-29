@@ -1,0 +1,32 @@
+@use "../global/variables" as var;
+
+// Медиа-запросы
+@mixin phone-wide {
+  @media (min-width: var.$phone-wide-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: var.$tablet-width) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: var.$laptop-width) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: var.$desktop-width) {
+    @content;
+  }
+}
+
+@mixin desktop-wide {
+  @media (min-width: var.$desktop-wide-width) {
+    @content;
+  }
+}

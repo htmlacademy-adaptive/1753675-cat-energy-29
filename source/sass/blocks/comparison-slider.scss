@@ -1,3 +1,5 @@
+@use "../global/mixins" as mixin;
+
 .comparison-slider__image-wrapper {
   display: flex;
   align-items: center;
@@ -5,27 +7,29 @@
   width: 280px;
   height: 256px;
   margin: 0 auto;
+
+  @include mixin.tablet {
+    width: 560px;
+    height: 512px;
+  }
 }
 
 .comparison-slider__image {
-  position: absolute;
-  top: 0;
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
 
   &--before {
     background-image: url("../img/slider/cat-before.png");
-    left: 0;
-    z-index: 2;
   }
 
   &--after {
     background-image: url("../img/slider/cat-after.png");
-    background-position-x: -11px;
-    transform: scaleX(-1);
-    right: 0;
-    z-index: 1;
+    background-position-x: -140px;
+
+    @include mixin.tablet {
+      background-position-x: -280px;
+    }
   }
 }
 

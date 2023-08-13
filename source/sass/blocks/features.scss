@@ -1,5 +1,17 @@
+@use "../global/mixins" as mixin;
+
 .features {
   padding-block: 20px 49px;
+
+  @include mixin.tablet {
+    padding-block: 45px 47px;
+    border-bottom: 1px solid var(--border-color-2);
+  }
+
+  @include mixin.desktop {
+    padding-block: 71px 0;
+    border-bottom: none;
+  }
 }
 
 .features__title {
@@ -10,73 +22,116 @@
   line-height: 40px;
   font-weight: 400;
   color: var(--text-basic);
+
+  @include mixin.tablet {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @include mixin.desktop {
+    margin-block-end: 32px;
+  }
 }
 
 .features__list {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   row-gap: 20px;
   list-style: none;
   padding: 0;
   margin: 0;
+
+  @include mixin.tablet {
+    flex-direction: row;
+    row-gap: 37px;
+    column-gap: 137px;
+    counter-reset: numbering 0;
+  }
+
+  @include mixin.tablet {
+    column-gap: 95px;
+    justify-content: space-between;
+  }
 }
 
 .features__item {
-  padding-inline-start: 80px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
   position: relative;
 
-  &--icon-leaf::before,
-  &--icon-mixture::before,
-  &--icon--cutlery::before,
-  &--icon-scales::before {
-    @include pseudo(60px, 60px, var(--accent-color));
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &--icon-leaf::after,
-  &--icon-mixture::after,
-  &--icon--cutlery::after,
-  &--icon-scales::after {
-    content: "";
+  &::before {
+    @include mixin.pseudo(60px, 60px, var(--accent-color), initial);
+    flex-shrink: 0;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+
+    @include mixin.tablet {
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      width: 80px;
+      height: 80px;
+      margin-block-start: 40px;
+    }
   }
 
-  &--icon-leaf::after {
-    width: 30px;
-    height: 32px;
+  &--icon-leaf::before {
     background-image: url("../img/features/icon-leaf.svg");
-    left: 15px;
   }
 
-  &--icon-mixture::after {
-    width: 26px;
-    height: 29px;
+  &--icon-mixture::before {
     background-image: url("../img/features/icon-mixture.svg");
-    left: 17px;
   }
 
-  &--icon--cutlery::after {
-    width: 25px;
-    height: 30px;
+  &--icon--cutlery::before {
     background-image: url("../img/features/icon-cutlery.svg");
-    left: 17px;
   }
 
-  &--icon-scales::after {
-    width: 26px;
-    height: 31px;
+  &--icon-scales::before {
     background-image: url("../img/features/icon-scales.svg");
-    left: 17px;
+  }
+
+  &::after {
+    @include mixin.tablet {
+      @include mixin.pseudo(136px, 280px);
+      content: counter(numbering);
+      font-family: "Oswald", sans-serif;
+      font-size: 280px;
+      font-weight: 400;
+      line-height: 280px;
+      color: var(--background-secondary);
+      z-index: -1;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  @include mixin.tablet {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: max-content;
+    max-width: 250px;
+    min-height: 280px;
+    padding-inline-start: 0;
+    counter-increment: numbering 1;
+  }
+
+  @include mixin.desktop {
+    max-width: 230px;
   }
 }
 
 .features__decription {
   margin: 0;
+
+  @include mixin.tablet {
+    grid-row: 2/3;
+    grid-column: 1/-1;
+    margin-block-start: 31px;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

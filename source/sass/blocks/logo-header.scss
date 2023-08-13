@@ -1,6 +1,14 @@
+@use "../global/mixins" as mixin;
+
 .logo-header {
   display: block;
   cursor: pointer;
+
+  @include mixin.tablet {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
 }
 
 .logo-header__picture {
@@ -8,6 +16,12 @@
   padding-block: 10px;
   padding-inline: 10px;
   margin-inline-start: -10px;
+
+  @include mixin.tablet {
+    padding-block: 0;
+    padding-inline: 0;
+    margin-inline-start: 0;
+  }
 }
 
 .logo-header__text {
@@ -18,4 +32,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include mixin.tablet {
+    position: static;
+    transform: translate(0, 0);
+  }
 }

@@ -1,17 +1,31 @@
+@use "../global/mixins" as mixin;
+
 .site-menu {
+  display: none;
   list-style: none;
   padding: 0;
   margin: 0;
 
   // Модификатор отвечающий за закрытие меню
-  &--closed {
-    display: none;
+  &--opened {
+    display: block;
+  }
+
+  @include mixin.tablet {
+    display: flex;
+    gap: 23px;
+    margin-inline-end: -10px;
   }
 }
 
 .site-menu__item {
   padding-block: 12px;
   border-top: 1px solid var(--border-color-2);
+
+  @include mixin.tablet {
+    padding-block: 0;
+    border-top: none;
+  }
 }
 
 .site-menu__link {
@@ -19,6 +33,11 @@
   padding-block: 10px;
   padding-inline: 10px;
   text-decoration: none;
-  color: var(--text-basic);
+  color: inherit;
   cursor: pointer;
+
+  @include mixin.tablet {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }

@@ -1,6 +1,25 @@
+@use "../global/mixins" as mixin;
+
 .live-demo {
   padding-block: 25px 40px;
   background-color: var(--background-ternary);
+
+  @include mixin.tablet {
+    padding-block: 45px 101px;
+    background-image: linear-gradient(to top, var(--background-ternary) 462px, var(--background-basic) 462px);
+  }
+
+  @include mixin.desktop {
+    padding-block: 69px 75px;
+  }
+}
+
+.live-demo__container {
+  @include mixin.desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+  }
 }
 
 .live-demo__title {
@@ -11,15 +30,55 @@
   line-height: 40px;
   font-weight: 400;
   color: var(--text-basic);
+
+  @include mixin.tablet {
+    margin-block-end: 60px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @include mixin.desktop {
+    max-width: 500px;
+    margin-block-end: 146px;
+  }
 }
 
 .live-demo__decription {
   margin: 0;
   margin-block-end: 20px;
+
+  @include mixin.tablet {
+    margin-block-end: 55px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @include mixin.desktop {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    max-width: 433px;
+    margin-block-end: 69px;
+  }
 }
 
 .live-demo__statistics {
-  margin-block-end: 20px;
+  display: flex;
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 32px;
+  margin: 0;
+  margin-block-end: 34px;
+
+  @include mixin.tablet {
+    margin-block-end: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @include mixin.desktop {
+    column-gap: 42px;
+    margin-block-end: 60px;
+  }
 }
 
 .live-demo__total {
@@ -31,4 +90,109 @@
   text-transform: uppercase;
   text-align: center;
   color: var(--text-basic);
+
+  @include mixin.tablet {
+    max-width: 180px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+
+  @include mixin.desktop {
+    max-width: 100%;
+  }
+}
+
+.live-demo__item {
+  box-sizing: border-box;
+  min-width: 124px;
+  padding-block: 14px 18px;
+  border: 1px solid var(--border-color-1);
+  border-radius: 5px;
+  position: relative;
+
+  @include mixin.tablet {
+    min-width: 162px;
+    padding-block: 15px 20px;
+    padding-inline: 30px;
+  }
+}
+
+.live-demo__value {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--text-basic);
+
+  @include mixin.tablet {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.live-demo__declaration {
+  max-width: 87px;
+  margin: 0;
+  margin-inline: auto;
+  padding-inline: 14px;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  position: absolute;
+  bottom: -17px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--background-ternary);
+
+  @include mixin.tablet {
+    max-width: 142px;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: var(--background-basic);
+  }
+
+  @include mixin.desktop {
+    background-color: var(--background-ternary);
+  }
+}
+
+.live-demo__summary {
+  @include mixin.tablet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block-end: 104px;
+  }
+
+  @include mixin.desktop {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 450px;
+    margin-block-end: 0;
+  }
+}
+
+.live-demo__sum {
+  @include mixin.tablet {
+    display: block;
+    margin-block-start: 9px;
+  }
+
+  @include mixin.desktop {
+    display: inline-block;
+    margin-block-start: 0;
+    margin-inline-start: 63px;
+  }
+}
+
+.live-demo__comparison-slider {
+  @include mixin.desktop {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    justify-self: end;
+  }
 }

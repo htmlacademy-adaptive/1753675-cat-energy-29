@@ -1,6 +1,23 @@
+@use "../global/mixins" as mixin;
+
 .program-selection {
   padding-block: 27px 32px;
   border-top: 1px solid var(--border-color-2);
+
+  @include mixin.tablet {
+    padding-block: 65px 60px;
+    border-top: none;
+  }
+
+  @include mixin.desktop {
+    padding-block: 188px 80px;
+  }
+}
+
+.program-selection__container {
+  @include mixin.tablet {
+    padding-inline: 70px;
+  }
 }
 
 .program-selection__title {
@@ -11,6 +28,12 @@
   line-height: 36px;
   font-weight: 400;
   color: var(--text-products);
+
+  @include mixin.tablet {
+    font-size: 60px;
+    line-height: 60px;
+    margin-block-end: 54px;
+  }
 }
 
 .program-selection__description {
@@ -21,4 +44,11 @@
   font-weight: 400;
   text-transform: uppercase;
   color: var(--text-basic);
+
+  @include mixin.tablet {
+    max-width: 350px;
+    font-size: 20px;
+    line-height: 30px;
+    margin-block-end: 66px;
+  }
 }

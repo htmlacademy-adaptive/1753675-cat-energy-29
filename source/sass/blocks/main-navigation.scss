@@ -1,3 +1,5 @@
+@use "../global/mixins" as mixin;
+
 .main-navigation {
   font-family: "Oswald", sans-serif;
   font-size: 20px;
@@ -5,9 +7,24 @@
   font-weight: 400;
   text-transform: uppercase;
   color: var(--text-basic);
+  margin-inline: -20px;
+
+  &--index {
+    @include mixin.desktop {
+      color: var(--background-basic);
+    }
+  }
+
+  @include mixin.tablet {
+    margin-inline: 0;
+  }
 }
 
 .main-navigation__menu {
   text-align: center;
   border-bottom: 1px solid var(--border-color-2);
+
+  @include mixin.tablet {
+    border-bottom: none;
+  }
 }

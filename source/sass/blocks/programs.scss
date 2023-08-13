@@ -1,6 +1,21 @@
+@use "../global/mixins" as mixin;
+
 .programs__wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 20px;
   padding-block-start: 20px;
+
+  @include mixin.tablet {
+    row-gap: 30px;
+    padding-block-start: 0;
+  }
+
+  @include mixin.desktop {
+    padding-block-start: 82px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 80px;
+  }
 }

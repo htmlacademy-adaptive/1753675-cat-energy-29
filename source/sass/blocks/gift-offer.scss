@@ -7,6 +7,10 @@
   @include mixin.tablet {
     padding-block: 75px 70px;
   }
+
+  @include mixin.desktop {
+    padding-block: 0;
+  }
 }
 
 .gift-offer__content {
@@ -34,6 +38,13 @@
     padding-block: 57px;
     padding-inline: 77px;
   }
+
+  @include mixin.desktop {
+    min-height: 288px;
+    flex-direction: column;
+    padding-block: 56px 43px;
+    padding-inline: 42px;
+  }
 }
 
 .gift-offer__illustration {
@@ -47,8 +58,13 @@
 
 .gift-offer__description {
   max-width: 180px;
+  margin: 0;
 
   @include mixin.tablet {
     text-align: left;
+  }
+
+  @include mixin.desktop {
+    text-align: center;
   }
 }

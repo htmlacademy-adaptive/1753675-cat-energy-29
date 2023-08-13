@@ -12,6 +12,7 @@
 
   @include mixin.tablet {
     max-width: 708px;
+    padding-inline: 0;
   }
 
   @include mixin.desktop {
@@ -20,7 +21,6 @@
 
   @include mixin.desktop-wide {
     max-width: 1220px;
-    padding-inline: 0;
   }
 }
 

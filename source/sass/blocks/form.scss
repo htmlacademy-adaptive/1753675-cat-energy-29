@@ -14,6 +14,17 @@
       "add-goods add-goods"
       "button footnote";
   }
+
+  @include mixin.desktop {
+    grid-template-areas:
+      "cat-data goal"
+      "owner owner"
+      "comment comment"
+      "add-goods add-goods"
+      "button footnote";
+    column-gap: 80px;
+    align-items: stretch;
+  }
 }
 
 .form__fieldset {
@@ -49,6 +60,7 @@
 
     @include mixin.tablet {
       grid-area: goal;
+      justify-content: center;
       margin-block-end: 0;
       margin-inline: 0;
       border: 1px solid var(--border-color-3);
@@ -73,6 +85,11 @@
       margin-block-end: 0;
       padding-block-end: 0;
     }
+
+    @include mixin.desktop {
+      grid-template-columns: repeat(4, 1fr);
+
+    }
   }
 
   @include mixin.tablet {
@@ -80,20 +97,18 @@
   }
 }
 
-.form__wrapper {
+.form__heading {
   display: flex;
   align-items: center;
   position: relative;
 
   &::before {
-    @include mixin.pseudo(100%, 2px, var(--accent-color));
+    @include mixin.pseudo(200%, 2px, var(--accent-color));
     top: 16px;
-    right: -70px;
+    left: 0;
+    right: 0;
     z-index: -1;
-
-    @include mixin.tablet {
-      width: 200%;
-    }
+    margin-inline-start: -50%;
   }
 
   @include mixin.tablet {
@@ -103,9 +118,10 @@
 
 .form__legend {
   max-width: 187px;
-  padding-inline-end: 20px;
+  padding-inline: 20px;
   margin: 0;
   margin-block-end: 37px;
+  margin-inline-start: -20px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 26px;
@@ -150,6 +166,7 @@
 
 .form__footnote {
   max-width: 175px;
+  align-self: center;
   margin: 0;
   line-height: 16px;
   text-align: center;
@@ -162,12 +179,17 @@
   @include mixin.tablet {
     margin-block-end: 0;
   }
+
+  @include mixin.desktop {
+    width: 100%;
+  }
 }
 
 .form__label {
   display: flex;
   column-gap: 15px;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .form__control {

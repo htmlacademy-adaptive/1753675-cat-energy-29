@@ -65,6 +65,7 @@
   justify-items: center;
   row-gap: 13px;
   grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: min-content;
   padding-block: 19px 25px;
   padding-inline: 20px;
 
@@ -73,10 +74,13 @@
     justify-content: center;
     align-items: flex-end;
     max-width: 324px;
-    min-height: 430px;
     padding-block: 0 40px;
     padding-inline: 37px;
     background-color: var(--background-secondary);
+  }
+
+  @include mixin.desktop {
+    max-width: 245px;
   }
 }
 
@@ -85,6 +89,11 @@
 
   @include mixin.tablet {
     justify-self: stretch;
+    align-self: flex-end;
+  }
+
+  @include mixin.desktop {
+    justify-self: center;
   }
 }
 
@@ -104,4 +113,9 @@
 .product-card__button {
   grid-column: 1/-1;
   width: 100%;
+
+  @include mixin.desktop {
+    justify-self: center;
+    max-width: 169px;
+  }
 }

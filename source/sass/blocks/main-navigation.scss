@@ -9,6 +9,12 @@
   color: var(--text-basic);
   margin-inline: -20px;
 
+  &--index {
+    @include mixin.desktop {
+      color: var(--background-basic);
+    }
+  }
+
   @include mixin.tablet {
     margin-inline: 0;
   }

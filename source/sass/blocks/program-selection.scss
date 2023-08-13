@@ -8,6 +8,10 @@
     padding-block: 65px 60px;
     border-top: none;
   }
+
+  @include mixin.desktop {
+    padding-block: 188px 80px;
+  }
 }
 
 .program-selection__container {

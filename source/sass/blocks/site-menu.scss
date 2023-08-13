@@ -33,15 +33,11 @@
   padding-block: 10px;
   padding-inline: 10px;
   text-decoration: none;
-  color: var(--text-basic);
+  color: inherit;
   cursor: pointer;
 
   @include mixin.tablet {
     font-size: 18px;
     line-height: 24px;
-  }
-
-  @include mixin.desktop {
-    color: var(--background-basic);
   }
 }

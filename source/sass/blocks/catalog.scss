@@ -9,6 +9,10 @@
     padding-block: 65px 70px;
     border: none;
   }
+
+  @include mixin.desktop {
+    padding-block: 188px 76px;
+  }
 }
 
 .catalog__title {
@@ -38,9 +42,16 @@
   @include mixin.tablet {
     grid-template-columns: repeat(auto-fill, minmax(324px, 1fr));
     justify-items: center;
-    gap: 60px;
+    row-gap: 60px;
+    column-gap: 60px;
     border: none;
     margin-inline: 0;
+  }
+
+  @include mixin.desktop {
+    grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
+    row-gap: 63px;
+    column-gap: 80px;
   }
 }
 

@@ -11,6 +11,10 @@
     display: block;
   }
 
+  &--nojs {
+
+  }
+
   @include mixin.tablet {
     display: flex;
     gap: 23px;

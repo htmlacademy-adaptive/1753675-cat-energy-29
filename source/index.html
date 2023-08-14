@@ -19,7 +19,7 @@
           </button>
         </div>
         <nav class="main-navigation__menu main-navigation main-navigation--index">
-          <ul class="site-menu site-menu--opened site-menu--nojs">
+          <ul class="site-menu site-menu--index site-menu--opened">
             <li class="site-menu__item site-menu__item--current">
               <a class="site-menu__link">Главная</a>
             </li>
@@ -104,9 +104,19 @@
                   <span class="visually-hidden">Стройный и подтянутый кот после программы Cat Energy.</span>
                 </div>
             </div>
-            <label class="visually-hidden" for="comparison-toggle">Изменение кота.</label>
-            <input class="comparison-slider__toggle" type="range" min="1" max="50" value="25" id="comparison-toggle">
-          </ш>
+            <div class="comparison-slider__toggle">
+              <svg class="comparison-slider__thumb" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <rect x="1" y="1" width="38" height="38" rx="19" fill="white"/>
+                <path d="M16 11L8 20L16 29V11Z" fill="#666666"/>
+                <path d="M32 20L24 11V29L32 20Z" fill="#666666"/>
+                <rect x="1" y="1" width="38" height="38" rx="19" stroke="#666666" stroke-width="2"/>
+              </svg>
+              <label class="visually-hidden">
+                Изменение кота.
+                <input  type="range" min="1" max="50" value="25">
+              </label>
+            </div>
+          </div>
         </div>
       </section>
       <section class="contacts">
@@ -119,7 +129,7 @@
             </address>
           </div>
           <div class="contacts__map map">
-            <!-- Здесь будет расположен iframe -->
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ca1fbac90ef6eb74745daca236be20b5f34b179a218395c70be810c513801&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
           </div>
       </section>
     </main>

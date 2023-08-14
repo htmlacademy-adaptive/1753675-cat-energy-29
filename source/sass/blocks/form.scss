@@ -88,7 +88,6 @@
 
     @include mixin.desktop {
       grid-template-columns: repeat(4, 1fr);
-
     }
   }
 
@@ -126,7 +125,7 @@
   font-size: 24px;
   line-height: 26px;
   text-transform: none;
-  background-color: var(--background-basic);
+  background-color: var(--basic-white);
   color: var(--text-basic);
 
   @include mixin.tablet {
@@ -159,6 +158,20 @@
   color: var(--text-secondary);
   border: 1px solid var(--background-input);
 
+  &:hover {
+    border: 1px solid var(--border-color-1);
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--text-secondary);
+  }
+
+  // Модификатор отображающий состояние ошибки
+  &--error {
+    border: 2px solid var(--status-error);
+  }
+
   @include mixin.tablet {
     margin-block-end: 0;
   }
@@ -190,6 +203,11 @@
   column-gap: 15px;
   align-items: center;
   flex-shrink: 0;
+
+  // Если .form__radio:disabled установить модификатор для отображения отключенного состояния
+  &--disabled {
+    opacity: 0.3;
+  }
 }
 
 .form__control {
@@ -203,6 +221,10 @@
     border: 1px solid var(--border-color-1);
     top: 0;
     left: 0;
+
+    &:hover {
+      border: 1px solid var(--borfer-color-4);
+    }
   }
 
   &--checkbox {

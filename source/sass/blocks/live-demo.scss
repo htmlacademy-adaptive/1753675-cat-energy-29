@@ -6,7 +6,7 @@
 
   @include mixin.tablet {
     padding-block: 45px 101px;
-    background-image: linear-gradient(to top, var(--background-ternary) 462px, var(--background-basic) 462px);
+    background-image: linear-gradient(to top, var(--background-ternary) 462px, var(--basic-white) 462px);
   }
 
   @include mixin.desktop {
@@ -150,7 +150,7 @@
     max-width: 142px;
     font-size: 14px;
     line-height: 14px;
-    background-color: var(--background-basic);
+    background-color: var(--basic-white);
   }
 
   @include mixin.desktop {

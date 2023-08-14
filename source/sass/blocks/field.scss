@@ -33,6 +33,20 @@
   border: 1px solid var(--background-input);
   color: var(--text-secondary);
 
+  &:hover {
+    border: 1px solid var(--border-color-1);
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px solid var(--text-secondary);
+  }
+
+  // Модификатор отображающий состояние ошибки
+  &--error {
+    border: 2px solid var(--status-error);
+  }
+
   @include mixin.tablet {
     font-size: 20px;
     max-height: 52px;

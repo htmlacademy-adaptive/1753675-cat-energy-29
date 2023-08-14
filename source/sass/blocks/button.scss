@@ -19,13 +19,34 @@
   cursor: pointer;
 
   &--primary {
-    color: var(--background-basic);
+    color: var(--basic-white);
     background-color: var(--accent-color);
+
+    &:not(:disabled):hover,
+    &[href]:hover,
+    &:not(:disabled):focus,
+    &[href]:focus {
+      background-color: var(--hover-accent);
+    }
+
+    &:not(:disabled):active,
+    &[href]:active {
+      color: var(--hover-white);
+    }
   }
 
   &--secondary {
     color: var(--text-secondary);
     background-color: var(--background-secondary);
+
+    &:not(:disabled):hover,
+    &:not(:disabled):focus {
+      background-color: var(--border-color-2);
+    }
+
+    &:not(:disabled):active {
+      color: var(--text-secondary-hover);
+    }
   }
 
   &--small-text {

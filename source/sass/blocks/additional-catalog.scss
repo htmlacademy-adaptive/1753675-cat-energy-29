@@ -46,7 +46,7 @@
   line-height: 24px;
   font-weight: 400;
   color: var(--text-products);
-  background-color: var(--background-basic);
+  background-color: var(--basic-white);
 
   @include mixin.tablet {
     margin-block-end: 80px;

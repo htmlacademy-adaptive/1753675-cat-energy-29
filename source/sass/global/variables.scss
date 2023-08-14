@@ -1,20 +1,25 @@
 // Цвета
 :root {
-  --background-basic: #ffffff;
+  --basic-white: #ffffff;
+  --hover-white: rgba(255, 255, 255, 0.3);
   --background-secondary: #f2f2f2;
   --background-ternary: #eaeaea;
   --background-input: #e7e7e7;
   --accent-color: #68b738;
+  --hover-accent: #5eaa2f;
   --hero-green-1: #64a73c;
   --hero-green-2: #62a63a;
   --text-basic: #000000;
   --text-secondary: #444444;
+  --text-secondary-hover: rgba(68, 68, 68, 0.3);
   --text-special: #111111;
   --text-products: #222222;
   --border-color-1: #cdcdcd;
   --border-color-2: #e6e6e6;
   --border-color-3: #d9d9d9;
+  --borfer-color-4: #bababa;
   --slider-control: #666666;
+  --special-grey: #666666;
   --status-error: #ff8282;
 }
 

@@ -23,21 +23,34 @@
   height: 22px;
   padding-block: 10px;
 
-  &--vkontakte {
-    background-image: url("../img/socials/vkontakte.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &--vkontakte::after,
+  &--youtube::after,
+  &--telegram::after {
+    @include mixin.pseudo(28px, 22px, var(--slider-control));
   }
 
-  &--youtube {
-    background-image: url("../img/socials/youtube.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &--vkontakte:hover::after,
+  &--youtube:hover::after,
+  &--telegram:hover::after {
+    background-color: var(--accent-color);
   }
 
-  &--telegram {
-    background-image: url("../img/socials/telegram.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+  &--vkontakte:active::after,
+  &--youtube:active::after,
+  &--telegram:active::after {
+    background-color: var(--accent-color);
+    opacity: 0.3;
+  }
+
+  &--vkontakte::after {
+    mask: url("../img/socials/vkontakte.svg") no-repeat center;
+  }
+
+  &--youtube::after {
+    mask: url("../img/socials/youtube.svg") no-repeat center;
+  }
+
+  &--telegram::after {
+    mask: url("../img/socials/telegram.svg") no-repeat center;
   }
 }

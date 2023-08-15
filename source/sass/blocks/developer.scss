@@ -1,22 +1,43 @@
+@use "../global/mixins" as mixin;
+
 .developer {
   position: relative;
   padding-block-start: 10px;
 }
 
 .developer__link {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
   padding-block: 10px;
   padding-inline-end: 55px;
   font-size: 16px;
   line-height: 26px;
   text-decoration: none;
   color: inherit;
-}
 
-.developer__icon {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-50%, +50%);
+  @include mixin.tablet {
+    column-gap: 23px;
+  }
+
+  &::after {
+    @include mixin.pseudo(27px, 34px, var(--slider-control), initial);
+    mask: url("../img/htmlacademy.svg") no-repeat center;
+    margin-inline-end: -50px;
+
+    @include mixin.tablet {
+      margin-inline-end: 0;
+    }
+  }
+
+  &:hover::after {
+    background-color: var(--accent-color);
+  }
+
+  &:active::after {
+    background-color: var(--accent-color);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

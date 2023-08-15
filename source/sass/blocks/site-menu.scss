@@ -5,22 +5,46 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: var(--basic-white);
 
-  // Модификатор отвечающий за закрытие меню
+  &--index {
+    @include mixin.desktop {
+      color: var(--basic-white);
+    }
+  }
+
   &--opened {
     display: block;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    box-shadow: 0 9px 10px -3px var(--border-color-1);
+  }
+
+  &--closed {
+    display: none;
   }
 
   @include mixin.tablet {
     display: flex;
     gap: 23px;
     margin-inline-end: -10px;
+    background-color: transparent;
   }
 }
 
 .site-menu__item {
   padding-block: 12px;
   border-top: 1px solid var(--border-color-2);
+
+  &--current::after {
+    @include mixin.tablet {
+      @include mixin.pseudo(calc(100% - 20px), 2px, var(--accent-color), initial);
+      margin-inline: auto;
+    }
+  }
 
   @include mixin.tablet {
     padding-block: 0;
@@ -36,8 +60,31 @@
   color: inherit;
   cursor: pointer;
 
+  &[href]:hover,
+  &[href]:focus {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
   @include mixin.tablet {
     font-size: 18px;
     line-height: 24px;
+  }
+}
+
+// Можно ли обойтись без каскада и лишних модификаторов для ссылок на главной?
+.site-menu--index .site-menu__item {
+  &--current::after {
+    @include mixin.desktop {
+      background-color: var(--basic-white);
+    }
+  }
+
+  @include mixin.tablet {
+    padding-block: 0;
+    border-top: none;
   }
 }

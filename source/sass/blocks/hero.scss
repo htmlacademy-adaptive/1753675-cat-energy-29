@@ -21,14 +21,14 @@
   }
 
   @include mixin.tablet {
-    background: var(--background-basic);
+    background: var(--basic-white);
     padding-block-start: 65px;
   }
 
   @include mixin.desktop {
     min-height: 720px;
     padding-block-start: 114px;
-    background-image: url("../img/background/hero-background.jpg"), linear-gradient(to right, var(--background-basic) 50%, var(--hero-green-2) 50%);
+    background-image: url("../img/background/hero-background.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: 50%, 100%;
@@ -64,7 +64,7 @@
   line-height: 36px;
   font-weight: 400;
   text-align: center;
-  color: var(--background-basic);
+  color: var(--basic-white);
 
   @include mixin.tablet {
     max-width: 500px;
@@ -96,7 +96,7 @@
   font-weight: 400;
   text-transform: uppercase;
   text-align: center;
-  color: var(--background-basic);
+  color: var(--basic-white);
 
   @include mixin.tablet {
     max-width: 300px;
@@ -142,8 +142,5 @@
   @include mixin.tablet {
     grid-row: 3/4;
     margin-inline: 0;
-  }
-
-  @include mixin.desktop {
   }
 }

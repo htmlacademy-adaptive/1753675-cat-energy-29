@@ -1,5 +1,9 @@
 @use "../global/mixins" as mixin;
 
+.comparison-slider {
+  position: relative;
+}
+
 .comparison-slider__image-wrapper {
   display: flex;
   align-items: center;
@@ -34,6 +38,30 @@
 }
 
 .comparison-slider__toggle {
-  display: block;
-  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &::before,
+  &::after {
+    @include mixin.pseudo(4px, 108px, var(--special-grey), initial);
+    display: block;
+    border-radius: 2px;
+
+    @include mixin.tablet {
+      height: 236px;
+    }
+  }
+
+  &::before {
+    margin-block-end: -2px;
+  }
+
+  &::after {
+    margin-block-start: -2px;
+  }
 }

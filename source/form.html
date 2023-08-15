@@ -140,42 +140,43 @@
           </address>
         </div>
         <div class="contacts__map map">
-          <!-- Здесь будет расположен iframe -->
+          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ca1fbac90ef6eb74745daca236be20b5f34b179a218395c70be810c513801&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
         </div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__wrapper container">
-      <a class="main-footer__logo-footer logo-footer">
+      <a class="main-footer__logo-footer logo-footer" href="index.html">
         <img class="logo-footer__text" src="img/logo-text.svg" width="128" height="24" alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
-        <div class="main-footer__socials socials">
-          <h2 class="visually-hidden">Наши социальные сети.</h2>
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" target='_blank' rel="nofollow">
-                <span class="visually-hidden">Vkontakte.</span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target='_blank' rel="nofollow">
-                <span class="visually-hidden">YouTube.</span>
-              </a>
-            </li>
-            <li class="socials__item">
-              <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy" target='_blank' rel="nofollow">
-                <span class="visually-hidden">Telegram.</span>
-              </a>
-            </li>
-          </ul>
-        </в>
+      <div class="main-footer__socials socials">
+        <h2 class="visually-hidden">Наши социальные сети.</h2>
+        <ul class="socials__list">
+          <li class="socials__item">
+            <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" target='_blank' rel="nofollow">
+              <span class="visually-hidden">Vkontakte.</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target='_blank' rel="nofollow">
+              <span class="visually-hidden">YouTube.</span>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy" target='_blank' rel="nofollow">
+              <span class="visually-hidden">Telegram.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="main-footer__developer developer">
       <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target='_blank' rel="nofollow">
         HTML Academy
-        <img class="developer__icon" src="img/htmlacademy.svg" width="27" height="34" alt="Разработчик сайта.">
+        <span class="visually-hidden">Разработчик сайта.</span>
       </a>
     </div>
   </footer>
+  <script src="js/script.js"></script>
   </body>
 </html>

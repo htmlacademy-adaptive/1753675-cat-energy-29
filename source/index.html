@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Cat Energy | Главная</title>
   </head>
   <body class="page__body">
@@ -18,8 +22,8 @@
             <span class="visually-hidden">Открыть меню.</span>
           </button>
         </div>
-        <nav class="main-navigation main-navigation--index">
-          <ul class="main-navigation__menu site-menu site-menu--opened">
+        <nav class="main-navigation__menu main-navigation main-navigation--index">
+          <ul class="site-menu site-menu--index site-menu--opened">
             <li class="site-menu__item site-menu__item--current">
               <a class="site-menu__link">Главная</a>
             </li>
@@ -104,9 +108,19 @@
                   <span class="visually-hidden">Стройный и подтянутый кот после программы Cat Energy.</span>
                 </div>
             </div>
-            <label class="visually-hidden" for="comparison-toggle">Изменение кота.</label>
-            <input class="comparison-slider__toggle" type="range" min="1" max="50" value="25" id="comparison-toggle">
-          </ш>
+            <div class="comparison-slider__toggle">
+              <svg class="comparison-slider__thumb" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <rect x="1" y="1" width="38" height="38" rx="19" fill="white"/>
+                <path d="M16 11L8 20L16 29V11Z" fill="#666666"/>
+                <path d="M32 20L24 11V29L32 20Z" fill="#666666"/>
+                <rect x="1" y="1" width="38" height="38" rx="19" stroke="#666666" stroke-width="2"/>
+              </svg>
+              <label class="visually-hidden">
+                Изменение кота.
+                <input  type="range" min="1" max="50" value="25">
+              </label>
+            </div>
+          </div>
         </div>
       </section>
       <section class="contacts">
@@ -119,7 +133,7 @@
             </address>
           </div>
           <div class="contacts__map map">
-            <!-- Здесь будет расположен iframe -->
+            <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ca1fbac90ef6eb74745daca236be20b5f34b179a218395c70be810c513801&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
           </div>
       </section>
     </main>
@@ -128,33 +142,34 @@
         <a class="main-footer__logo-footer logo-footer">
           <img class="logo-footer__text" src="img/logo-text.svg" width="128" height="24" alt="Шрифтовое начертание логотипа Cat Energy.">
         </a>
-          <div class="main-footer__socials socials">
-            <h2 class="visually-hidden">Наши социальные сети.</h2>
-            <ul class="socials__list">
-              <li class="socials__item">
-                <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" target='_blank' rel="nofollow">
-                  <span class="visually-hidden">Vkontakte.</span>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target='_blank' rel="nofollow">
-                  <span class="visually-hidden">YouTube.</span>
-                </a>
-              </li>
-              <li class="socials__item">
-                <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy" target='_blank' rel="nofollow">
-                  <span class="visually-hidden">Telegram.</span>
-                </a>
-              </li>
-            </ul>
-          </в>
+        <div class="main-footer__socials socials">
+          <h2 class="visually-hidden">Наши социальные сети.</h2>
+          <ul class="socials__list">
+            <li class="socials__item">
+              <a class="socials__link socials__link--vkontakte" href="https://vk.com/htmlacademy" target='_blank' rel="nofollow">
+                <span class="visually-hidden">Vkontakte.</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target='_blank' rel="nofollow">
+                <span class="visually-hidden">YouTube.</span>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link socials__link--telegram" href="https://t.me/htmlacademy" target='_blank' rel="nofollow">
+                <span class="visually-hidden">Telegram.</span>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="main-footer__developer developer">
         <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target='_blank' rel="nofollow">
           HTML Academy
-          <img class="developer__icon" src="img/htmlacademy.svg" width="27" height="34" alt="Разработчик сайта.">
+          <span class="visually-hidden">Разработчик сайта.</span>
         </a>
       </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

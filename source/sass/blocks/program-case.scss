@@ -172,6 +172,15 @@
   color: var(--text-basic);
   position: relative;
 
+  &[href]:hover,
+  &[href]:focus {
+    // должна вырасти стрелочка
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
   &::after {
     @include mixin.pseudo(32px, 10px);
     background-image: url("../img/icon_arrow.svg");

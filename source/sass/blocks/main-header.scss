@@ -34,44 +34,38 @@
 }
 
 .main-header__toggle {
+  box-sizing: content-box;
   width: 24px;
-  height: 2px;
-  background-color: var(--text-basic);
+  height: 20px;
+  padding-block: 10px;
+  padding-inline: 10px;
+  margin-inline-start: -10px;
+  background-color: var(--basic-white);
   position: relative;
   cursor: pointer;
   border: none;
 
+  &::after {
+    @include mixin.pseudo(24px, 2px, var(--text-basic));
+    top: 10px;
+    left: 10px;
+    box-shadow: 0 8px 0 0 var(--text-basic), 0 16px 0 0 var(--text-basic);
+  }
+
   // Модификатор отвечающий за отображение иконки-крестика для открытого меню
   &--opened {
-    transform: rotate(45deg);
-  }
+    &::before {
+      @include mixin.pseudo(24px, 2px, var(--text-basic));
+      transform: rotate(-45deg) translate(-8px, -9px);
+    }
 
-  &--opened::before {
-    transform: rotate(90deg) translate(8px, 0);
-  }
-
-  &--opened::after {
-    transform: rotate(180deg) translate(0, 8px);
-    opacity: 0;
+    &::after {
+      transform: rotate(45deg) translate(7px, 6px);
+      box-shadow: none;
+    }
   }
 
   @include mixin.tablet {
     display: none;
   }
-}
-
-.main-header__toggle::before,
-.main-header__toggle::after {
-  @include mixin.pseudo(100%, 2px, var(--text-basic));
-  transition: transform 0.3s, opacity 0.3s;
-}
-
-.main-header__toggle::before {
-  top: -8px;
-  left: 0;
-}
-
-.main-header__toggle::after {
-  bottom: -8px;
-  left: 0;
 }

@@ -2,12 +2,23 @@
 
 .logo-header {
   display: block;
-  cursor: pointer;
 
   @include mixin.tablet {
     display: flex;
     align-items: center;
     gap: 13px;
+  }
+
+  &[href] {
+    cursor: pointer;
+  }
+
+  &[href]:hover {
+    opacity: 0.8;
+  }
+
+  &[href]:active {
+    opacity: 0.6;
   }
 }
 

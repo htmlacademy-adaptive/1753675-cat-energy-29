@@ -2,6 +2,11 @@
 
 .contacts {
   position: relative;
+
+  @include mixin.desktop {
+    max-width: 1440px;
+    margin-inline: auto;
+  }
 }
 
 .contacts__wrapper {
@@ -13,7 +18,7 @@
   background-color: var(--background-secondary);
 
   &--main {
-    background-color: var(--background-basic);
+    background-color: var(--basic-white);
   }
 
   @include mixin.tablet {
@@ -28,7 +33,7 @@
     z-index: 1;
     top: 95px;
     left: 110px;
-    background-color: var(--background-basic);
+    background-color: var(--basic-white);
   }
 }
 

@@ -1,0 +1,46 @@
+@use "../global/mixins" as mixin;
+
+.menu-toggle {
+  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  row-gap: 6px;
+  width: 24px;
+  height: 20px;
+  padding-block: 10px;
+  padding-inline: 10px;
+  margin-inline-start: -10px;
+  background-color: var(--basic-white);
+  position: relative;
+  cursor: pointer;
+  border: none;
+
+  // Модификатор отвечающий за отображение иконки-крестика для открытого меню
+  &--opened {
+    .menu-toggle__line--1 {
+      transform: rotate(45deg);
+      top: 10px;
+    }
+
+    .menu-toggle__line--2 {
+      display: none;
+    }
+
+    .menu-toggle__line--3 {
+      transform: rotate(-45deg);
+      top: 2px;
+    }
+  }
+
+  @include mixin.tablet {
+    display: none;
+  }
+}
+
+.menu-toggle__line {
+  width: 24px;
+  height: 2px;
+  background-color: var(--text-basic);
+  position: relative;
+  transition: transform 0.5s ease;
+}

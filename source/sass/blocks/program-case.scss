@@ -172,9 +172,23 @@
   color: var(--text-basic);
   position: relative;
 
+  &::before,
+  &::after {
+    transition: all 0.3s;
+  }
+
   &[href]:hover,
   &[href]:focus {
-    // должна вырасти стрелочка
+    &::before {
+      @include mixin.pseudo(8px, 2px, var(--text-basic));
+      right: 17px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::after {
+      right: -15px;
+    }
   }
 
   &[href]:active {

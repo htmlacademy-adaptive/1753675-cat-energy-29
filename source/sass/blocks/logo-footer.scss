@@ -1,6 +1,7 @@
 .logo-footer {
   display: flex;
   justify-content: center;
+  transition: opacity 0.3s;
 
   &[href] {
     cursor: pointer;

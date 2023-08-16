@@ -17,6 +17,7 @@
   text-align: center;
   border: none;
   cursor: pointer;
+  transition: background-color 0.5s;
 
   &--primary {
     color: var(--basic-white);

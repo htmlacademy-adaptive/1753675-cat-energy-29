@@ -18,8 +18,11 @@
             <img class="logo-header__picture" src="img/logo-picture.svg" width="33" height="38" alt="Кот - супергерой в плаще.">
             <img class="logo-header__text" src="img/logo-text.svg" width="101" height="18" alt="Шрифтовое начертание логотипа Cat Energy.">
           </a>
-          <button class="main-header__toggle" type="button">
+          <button class="main-header__menu-toggle menu-toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
+            <span class="menu-toggle__line menu-toggle__line--1"></span>
+            <span class="menu-toggle__line menu-toggle__line--2"></span>
+            <span class="menu-toggle__line menu-toggle__line--3"></span>
           </button>
         </div>
         <nav class="main-navigation__menu main-navigation main-navigation--index">
@@ -125,12 +128,14 @@
       </section>
       <section class="contacts">
           <h2 class="visually-hidden">Наши контакты.</h2>
-          <div class="contacts__wrapper contacts__wrapper--index">
-            <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
-            <address class="contacts__address">
-              <span class="visually-hidden">Мы находимся по адресу.</span>
-              ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
-            </address>
+          <div class="contacts__container container">
+            <div class="contacts__wrapper contacts__wrapper--index">
+              <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
+              <address class="contacts__address">
+                <span class="visually-hidden">Мы находимся по адресу.</span>
+                ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
+              </address>
+            </div>
           </div>
           <div class="contacts__map map">
             <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ca1fbac90ef6eb74745daca236be20b5f34b179a218395c70be810c513801&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
@@ -162,12 +167,12 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="main-footer__developer developer">
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target='_blank' rel="nofollow">
-          HTML Academy
-          <span class="visually-hidden">Разработчик сайта.</span>
-        </a>
+        <div class="main-footer__developer developer">
+          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target='_blank' rel="nofollow">
+            HTML Academy
+            <span class="visually-hidden">Разработчик сайта.</span>
+          </a>
+        </div>
       </div>
     </footer>
     <script src="js/script.js"></script>

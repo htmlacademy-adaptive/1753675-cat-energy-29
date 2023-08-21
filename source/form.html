@@ -11,8 +11,15 @@
       <div class="main-header__container container">
         <div class="main-header__wrapper">
           <a class="main-header__logo-header logo-header" href="index.html">
-            <img class="logo-header__picture" src="img/logo-picture.svg" width="33" height="38" alt="Кот - супергерой в плаще.">
-            <img class="logo-header__text" src="img/logo-text.svg" width="101" height="18" alt="Шрифтовое начертание логотипа Cat Energy.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo/logo-picture-desktop.svg" width="70" height="59">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-picture-tablet.svg" width="60" height="50">
+              <img class="logo-header__picture" src="img/logo/logo-picture-mobile.svg" width="33" height="38" alt="Кот - супергерой в плаще.">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo/logo-text-tablet.svg">
+              <img class="logo-header__text" src="img/logo/logo-text-mobile.svg" width="101" height="18" alt="Шрифтовое начертание логотипа Cat Energy.">
+            </picture>
           </a>
           <button class="main-header__menu-toggle menu-toggle" type="button">
             <span class="visually-hidden">Открыть меню.</span>
@@ -152,7 +159,7 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper container">
       <a class="main-footer__logo-footer logo-footer" href="index.html">
-        <img class="logo-footer__text" src="img/logo-text.svg" width="128" height="24" alt="Шрифтовое начертание логотипа Cat Energy.">
+        <img class="logo-footer__text" src="img/logo/logo-text-mobile.svg" width="128" height="24" alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
       <div class="main-footer__socials socials">
         <h2 class="visually-hidden">Наши социальные сети.</h2>

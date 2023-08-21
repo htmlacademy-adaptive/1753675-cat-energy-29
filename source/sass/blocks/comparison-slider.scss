@@ -24,15 +24,36 @@
   background-repeat: no-repeat;
 
   &--before {
-    background-image: url("../img/slider/cat-before.png");
+    background-image: url("../img/slider/cat-before-mobile.png");
+
+    @include mixin.retina {
+      background-image: url("../img/slider/cat-before-mobile@2x.png");
+    }
+
+    @include mixin.tablet {
+      background-image: url("../img/slider/cat-before-tablet.png");
+
+      @include mixin.retina {
+        background-image: url("../img/slider/cat-before-tablet@2x.png");
+      }
+    }
   }
 
   &--after {
-    background-image: url("../img/slider/cat-after.png");
+    background-image: url("../img/slider/cat-after-mobile.png");
     background-position-x: -140px;
+
+    @include mixin.retina {
+      background-image: url("../img/slider/cat-after-mobile@2x.png");
+    }
 
     @include mixin.tablet {
       background-position-x: -280px;
+      background-image: url("../img/slider/cat-after-tablet.png");
+
+      @include mixin.retina {
+        background-image: url("../img/slider/cat-after-tablet@2x.png");
+      }
     }
   }
 }

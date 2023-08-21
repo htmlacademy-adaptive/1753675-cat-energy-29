@@ -4,13 +4,31 @@
   width: 100%;
   height: 362px;
   background-color: var(--background-ternary);
-  background-image: url("../img/map.png");
+  background-image: url("../img/map/map-mobile.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+  @include mixin.retina {
+    background-image: url("../img/map/map-mobile@2x.png");
+  }
+
   @include mixin.tablet {
     height: 400px;
+    background-image: url("../img/map/map-tablet.png");
+
+    @include mixin.retina {
+      background-image: url("../img/map/map-tablet@2x.png");
+    }
+  }
+
+  @include mixin.desktop {
+    height: 400px;
+    background-image: url("../img/map/map-desktop.png");
+
+    @include mixin.retina {
+      background-image: url("../img/map/map-desktop@2x.png");
+    }
   }
 }
 

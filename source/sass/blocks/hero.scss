@@ -124,10 +124,9 @@
   }
 }
 
-.hero__product-image {
+.hero__product {
   grid-row: 3/4;
   grid-column: 1/2;
-  display: block;
   margin-inline: auto;
   margin-block-end: 3px;
 
@@ -137,10 +136,16 @@
 
   @include mixin.desktop {
     grid-column: 2/3;
-    grid-row: 1/4;
+    grid-row: 1/5;
     margin-inline-start: -160px;
     z-index: 0;
   }
+}
+
+.hero__product-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero__button {

@@ -32,6 +32,10 @@
     }
   }
 
+  &--nojs {
+    display: none;
+  }
+
   @include mixin.tablet {
     display: none;
   }

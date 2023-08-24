@@ -25,7 +25,7 @@
               <img class="logo-header__text" src="img/logo/logo-text-mobile.svg" width="101" height="18" alt="Шрифтовое начертание логотипа Cat Energy.">
             </picture>
           </a>
-          <button class="main-header__menu-toggle menu-toggle" type="button">
+          <button class="main-header__menu-toggle menu-toggle menu-toggle--nojs" type="button">
             <span class="visually-hidden">Открыть меню.</span>
             <span class="menu-toggle__line menu-toggle__line--1"></span>
             <span class="menu-toggle__line menu-toggle__line--2"></span>
@@ -33,7 +33,7 @@
           </button>
         </div>
         <nav class="main-navigation__menu main-navigation main-navigation--index">
-          <ul class="site-menu site-menu--index site-menu--opened">
+          <ul class="site-menu site-menu--index site-menu--opened site-menu--nojs">
             <li class="site-menu__item site-menu__item--current">
               <a class="site-menu__link">Главная</a>
             </li>
@@ -52,10 +52,12 @@
         <div class="hero__container container">
           <h1 class="hero__title">Функциональное питание для котов</h1>
           <p class="hero__decription">Занялся собой? Займись котом!</p>
-          <picture>
-            <source media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.png 1x, img/hero/hero-product-tablet@2x.png 2x" width="709" height="609">
-            <img class="hero__product-image" src="img/hero/hero-product-mobile.png" srcset="img/hero/hero-product-mobile@2x.png 2x" width="280" height="270" alt="Демонстрационная упаковка питания для котов Cat Energy.">
-          </picture>
+          <div class="hero__product">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.png 1x, img/hero/hero-product-tablet@2x.png 2x" width="709" height="609">
+              <img class="hero__product-image" src="img/hero/hero-product-mobile.png" srcset="img/hero/hero-product-mobile@2x.png 2x" width="280" height="270" alt="Демонстрационная упаковка питания для котов Cat Energy.">
+            </picture>
+          </div>
           <a class="hero__button button button--primary button--small-text" href="form.html">подобрать программу</a>
       </div>
       </section>
@@ -114,11 +116,19 @@
           </div>
           <div class="live-demo__comparison-slider comparison-slider">
             <div class="comparison-slider__image-wrapper">
-                <div class="comparison-slider__image comparison-slider__image--before" style="width: 50%;">
-                  <span class="visually-hidden">Полный кот с ожирением до программы Cat Energy.</span>
+                <div class="comparison-slider__image comparison-slider__image--before">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/slider/cat-before-tablet.png 1x, img/slider/cat-before-tablet@2x.png 2x" width="560" height="512">
+            <img src="img/slider/cat-before-mobile.png" srcset="img/slider/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Полный кот с ожирением до программы Cat Energy.">
+                  </picture>
+                  <!-- <span class="visually-hidden">Полный кот с ожирением до программы Cat Energy.</span> -->
                 </div>
-                <div class="comparison-slider__image comparison-slider__image--after" style="width: 50%;">
-                  <span class="visually-hidden">Стройный и подтянутый кот после программы Cat Energy.</span>
+                <div class="comparison-slider__image comparison-slider__image--after">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/slider/cat-after-tablet.png 1x, img/slider/cat-after-tablet@2x.png 2x" width="560" height="512">
+            <img src="img/slider/cat-after-mobile.png" srcset="img/slider/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Полный кот с ожирением до программы Cat Energy.">
+                  </picture>
+                  <!-- <span class="visually-hidden">Стройный и подтянутый кот после программы Cat Energy.</span> -->
                 </div>
             </div>
             <div class="comparison-slider__toggle">

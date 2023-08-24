@@ -13,15 +13,17 @@
     position: absolute;
     top: 0;
     left: 0;
+    background-color: transparent;
   }
 }
 
 .main-header__container {
+  padding-inline: 0;
+
   @include mixin.tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 0;
   }
 }
 
@@ -30,5 +32,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 20px;
   position: relative;
+  z-index: 3;
+  background-color: var(--basic-white);
+
+  @include mixin.desktop {
+    background-color: transparent;
+  }
 }

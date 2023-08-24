@@ -30,3 +30,11 @@
     @content;
   }
 }
+
+
+// Ретина
+@mixin retina {
+  @media (min-resolution: var.$retina-dppx) {
+    @content;
+  }
+}

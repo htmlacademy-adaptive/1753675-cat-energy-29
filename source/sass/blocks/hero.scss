@@ -1,3 +1,4 @@
+@use "../global/variables" as var;
 @use "../global/mixins" as mixin;
 
 .hero {
@@ -10,13 +11,17 @@
     min-height: 302px;
     grid-row: 1/4;
     grid-column: 1/2;
-    background-image: url("../img/background/hero-background.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
+    background-image: url("../img/hero/hero-bg-mobile.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
 
     @include mixin.tablet {
       content: none;
+    }
+
+    @include mixin.retina {
+      background-image: url("../img/hero/hero-bg-mobile@2x.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
     }
   }
 
@@ -28,10 +33,14 @@
   @include mixin.desktop {
     min-height: 720px;
     padding-block-start: 114px;
-    background-image: url("../img/background/hero-background.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
+    background-image: url("../img/hero/hero-bg-desktop.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
     background-repeat: no-repeat;
     background-position: bottom right;
-    background-size: 50%, 100%;
+    background-size: contain, 100%;
+
+    @include mixin.retina {
+      background-image: url("../img/hero/hero-bg-desktop@2x.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
+    }
   }
 }
 
@@ -115,10 +124,9 @@
   }
 }
 
-.hero__product-image {
+.hero__product {
   grid-row: 3/4;
   grid-column: 1/2;
-  display: block;
   margin-inline: auto;
   margin-block-end: 3px;
 
@@ -128,10 +136,16 @@
 
   @include mixin.desktop {
     grid-column: 2/3;
-    grid-row: 1/4;
+    grid-row: 1/5;
     margin-inline-start: -160px;
     z-index: 0;
   }
+}
+
+.hero__product-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .hero__button {

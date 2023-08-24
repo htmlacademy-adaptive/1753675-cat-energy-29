@@ -17,12 +17,14 @@
 
   @include mixin.tablet {
     column-gap: 23px;
+    justify-content: stretch;
   }
 
   &::after {
     @include mixin.pseudo(27px, 34px, var(--slider-control), initial);
     mask: url("../img/htmlacademy.svg") no-repeat center;
     margin-inline-end: -50px;
+    transition: background-color 0.5s;
 
     @include mixin.tablet {
       margin-inline-end: 0;

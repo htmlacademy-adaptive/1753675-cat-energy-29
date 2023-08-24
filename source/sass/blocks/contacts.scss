@@ -2,22 +2,30 @@
 
 .contacts {
   position: relative;
+}
+
+.contacts__container {
+  padding-inline: 0;
+
+  @include mixin.tablet {
+    margin-inline: 0;
+  }
 
   @include mixin.desktop {
-    max-width: 1440px;
     margin-inline: auto;
   }
 }
 
 .contacts__wrapper {
   box-sizing: border-box;
+  width: 100vw;
   display: flex;
   justify-content: space-between;
   padding-block: 26px;
   padding-inline: 20px;
   background-color: var(--background-secondary);
 
-  &--main {
+  &--index {
     background-color: var(--basic-white);
   }
 
@@ -27,12 +35,11 @@
   }
 
   @include mixin.desktop {
-    min-width: 565px;
+    max-width: 565px;
     padding-inline: 80px;
     position: absolute;
     z-index: 1;
     top: 95px;
-    left: 110px;
     background-color: var(--basic-white);
   }
 }

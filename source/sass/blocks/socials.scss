@@ -27,6 +27,7 @@
   &--youtube::after,
   &--telegram::after {
     @include mixin.pseudo(28px, 22px, var(--slider-control));
+    transition: background-color 0.5s;
   }
 
   &--vkontakte:hover::after,

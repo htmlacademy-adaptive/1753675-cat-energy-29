@@ -12,6 +12,24 @@
 
 .product-card__link {
   text-decoration: none;
+
+  &--image {
+    min-width: 140px;
+    min-height: 107px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include mixin.tablet {
+      min-width: 200px;
+      min-height: 210px;
+      margin-block-start: -65px;
+    }
+
+    @include mixin.desktop {
+      min-width: 169px;
+    }
+  }
 }
 
 .product-card__title {
@@ -51,11 +69,8 @@
 
 .product-card__image {
   display: block;
+  width: 100%;
   object-fit: contain;
-
-  @include mixin.tablet {
-    margin-block-start: -65px;
-  }
 }
 
 .product-card__container {
@@ -74,6 +89,7 @@
     justify-content: center;
     align-items: flex-end;
     max-width: 324px;
+    max-height: 430px;
     padding-block: 0 40px;
     padding-inline: 37px;
     background-color: var(--background-secondary);

@@ -11,15 +11,25 @@
       <div class="main-header__container container">
         <div class="main-header__wrapper">
           <a class="main-header__logo-header logo-header" href="index.html">
-            <img class="logo-header__picture" src="img/logo-picture.svg" width="33" height="38" alt="Кот - супергерой в плаще.">
-            <img class="logo-header__text" src="img/logo-text.svg" width="101" height="18" alt="Шрифтовое начертание логотипа Cat Energy.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo/logo-picture-desktop.svg" width="70" height="59">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-picture-tablet.svg" width="60" height="50">
+              <img class="logo-header__picture" src="img/logo/logo-picture-mobile.svg" width="33" height="38" alt="Кот - супергерой в плаще.">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo/logo-text-tablet.svg">
+              <img class="logo-header__text" src="img/logo/logo-text-mobile.svg" width="101" height="18" alt="Шрифтовое начертание логотипа Cat Energy.">
+            </picture>
           </a>
-          <button class="main-header__toggle" type="button">
+          <button class="main-header__menu-toggle menu-toggle menu-toggle--nojs" type="button">
             <span class="visually-hidden">Открыть меню.</span>
+            <span class="menu-toggle__line menu-toggle__line--1"></span>
+            <span class="menu-toggle__line menu-toggle__line--2"></span>
+            <span class="menu-toggle__line menu-toggle__line--3"></span>
           </button>
         </div>
         <nav class="main-navigation">
-          <ul class="main-navigation__menu site-menu site-menu--opened">
+          <ul class="main-navigation__menu site-menu site-menu--opened site-menu--nojs">
             <li class="site-menu__item">
               <a class="site-menu__link" href="index.html">Главная</a>
             </li>
@@ -79,9 +89,9 @@
               </div>
             </fieldset>
             <fieldset class="form__fieldset form__fieldset--owner-data">
-              <div class="form__heading">
-                <legend class="form__legend">Контактные данные (владельца кота)</legend>
-              </div>
+              <legend class="form__heading">
+                <span class="form__legend">Контактные данные (владельца кота)</span>
+              </legend>
               <div class="form__wrapper">
                 <div class="form__field field">
                   <label class="field__label" for="email">E-mail:*</label>
@@ -101,9 +111,9 @@
               <textarea class="form__text-input" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
             </div>
             <fieldset class="form__fieldset form__fieldset--additionals">
-              <div class="form__heading">
-                <legend class="form__legend">Дополнительно</legend>
-              </div>
+              <legend class="form__heading">
+                <span class="form__legend">Дополнительно</span>
+              </legend>
                 <label class="form__label">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="sweetener" checked>
                   <span class="form__control form__control--checkbox"></span>
@@ -132,12 +142,14 @@
       </section>
       <section class="contacts">
         <h2 class="visually-hidden">Наши контакты.</h2>
-        <div class="contacts__wrapper">
-          <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
-          <address class="contacts__address">
-            <span class="visually-hidden">Мы находимся по адресу.</span>
-            ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
-          </address>
+        <div class="contacts__container container">
+          <div class="contacts__wrapper">
+            <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
+            <address class="contacts__address">
+              <span class="visually-hidden">Мы находимся по адресу.</span>
+              ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
+            </address>
+          </div>
         </div>
         <div class="contacts__map map">
           <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ca1fbac90ef6eb74745daca236be20b5f34b179a218395c70be810c513801&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
@@ -147,7 +159,7 @@
   <footer class="main-footer">
     <div class="main-footer__wrapper container">
       <a class="main-footer__logo-footer logo-footer" href="index.html">
-        <img class="logo-footer__text" src="img/logo-text.svg" width="128" height="24" alt="Шрифтовое начертание логотипа Cat Energy.">
+        <img class="logo-footer__text" src="img/logo/logo-text-mobile.svg" width="128" height="24" alt="Шрифтовое начертание логотипа Cat Energy.">
       </a>
       <div class="main-footer__socials socials">
         <h2 class="visually-hidden">Наши социальные сети.</h2>
@@ -169,12 +181,12 @@
           </li>
         </ul>
       </div>
-    </div>
-    <div class="main-footer__developer developer">
-      <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target='_blank' rel="nofollow">
-        HTML Academy
-        <span class="visually-hidden">Разработчик сайта.</span>
-      </a>
+      <div class="main-footer__developer developer">
+        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target='_blank' rel="nofollow">
+          HTML Academy
+          <span class="visually-hidden">Разработчик сайта.</span>
+        </a>
+      </div>
     </div>
   </footer>
   <script src="js/script.js"></script>

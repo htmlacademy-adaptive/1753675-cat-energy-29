@@ -15,15 +15,25 @@
       <div class="main-header__container container">
         <div class="main-header__wrapper">
           <a class="main-header__logo-header logo-header">
-            <img class="logo-header__picture" src="img/logo-picture.svg" width="33" height="38" alt="Кот - супергерой в плаще.">
-            <img class="logo-header__text" src="img/logo-text.svg" width="101" height="18" alt="Шрифтовое начертание логотипа Cat Energy.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo/logo-picture-desktop.svg" width="70" height="59">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-picture-tablet.svg" width="60" height="50">
+              <img class="logo-header__picture" src="img/logo/logo-picture-mobile.svg" width="33" height="38" alt="Кот - супергерой в плаще.">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/logo/logo-text-tablet.svg">
+              <img class="logo-header__text" src="img/logo/logo-text-mobile.svg" width="101" height="18" alt="Шрифтовое начертание логотипа Cat Energy.">
+            </picture>
           </a>
-          <button class="main-header__toggle" type="button">
+          <button class="main-header__menu-toggle menu-toggle menu-toggle--nojs" type="button">
             <span class="visually-hidden">Открыть меню.</span>
+            <span class="menu-toggle__line menu-toggle__line--1"></span>
+            <span class="menu-toggle__line menu-toggle__line--2"></span>
+            <span class="menu-toggle__line menu-toggle__line--3"></span>
           </button>
         </div>
         <nav class="main-navigation__menu main-navigation main-navigation--index">
-          <ul class="site-menu site-menu--index site-menu--opened">
+          <ul class="site-menu site-menu--index site-menu--opened site-menu--nojs">
             <li class="site-menu__item site-menu__item--current">
               <a class="site-menu__link">Главная</a>
             </li>
@@ -42,7 +52,12 @@
         <div class="hero__container container">
           <h1 class="hero__title">Функциональное питание для котов</h1>
           <p class="hero__decription">Занялся собой? Займись котом!</p>
-          <img class="hero__product-image" src="img/hero-product.png" width="280" height="270" alt="Демонстрационная упаковка питания для котов Cat Energy.">
+          <div class="hero__product">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.png 1x, img/hero/hero-product-tablet@2x.png 2x" width="709" height="609">
+              <img class="hero__product-image" src="img/hero/hero-product-mobile.png" srcset="img/hero/hero-product-mobile@2x.png 2x" width="280" height="270" alt="Демонстрационная упаковка питания для котов Cat Energy.">
+            </picture>
+          </div>
           <a class="hero__button button button--primary button--small-text" href="form.html">подобрать программу</a>
       </div>
       </section>
@@ -101,11 +116,19 @@
           </div>
           <div class="live-demo__comparison-slider comparison-slider">
             <div class="comparison-slider__image-wrapper">
-                <div class="comparison-slider__image comparison-slider__image--before" style="width: 50%;">
-                  <span class="visually-hidden">Полный кот с ожирением до программы Cat Energy.</span>
+                <div class="comparison-slider__image comparison-slider__image--before">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/slider/cat-before-tablet.png 1x, img/slider/cat-before-tablet@2x.png 2x" width="560" height="512">
+            <img src="img/slider/cat-before-mobile.png" srcset="img/slider/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Полный кот с ожирением до программы Cat Energy.">
+                  </picture>
+                  <!-- <span class="visually-hidden">Полный кот с ожирением до программы Cat Energy.</span> -->
                 </div>
-                <div class="comparison-slider__image comparison-slider__image--after" style="width: 50%;">
-                  <span class="visually-hidden">Стройный и подтянутый кот после программы Cat Energy.</span>
+                <div class="comparison-slider__image comparison-slider__image--after">
+                  <picture>
+                    <source media="(min-width: 768px)" srcset="img/slider/cat-after-tablet.png 1x, img/slider/cat-after-tablet@2x.png 2x" width="560" height="512">
+            <img src="img/slider/cat-after-mobile.png" srcset="img/slider/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Полный кот с ожирением до программы Cat Energy.">
+                  </picture>
+                  <!-- <span class="visually-hidden">Стройный и подтянутый кот после программы Cat Energy.</span> -->
                 </div>
             </div>
             <div class="comparison-slider__toggle">
@@ -125,12 +148,14 @@
       </section>
       <section class="contacts">
           <h2 class="visually-hidden">Наши контакты.</h2>
-          <div class="contacts__wrapper contacts__wrapper--index">
-            <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
-            <address class="contacts__address">
-              <span class="visually-hidden">Мы находимся по адресу.</span>
-              ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
-            </address>
+          <div class="contacts__container container">
+            <div class="contacts__wrapper contacts__wrapper--index">
+              <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
+              <address class="contacts__address">
+                <span class="visually-hidden">Мы находимся по адресу.</span>
+                ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
+              </address>
+            </div>
           </div>
           <div class="contacts__map map">
             <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ca1fbac90ef6eb74745daca236be20b5f34b179a218395c70be810c513801&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
@@ -140,7 +165,7 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper container">
         <a class="main-footer__logo-footer logo-footer">
-          <img class="logo-footer__text" src="img/logo-text.svg" width="128" height="24" alt="Шрифтовое начертание логотипа Cat Energy.">
+          <img class="logo-footer__text" src="img/logo/logo-text-mobile.svg" width="128" height="24" alt="Шрифтовое начертание логотипа Cat Energy.">
         </a>
         <div class="main-footer__socials socials">
           <h2 class="visually-hidden">Наши социальные сети.</h2>
@@ -162,12 +187,12 @@
             </li>
           </ul>
         </div>
-      </div>
-      <div class="main-footer__developer developer">
-        <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target='_blank' rel="nofollow">
-          HTML Academy
-          <span class="visually-hidden">Разработчик сайта.</span>
-        </a>
+        <div class="main-footer__developer developer">
+          <a class="developer__link" href="https://htmlacademy.ru/intensive/adaptive" target='_blank' rel="nofollow">
+            HTML Academy
+            <span class="visually-hidden">Разработчик сайта.</span>
+          </a>
+        </div>
       </div>
     </footer>
     <script src="js/script.js"></script>

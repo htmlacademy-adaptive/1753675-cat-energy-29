@@ -44,7 +44,8 @@ const handleMouseUp = () => {
 
 const handleDrag = (event) => {
   // Вычисляем позицию тогглера относительно контейнера
-  const togglePosition = event.clientX - containerX;
+  const clientX = event.clientX || event.touches[0].clientX;
+  const togglePosition = clientX - containerX;
 
   // Проверяем находится ли тогглер в допустимой области
   if (togglePosition < 0) {

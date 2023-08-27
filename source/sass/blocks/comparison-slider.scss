@@ -1,7 +1,12 @@
 @use "../global/mixins" as mixin;
 
 .comparison-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .comparison-slider__image-wrapper {
@@ -10,7 +15,6 @@
   position: relative;
   width: 280px;
   min-height: 256px;
-  margin: 0 auto;
 
   @include mixin.tablet {
     width: 560px;
@@ -69,4 +73,39 @@
   &::after {
     margin-block-start: -2px;
   }
+
+  &:hover {
+    .comparison-slider__thumb {
+      color: var(--accent-color);
+    }
+  }
+
+  &:active {
+    .comparison-slider__thumb {
+      color: var(--active-accent);
+    }
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: var(--accent-color);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: var(--active-accent);
+  }
 }
+
+.comparison-slider__thumb {
+  color: var(--slider-control);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: -webkit-focus-ring-color auto 5px;
+  }
+}
+

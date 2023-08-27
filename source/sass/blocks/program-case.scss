@@ -58,7 +58,10 @@
   &--slim::after {
     @include mixin.pseudo(36px, 50px);
     margin-block-start: -3px;
-    background-image: url("../img/programs/cat-slim.svg");
+    background-image: url("../img/sprite.svg#cat-slim");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @include mixin.tablet {
       width: 140px;
@@ -76,7 +79,10 @@
   &--pro::after {
     @include mixin.pseudo(67px, 28px);
     margin-inline-start: -5px;
-    background-image: url("../img/programs/cat-mass.svg");
+    background-image: url("../img/sprite.svg#cat-mass");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
     @include mixin.tablet {
       width: 268px;
@@ -174,20 +180,13 @@
 
   &::before,
   &::after {
-    transition: all 0.3s;
+    transition: background-image 0.3s ease-in-out;
   }
 
   &[href]:hover,
   &[href]:focus {
-    &::before {
-      @include mixin.pseudo(8px, 2px, var(--text-basic));
-      right: 17px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
     &::after {
-      right: -15px;
+      background-image: url("../img/sprite.svg#arrow-long");
     }
   }
 
@@ -197,9 +196,8 @@
 
   &::after {
     @include mixin.pseudo(32px, 10px);
-    background-image: url("../img/icon_arrow.svg");
+    background-image: url("../img/sprite.svg#arrow-short");
     background-repeat: no-repeat;
-    background-size: contain;
     right: 0;
     top: 50%;
     transform: translateY(-50%);

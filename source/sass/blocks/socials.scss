@@ -44,14 +44,14 @@
   }
 
   &--vkontakte::after {
-    mask: url("../img/socials/vkontakte.svg") no-repeat center;
+    mask: url("../img/sprite.svg#vkontakte") no-repeat center;
   }
 
   &--youtube::after {
-    mask: url("../img/socials/youtube.svg") no-repeat center;
+    mask: url("../img/sprite.svg#youtube") no-repeat center;
   }
 
   &--telegram::after {
-    mask: url("../img/socials/telegram.svg") no-repeat center;
+    mask: url("../img/sprite.svg#telegram") no-repeat center;
   }
 }

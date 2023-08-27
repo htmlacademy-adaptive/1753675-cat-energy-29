@@ -54,6 +54,8 @@
           <p class="hero__decription">Занялся собой? Займись котом!</p>
           <div class="hero__product">
             <picture>
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.webp 1x, img/hero/hero-product-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/hero/hero-product-mobile.webp 1x, img//hero/hero-product-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.png 1x, img/hero/hero-product-tablet@2x.png 2x" width="709" height="609">
               <img class="hero__product-image" src="img/hero/hero-product-mobile.png" srcset="img/hero/hero-product-mobile@2x.png 2x" width="280" height="270" alt="Демонстрационная упаковка питания для котов Cat Energy.">
             </picture>
@@ -121,27 +123,18 @@
                     <source media="(min-width: 768px)" srcset="img/slider/cat-before-tablet.png 1x, img/slider/cat-before-tablet@2x.png 2x" width="560" height="512">
             <img src="img/slider/cat-before-mobile.png" srcset="img/slider/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Полный кот с ожирением до программы Cat Energy.">
                   </picture>
-                  <!-- <span class="visually-hidden">Полный кот с ожирением до программы Cat Energy.</span> -->
                 </div>
                 <div class="comparison-slider__image comparison-slider__image--after">
                   <picture>
                     <source media="(min-width: 768px)" srcset="img/slider/cat-after-tablet.png 1x, img/slider/cat-after-tablet@2x.png 2x" width="560" height="512">
             <img src="img/slider/cat-after-mobile.png" srcset="img/slider/cat-after-mobile@2x.png 2x" width="280" height="256" alt="Полный кот с ожирением до программы Cat Energy.">
                   </picture>
-                  <!-- <span class="visually-hidden">Стройный и подтянутый кот после программы Cat Energy.</span> -->
                 </div>
             </div>
             <div class="comparison-slider__toggle">
-              <svg class="comparison-slider__thumb" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <rect x="1" y="1" width="38" height="38" rx="19" fill="white"/>
-                <path d="M16 11L8 20L16 29V11Z" fill="#666666"/>
-                <path d="M32 20L24 11V29L32 20Z" fill="#666666"/>
-                <rect x="1" y="1" width="38" height="38" rx="19" stroke="#666666" stroke-width="2"/>
+              <svg class="comparison-slider__thumb" width="40" height="40" tabindex="0" role="slider" aria-label="Слайдер отображающий изменения кота.">
+                <use href="img/sprite.svg#slider-toggle"></use>
               </svg>
-              <label class="visually-hidden">
-                Изменение кота.
-                <input  type="range" min="1" max="50" value="25">
-              </label>
             </div>
           </div>
         </div>

@@ -65,8 +65,8 @@
   &::before {
     @include mixin.pseudo(60px, 60px, var(--accent-color), initial);
     flex-shrink: 0;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
 
     @include mixin.tablet {
       grid-row: 1 / 2;
@@ -78,19 +78,23 @@
   }
 
   &--icon-leaf::before {
-    background-image: url("../img/features/icon-leaf.svg");
+    background-image: url("../img/sprite.svg#icon-leaf");
+    background-size: 30px 32px;
   }
 
   &--icon-mixture::before {
-    background-image: url("../img/features/icon-mixture.svg");
+    background-image: url("../img/sprite.svg#icon-mixture");
+    background-size: 27px 29px;
   }
 
   &--icon--cutlery::before {
-    background-image: url("../img/features/icon-cutlery.svg");
+    background-image: url("../img/sprite.svg#icon-cutlery");
+    background-size: 26px 30px;
   }
 
   &--icon-scales::before {
-    background-image: url("../img/features/icon-scales.svg");
+    background-image: url("../img/sprite.svg#icon-scales");
+    background-size: 27px 31px;
   }
 
   &::after {

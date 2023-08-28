@@ -58,7 +58,7 @@
   &--slim::after {
     @include mixin.pseudo(36px, 50px);
     margin-block-start: -3px;
-    background-image: url("../img/sprite.svg#cat-slim");
+    background-image: url("../img/icons/sprite.svg#cat-slim");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -79,7 +79,7 @@
   &--pro::after {
     @include mixin.pseudo(67px, 28px);
     margin-inline-start: -5px;
-    background-image: url("../img/sprite.svg#cat-mass");
+    background-image: url("../img/icons/sprite.svg#cat-mass");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -186,7 +186,7 @@
   &[href]:hover,
   &[href]:focus {
     &::after {
-      background-image: url("../img/sprite.svg#arrow-long");
+      background-image: url("../img/icons/sprite.svg#arrow-long");
     }
   }
 
@@ -196,7 +196,7 @@
 
   &::after {
     @include mixin.pseudo(32px, 10px);
-    background-image: url("../img/sprite.svg#arrow-short");
+    background-image: url("../img/icons/sprite.svg#arrow-short");
     background-repeat: no-repeat;
     right: 0;
     top: 50%;

@@ -19,6 +19,11 @@
   cursor: pointer;
   transition: background-color 0.5s;
 
+  @include mixin.tablet {
+    width: 250px;
+    padding-block: 10px;
+  }
+
   &--primary {
     color: var(--basic-white);
     background-color: var(--accent-color);
@@ -60,10 +65,5 @@
       padding-block: 14px;
       padding-inline: 26px;
     }
-  }
-
-  @include mixin.tablet {
-    width: 250px;
-    padding-block: 10px;
   }
 }

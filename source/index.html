@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
@@ -54,8 +54,10 @@
           <p class="hero__decription">Занялся собой? Займись котом!</p>
           <div class="hero__product">
             <picture>
+              <source type="image/avif" media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.avif 1x, img/hero/hero-product-tablet@2x.avif 2x">
+              <source type="image/avif" srcset="img/hero/hero-product-mobile.avif 1x, img/hero/hero-product-mobile@2x.avif 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.webp 1x, img/hero/hero-product-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="img/hero/hero-product-mobile.webp 1x, img//hero/hero-product-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/hero/hero-product-mobile.webp 1x, img/hero/hero-product-mobile@2x.webp 2x">
               <source media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.png 1x, img/hero/hero-product-tablet@2x.png 2x" width="709" height="609">
               <img class="hero__product-image" src="img/hero/hero-product-mobile.png" srcset="img/hero/hero-product-mobile@2x.png 2x" width="280" height="270" alt="Демонстрационная упаковка питания для котов Cat Energy.">
             </picture>
@@ -121,7 +123,7 @@
                 <div class="comparison-slider__image comparison-slider__image--before">
                   <picture>
                     <source media="(min-width: 768px)" srcset="img/slider/cat-before-tablet.png 1x, img/slider/cat-before-tablet@2x.png 2x" width="560" height="512">
-            <img src="img/slider/cat-before-mobile.png" srcset="img/slider/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Полный кот с ожирением до программы Cat Energy.">
+                    <img src="img/slider/cat-before-mobile.png" srcset="img/slider/cat-before-mobile@2x.png 2x" width="280" height="256" alt="Полный кот с ожирением до программы Cat Energy.">
                   </picture>
                 </div>
                 <div class="comparison-slider__image comparison-slider__image--after">
@@ -133,7 +135,7 @@
             </div>
             <div class="comparison-slider__toggle">
               <svg class="comparison-slider__thumb" width="40" height="40" tabindex="0" role="slider" aria-label="Слайдер отображающий изменения кота.">
-                <use href="img/sprite.svg#slider-toggle"></use>
+                <use href="img/icons/sprite.svg#slider-toggle"></use>
               </svg>
             </div>
           </div>

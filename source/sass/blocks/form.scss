@@ -245,7 +245,7 @@
 
 .form__checkbox:checked + .form__control::after {
   @include mixin.pseudo(18px, 14px);
-  background-image: url("../img/sprite.svg#check-mark");
+  background-image: url("../img/icons/sprite.svg#check-mark");
   background-repeat: no-repeat;
   background-size: contain;
   top: 50%;

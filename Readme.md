@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Анастасия Ермоленко](https://up.htmlacademy.ru/adaptive/29/user/1753675).
-* Наставник: [Дмитрий Осадченко](https://htmlacademy.ru/profile/dimaos).
+* Наставник: [Кенан Агаев](https://htmlacademy.ru/profile/kenakula).
 
 ---
 

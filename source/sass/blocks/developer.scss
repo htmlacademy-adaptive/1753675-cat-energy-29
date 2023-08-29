@@ -22,7 +22,7 @@
 
   &::after {
     @include mixin.pseudo(27px, 34px, var(--slider-control), initial);
-    mask: url("../img/sprite.svg#htmlacademy") no-repeat center;
+    mask: url("../img/icons/sprite.svg#htmlacademy") no-repeat center;
     margin-inline-end: -50px;
     transition: background-color 0.5s;
 

@@ -5,7 +5,7 @@
   background-color: var(--background-ternary);
 
   @include mixin.tablet {
-    padding-block: 45px 101px;
+    padding-block: 36px 101px;
     background-image: linear-gradient(to top, var(--background-ternary) 462px, var(--basic-white) 462px);
   }
 
@@ -68,8 +68,10 @@
   column-gap: 32px;
   margin: 0;
   margin-block-end: 34px;
+  margin-block-start: -7px;
 
   @include mixin.tablet {
+    column-gap: 42px;
     margin-block-end: 0;
     font-size: 20px;
     line-height: 20px;
@@ -93,6 +95,7 @@
 
   @include mixin.tablet {
     max-width: 180px;
+    padding-block-start: 12px;
     font-size: 20px;
     line-height: 20px;
     text-align: right;
@@ -147,7 +150,9 @@
   background-color: var(--background-ternary);
 
   @include mixin.tablet {
+    width: max-content;
     max-width: 142px;
+    bottom: -4px;
     font-size: 14px;
     line-height: 14px;
     background-color: var(--basic-white);
@@ -163,7 +168,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-block-end: 104px;
+    margin-block-end: 95px;
   }
 
   @include mixin.desktop {

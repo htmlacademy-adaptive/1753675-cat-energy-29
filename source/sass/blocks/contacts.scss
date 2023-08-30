@@ -55,6 +55,7 @@
   color: var(--text-special);
 
   @include mixin.tablet {
+    max-width: 165px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -69,6 +70,7 @@
     max-width: 160px;
     font-size: 16px;
     line-height: 20px;
+    text-align: end;
   }
 }
 

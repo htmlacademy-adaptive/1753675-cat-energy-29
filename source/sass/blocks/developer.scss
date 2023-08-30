@@ -18,6 +18,10 @@
   @include mixin.tablet {
     column-gap: 23px;
     justify-content: stretch;
+    max-width: 170px;
+    line-height: 20px;
+    padding-inline-end: 0;
+    margin-block-start: -8px;
   }
 
   &::after {
@@ -29,6 +33,7 @@
 
     @include mixin.tablet {
       margin-inline-end: 0;
+      margin-block-start: -6px;
     }
   }
 

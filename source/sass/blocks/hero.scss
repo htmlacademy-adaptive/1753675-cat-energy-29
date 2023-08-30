@@ -27,7 +27,6 @@
 
   @include mixin.tablet {
     background: var(--basic-white);
-    padding-block-start: 65px;
   }
 
   @include mixin.desktop {
@@ -58,7 +57,7 @@
   @include mixin.tablet {
     grid-template-columns: max-content 1fr;
     grid-auto-rows: min-content;
-    padding-block-start: 32px;
+    padding-block-start: 29px;
   }
 }
 
@@ -150,6 +149,10 @@
   display: block;
   width: 100%;
   height: auto;
+
+  @include mixin.tablet {
+    margin-block-start: -29px;
+  }
 }
 
 .hero__button {

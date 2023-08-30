@@ -4,7 +4,7 @@
   padding-block: 20px 49px;
 
   @include mixin.tablet {
-    padding-block: 45px 47px;
+    padding-block: 42px 47px;
     border-bottom: 1px solid var(--border-color-2);
   }
 
@@ -50,8 +50,7 @@
   }
 
   @include mixin.tablet {
-    column-gap: 95px;
-    justify-content: space-between;
+    column-gap: 134px;
   }
 }
 
@@ -73,7 +72,7 @@
       grid-column: 1 / 2;
       width: 80px;
       height: 80px;
-      margin-block-start: 40px;
+      margin-block-start: 32px;
     }
   }
 

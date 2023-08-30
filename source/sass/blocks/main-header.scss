@@ -4,7 +4,7 @@
   box-sizing: border-box;
 
   @include mixin.tablet {
-    padding-block-start: 25px;
+    padding-block-start: 18px;
   }
 
   @include mixin.desktop {
@@ -36,6 +36,10 @@
   position: relative;
   z-index: 3;
   background-color: var(--basic-white);
+
+  @include mixin.tablet {
+    padding-inline: 0;
+  }
 
   @include mixin.desktop {
     background-color: transparent;

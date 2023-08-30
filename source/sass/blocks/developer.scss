@@ -2,7 +2,7 @@
 
 .developer {
   position: relative;
-  padding-block-start: 10px;
+  padding-block-start: 11px;
 }
 
 .developer__link {
@@ -23,7 +23,8 @@
   &::after {
     @include mixin.pseudo(27px, 34px, var(--slider-control), initial);
     mask: url("../img/icons/sprite.svg#htmlacademy") no-repeat center;
-    margin-inline-end: -50px;
+    margin-inline-end: -55px;
+    margin-block-start: -3px;
     transition: background-color 0.5s;
 
     @include mixin.tablet {

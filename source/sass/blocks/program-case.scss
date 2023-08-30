@@ -16,9 +16,8 @@
     @include mixin.pseudo(50px, 50px, var(--accent-color), initial);
     grid-column: 1/2;
     grid-row: 1/2;
+    margin-block-start: 2px;
     border-radius: 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
 
     @include mixin.tablet {
       grid-column: 2/3;
@@ -78,7 +77,7 @@
 
   &--pro::after {
     @include mixin.pseudo(67px, 28px);
-    margin-inline-start: -5px;
+    margin-block-start: 3px;
     background-image: url("../img/icons/sprite.svg#cat-mass");
     background-size: contain;
     background-repeat: no-repeat;
@@ -116,8 +115,10 @@
 
 .program-case__title {
   grid-column: 2/3;
+  align-self: center;
   margin: 0;
   margin-inline-start: 20px;
+  margin-block-start: 3px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 37px;
@@ -166,7 +167,7 @@
 .program-case__link {
   grid-column: 1/-1;
   display: inline-block;
-  margin-block-start: 11px;
+  margin-block-start: 8px;
   padding-block: 10px;
   padding-inline-end: 47px;
   font-family: "Oswald", sans-serif;

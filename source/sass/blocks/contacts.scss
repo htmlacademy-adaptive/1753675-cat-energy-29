@@ -74,5 +74,8 @@
 
 .contacts__city {
   display: block;
-  margin-block-start: 20px;
+
+  @include mixin.tablet {
+    margin-block-start: 20px;
+  }
 }

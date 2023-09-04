@@ -55,6 +55,10 @@
   transform: translate(-50%, -50%);
   z-index: 12;
 
+  @include mixin.desktop {
+    margin-block-start: -15px;
+  }
+
   &::before,
   &::after {
     @include mixin.pseudo(4px, 108px, var(--special-grey), initial);
@@ -63,6 +67,10 @@
 
     @include mixin.tablet {
       height: 236px;
+    }
+
+    @include mixin.desktop {
+      height: 238px;
     }
   }
 

@@ -33,6 +33,10 @@
     padding-inline: 0;
     margin-inline-start: 0;
   }
+
+  @include mixin.desktop {
+    margin-block-start: -6px;
+  }
 }
 
 .logo-header__text {
@@ -47,5 +51,11 @@
   @include mixin.tablet {
     position: static;
     transform: translate(0, 0);
+  }
+
+  @include mixin.desktop {
+    width: 118px;
+    height: 21px;
+    margin-block-start: -1px;
   }
 }

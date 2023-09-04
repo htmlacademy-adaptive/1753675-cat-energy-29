@@ -37,6 +37,7 @@
   @include mixin.desktop {
     max-width: 565px;
     padding-inline: 80px;
+    padding-block: 60px 58px;
     position: absolute;
     z-index: 1;
     top: 95px;
@@ -59,6 +60,10 @@
     font-size: 20px;
     line-height: 26px;
   }
+
+  @include mixin.desktop {
+    margin-block-start: 1px;
+  }
 }
 
 .contacts__address {
@@ -67,10 +72,14 @@
   font-style: normal;
 
   @include mixin.tablet {
-    max-width: 160px;
+    max-width: 157px;
     font-size: 16px;
     line-height: 20px;
     text-align: end;
+  }
+
+  @include mixin.desktop {
+    text-align: start;
   }
 }
 
@@ -79,5 +88,9 @@
 
   @include mixin.tablet {
     margin-block-start: 20px;
+  }
+
+  @include mixin.desktop {
+    margin-block-start: 19px;
   }
 }

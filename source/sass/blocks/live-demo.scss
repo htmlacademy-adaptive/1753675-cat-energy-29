@@ -10,7 +10,7 @@
   }
 
   @include mixin.desktop {
-    padding-block: 69px 75px;
+    padding-block: 61px 55px;
   }
 }
 
@@ -45,7 +45,7 @@
 
 .live-demo__decription {
   margin: 0;
-  margin-block-end: 20px;
+  margin-block-end: 27px;
 
   @include mixin.tablet {
     margin-block-end: 55px;
@@ -57,7 +57,7 @@
     grid-column: 1/2;
     grid-row: 2/3;
     max-width: 433px;
-    margin-block-end: 69px;
+    margin-block-end: 76px;
   }
 }
 
@@ -79,7 +79,7 @@
 
   @include mixin.desktop {
     column-gap: 42px;
-    margin-block-end: 60px;
+    margin-block-end: 46px;
   }
 }
 

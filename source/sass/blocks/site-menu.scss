@@ -40,6 +40,10 @@
     position: initial;
     transform: none;
   }
+
+  @include mixin.desktop {
+    min-width: 475px;
+  }
 }
 
 .site-menu__item {
@@ -80,6 +84,11 @@
   @include mixin.tablet {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  @include mixin.desktop {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 

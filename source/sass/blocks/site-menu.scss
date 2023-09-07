@@ -54,6 +54,11 @@
     @include mixin.tablet {
       @include mixin.pseudo(calc(100% - 20px), 2px, var(--accent-color), initial);
       margin-inline: auto;
+      margin-block-start: -4px;
+    }
+
+    @include mixin.desktop {
+      margin-block-start: 0;
     }
   }
 

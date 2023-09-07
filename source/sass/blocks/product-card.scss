@@ -4,8 +4,6 @@
   box-sizing: border-box;
 
   @include mixin.tablet {
-    display: flex;
-    align-items: flex-end;
     min-height: 511px;
   }
 }
@@ -63,9 +61,15 @@
   @include mixin.tablet {
     display: grid;
     row-gap: 10px;
-    padding-block: 12px 19px;
+    padding-block: 7px;
+    margin-block-end: 17px;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @include mixin.desktop {
+    padding-block: 10px;
+    margin-block-end: 20px;
   }
 }
 
@@ -100,6 +104,7 @@
     padding-block: 0 40px;
     padding-inline: 37px;
     background-color: var(--background-secondary);
+    margin-block-start: 81px;
   }
 
   @include mixin.desktop {
@@ -117,6 +122,9 @@
 
   @include mixin.desktop {
     justify-self: center;
+    max-width: 170px;
+    min-width: 169px;
+    margin-block-start: -9px;
   }
 }
 

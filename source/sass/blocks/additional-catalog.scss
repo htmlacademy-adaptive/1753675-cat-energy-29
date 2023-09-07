@@ -59,6 +59,10 @@
     padding-inline: 40px 40px;
     margin-inline-start: 0;
   }
+
+  @include mixin.desktop {
+    margin-inline-start: -40px;
+  }
 }
 
 .additional-catalog__products {

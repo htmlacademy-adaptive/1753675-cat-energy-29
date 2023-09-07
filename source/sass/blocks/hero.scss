@@ -167,7 +167,11 @@
   margin-inline: auto;
 
   @include mixin.tablet {
+    width: 244px;
     grid-row: 3/4;
     margin-inline: 0;
+    font-size: 20px;
+    line-height: 26px;
+    padding-block: 14px;
   }
 }

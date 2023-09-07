@@ -203,9 +203,13 @@
     @include mixin.pseudo(32px, 10px);
     background-image: url("../img/icons/sprite.svg#arrow-short");
     background-repeat: no-repeat;
-    right: 0;
+    right: 4px;
     top: 50%;
     transform: translateY(-50%);
+
+    @include mixin.tablet {
+      right: -5px;
+    }
   }
 
   @include mixin.tablet {

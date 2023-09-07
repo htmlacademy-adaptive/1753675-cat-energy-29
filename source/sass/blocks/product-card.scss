@@ -35,6 +35,7 @@
 .product-card__title {
   max-width: 60%;
   margin: 0;
+  margin-block-start: -1px;
   margin-block-end: 14px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -47,6 +48,7 @@
   @include mixin.tablet {
     max-width: 140px;
     margin-inline: auto;
+    margin-block-start: 3px;
     font-size: 20px;
     line-height: 24px;
     text-align: center;
@@ -61,7 +63,7 @@
   @include mixin.tablet {
     display: grid;
     row-gap: 10px;
-    padding-block: 20px 15px;
+    padding-block: 12px 19px;
     font-size: 16px;
     line-height: 20px;
   }
@@ -71,6 +73,11 @@
   display: block;
   width: 100%;
   object-fit: contain;
+  margin-block-start: -7px;
+
+  @include mixin.tablet {
+    margin-block-start: -12px;
+  }
 }
 
 .product-card__container {
@@ -81,7 +88,7 @@
   row-gap: 13px;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: min-content;
-  padding-block: 19px 25px;
+  padding-block: 22px 26px;
   padding-inline: 20px;
 
   @include mixin.tablet {

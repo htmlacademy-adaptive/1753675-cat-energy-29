@@ -1,11 +1,11 @@
 @use "../global/mixins" as mixin;
 
 .gift-offer {
-  padding-block: 35px;
+  padding-block: 33px;
   color: var(--basic-white);
 
   @include mixin.tablet {
-    padding-block: 75px 70px;
+    padding-block: 69px 70px;
   }
 
   @include mixin.desktop {
@@ -40,7 +40,7 @@
     flex-direction: row;
     min-height: 200px;
     padding-block: 57px;
-    padding-inline: 77px;
+    padding-inline: 79px 106px;
     background-image: url("../img/gift/gift-tablet.jpg");
 
     @include mixin.retina {

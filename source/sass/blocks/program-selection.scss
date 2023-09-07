@@ -5,7 +5,7 @@
   border-top: 1px solid var(--border-color-2);
 
   @include mixin.tablet {
-    padding-block: 65px 60px;
+    padding-block: 58px 60px;
     border-top: none;
   }
 
@@ -16,7 +16,11 @@
 
 .program-selection__container {
   @include mixin.tablet {
-    padding-inline: 70px;
+    padding-inline: 40px;
+  }
+
+  @include mixin.desktop {
+    padding-inline: 0;
   }
 }
 

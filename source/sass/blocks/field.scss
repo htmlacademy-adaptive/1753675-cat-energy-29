@@ -17,9 +17,8 @@
 
   &--email {
     &::after {
-      @include mixin.pseudo(20px, 20px);
+      @include mixin.pseudo(20px, 20px, var(--text-basic));
       right: 16px;
-      background-color: var(--text-basic);
       mask-image: url("../img/icons/sprite.svg#email");
     }
 
@@ -30,9 +29,8 @@
 
   &--phone {
     &::after {
-      @include mixin.pseudo(20px, 20px);
+      @include mixin.pseudo(20px, 20px, var(--text-basic));
       right: 16px;
-      background-color: var(--text-basic);
       mask-image: url("../img/icons/sprite.svg#phone");
     }
 
@@ -55,6 +53,11 @@
 
 .field__label {
   flex-shrink: 0;
+
+  @include mixin.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .field__input {
@@ -83,16 +86,6 @@
   @include mixin.tablet {
     font-size: 20px;
     max-height: 52px;
-  }
-}
-
-.form__wrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 14px;
-  column-gap: 80px;
-
-  @include mixin.desktop {
-    flex-direction: row;
+    padding-inline-start: 20px;
   }
 }

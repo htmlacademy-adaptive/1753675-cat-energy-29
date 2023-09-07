@@ -21,11 +21,12 @@
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  padding-block: 26px;
+  padding-block: 28px;
   padding-inline: 20px;
   background-color: var(--background-secondary);
 
   &--index {
+    padding-block: 26px;
     background-color: var(--basic-white);
   }
 

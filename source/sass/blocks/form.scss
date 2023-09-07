@@ -16,6 +16,7 @@
   }
 
   @include mixin.desktop {
+    grid-template-columns: repeat(2, minmax(570px, 1fr));
     grid-template-areas:
       "cat-data goal"
       "owner owner"
@@ -33,7 +34,7 @@
   flex-direction: column;
   row-gap: 14px;
   padding: 0;
-  padding-block-end: 24px;
+  padding-block-end: 20px;
   margin: 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -46,6 +47,7 @@
     @include mixin.tablet {
       grid-area: cat-data;
       padding-block-end: 7px;
+      row-gap: 19px;
     }
   }
 
@@ -63,6 +65,8 @@
       justify-content: center;
       margin-block-end: 0;
       margin-inline: 0;
+      padding-block: 23px 26px;
+      padding-inline: 26px;
       border: 1px solid var(--border-color-3);
     }
   }
@@ -75,24 +79,11 @@
   }
 
   &--additionals {
-    margin-block-end: 10px;
+    padding-block-end: 0;
 
     @include mixin.tablet {
       grid-area: add-goods;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      row-gap: 32px;
-      margin-block-end: 0;
-      padding-block-end: 0;
     }
-
-    @include mixin.desktop {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-
-  @include mixin.tablet {
-    font-size: 20px;
   }
 }
 
@@ -109,6 +100,10 @@
     right: 0;
     z-index: -1;
     margin-inline-start: -50%;
+
+    @include mixin.tablet {
+      top: 22px;
+    }
   }
 
   @include mixin.tablet {
@@ -116,11 +111,28 @@
   }
 }
 
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 14px;
+  column-gap: 80px;
+
+  @include mixin.tablet {
+    row-gap: 20px;
+  }
+
+  @include mixin.desktop {
+    display: grid;
+    grid-template-columns: 569px 572px;
+    column-gap: 80px;
+  }
+}
+
 .form__legend {
   max-width: 187px;
   padding-inline: 20px;
   margin: 0;
-  margin-block-end: 37px;
+  margin-block-end: 34px;
   margin-inline-start: -20px;
   font-family: "Oswald", sans-serif;
   font-size: 24px;
@@ -133,8 +145,15 @@
     max-width: max-content;
     padding-inline: 40px;
     margin-inline-start: -40px;
+    margin-block-end: 76px;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  &--additionals {
+    @include mixin.tablet {
+      margin-block-end: 54px;
+    }
   }
 }
 
@@ -147,10 +166,11 @@
 .form__text-input {
   box-sizing: border-box;
   width: 100%;
-  max-height: 150px;
-  padding-inline: 14px 14px;
+  min-height: 150px;
+  padding-inline: 14px;
   padding-block: 14px;
-  margin-block-end: 23px;
+  margin-block-start: 6px;
+  margin-block-end: 19px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -158,6 +178,7 @@
   text-transform: uppercase;
   color: var(--text-secondary);
   border: 1px solid var(--background-input);
+  resize: vertical;
 
   &:hover {
     border: 1px solid var(--border-color-1);
@@ -174,7 +195,17 @@
   }
 
   @include mixin.tablet {
+    margin-block-start: 11px;
     margin-block-end: 0;
+    padding-inline: 19px;
+    padding-block: 11px;
+    min-height: 175px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @include mixin.desktop {
+    padding-block: 5px;
   }
 }
 
@@ -182,20 +213,61 @@
   max-width: 175px;
   align-self: center;
   margin: 0;
+  margin-inline: auto;
   line-height: 16px;
   text-align: center;
   color: var(--text-basic);
+
+  @include mixin.tablet {
+    max-width: 180px;
+    align-self: flex-start;
+    margin-block-start: 3px;
+    margin-inline-start: 26px;
+    font-size: 16px;
+  }
+
+  @include mixin.desktop {
+    align-self: center;
+    margin-block-start: -6px;
+    margin-inline-start: -3px;
+  }
 }
 
 .form__button {
   margin-block-end: 21px;
 
   @include mixin.tablet {
+    width: 284px;
+    margin-block-start: -14px;
     margin-block-end: 0;
+    padding-block: 14px;
+    font-size: 20px;
+    line-height: 26px;
   }
 
   @include mixin.desktop {
-    width: 100%;
+    width: 570px;
+    margin-block-start: -4px;
+  }
+}
+
+.form__checkbox-group {
+  display: grid;
+  row-gap: 12px;
+  margin-block-end: 35px;
+
+  @include mixin.tablet {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 32px;
+    column-gap: 57px;
+    margin-block-end: 0;
+    padding-block-end: 0;
+    font-size: 20px;
+  }
+
+  @include mixin.desktop {
+    display: flex;
+    column-gap: 104px;
   }
 }
 
@@ -205,9 +277,19 @@
   align-items: center;
   flex-shrink: 0;
 
+  @include mixin.tablet {
+    font-size: 20px;
+    line-height: 20px;
+    column-gap: 20px;
+  }
+
   // Если .form__radio:disabled установить модификатор для отображения отключенного состояния
   &--disabled {
     opacity: 0.3;
+  }
+
+  &--checkbox {
+    min-width: 221px;
   }
 }
 
@@ -216,6 +298,11 @@
   position: relative;
   width: 30px;
   height: 30px;
+
+  @include mixin.tablet {
+    width: 40px;
+    height: 40px;
+  }
 
   &--radio {
     border-radius: 50%;
@@ -241,6 +328,11 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  @include mixin.tablet {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .form__checkbox:checked + .form__control::after {

@@ -108,32 +108,34 @@
                 <p class="form__legend">Комментарий</p>
               </div>
               <label class="visually-hidden" for="comment">Поле для комментария:</label>
-              <textarea class="form__text-input" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+              <textarea class="form__text-input" name="comment" id="comment" cols="30" rows="5" placeholder="Расскажите обо всех повАдках кота"></textarea>
             </div>
             <fieldset class="form__fieldset form__fieldset--additionals">
               <legend class="form__heading">
-                <span class="form__legend">Дополнительно</span>
+                <span class="form__legend form__legend--additionals">Дополнительно</span>
               </legend>
-                <label class="form__label">
+              <div class="form__checkbox-group">
+                <label class="form__label form__label--checkbox">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="sweetener" checked>
                   <span class="form__control form__control--checkbox"></span>
                   сахарозаменитель
                 </label>
-                <label class="form__label">
+                <label class="form__label form__label--checkbox">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="drinking-water">
                   <span class="form__control form__control--checkbox"></span>
                   питьевая вода
                 </label>
-                <label class="form__label">
+                <label class="form__label form__label--checkbox">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="milk">
                   <span class="form__control form__control--checkbox"></span>
                   молоко
                 </label>
-                <label class="form__label">
+                <label class="form__label form__label--checkbox">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="vitamins">
                   <span class="form__control form__control--checkbox"></span>
                   витамины
                 </label>
+              </div>
             </fieldset>
             <button class="form__button button button--primary" type="submit">отправить заявку</button>
             <p class="form__footnote">* — Обязательные поля</p>

@@ -44,6 +44,7 @@
   @include mixin.tablet {
     min-height: 429px;
     padding-block: 160px 40px;
+    padding-inline: 35px;
     border: 2px solid var(--background-secondary);
   }
 }
@@ -59,7 +60,7 @@
   color: var(--text-special);
 
   @include mixin.tablet {
-    max-width: 50%;
+    max-width: 70%;
     margin-block-end: 23px;
     font-size: 20px;
     line-height: 24px;
@@ -69,9 +70,11 @@
 .show-more__description {
   margin: 0;
   margin-block-end: 21px;
+  font-size: 12px;
+  line-height: 16px;
 
   @include mixin.tablet {
-    max-width: 65%;
+    max-width: 70%;
     font-size: 16px;
   }
 }

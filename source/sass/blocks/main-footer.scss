@@ -1,11 +1,11 @@
 @use "../global/mixins" as mixin;
 
 .main-footer {
-  padding-block: 30px 40px;
+  padding-block: 25px;
   background-color: var(--background-secondary);
 
   @include mixin.tablet {
-    padding-block: 45px 55px;
+    padding-block: 45px 41px;
   }
 
   @include mixin.desktop {

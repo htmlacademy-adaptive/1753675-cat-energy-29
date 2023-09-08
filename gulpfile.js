@@ -6,11 +6,13 @@ import autoprefixer from 'autoprefixer';
 import csso from "postcss-csso";
 import rename from "gulp-rename";
 import terser from "gulp-terser";
+import htmlmin from "gulp-htmlmin";
 import squoosh from "gulp-libsquoosh";
 import svgo from "gulp-svgmin";
 import { stacksvg } from "gulp-stacksvg";
 import del from "del";
 import browser from 'browser-sync';
+
 
 // Styles
 
@@ -31,6 +33,7 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
 }
 
@@ -62,7 +65,9 @@ const copyImages = () => {
 const createWebp = () => {
   return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png'])
   .pipe(squoosh({
-    webp: {}
+    webp: {
+      quality: 80,
+    }
   }))
   .pipe(gulp.dest('build/img'))
 }
@@ -72,7 +77,9 @@ const createWebp = () => {
 const createAvif = () => {
   return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png'])
   .pipe(squoosh({
-    avif: {}
+    avif: {
+      cqLevel: 10,
+    }
   }))
   .pipe(gulp.dest('build/img'))
 }

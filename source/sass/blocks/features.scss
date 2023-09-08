@@ -17,7 +17,7 @@
 .features__title {
   margin: 0;
   margin-block-end: 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
@@ -105,7 +105,7 @@
     @include mixin.tablet {
       @include mixin.pseudo(136px, 280px);
       content: counter(numbering);
-      font-family: "Oswald", sans-serif;
+      font-family: "Oswald", "Arial", "Helvetica", sans-serif;
       font-size: 280px;
       font-weight: 400;
       line-height: 280px;

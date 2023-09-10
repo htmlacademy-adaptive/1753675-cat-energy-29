@@ -150,6 +150,10 @@
     line-height: 36px;
   }
 
+  @include mixin.desktop {
+    max-width: 40%;
+  }
+
   &--additionals {
     @include mixin.tablet {
       margin-block-end: 54px;
@@ -267,6 +271,7 @@
 
   @include mixin.desktop {
     display: flex;
+    flex-wrap: wrap;
     column-gap: 104px;
   }
 }
@@ -290,6 +295,7 @@
 
   &--checkbox {
     min-width: 221px;
+    max-width: 225px;
   }
 }
 
@@ -298,6 +304,7 @@
   position: relative;
   width: 30px;
   height: 30px;
+  flex-shrink: 0;
 
   @include mixin.tablet {
     width: 40px;

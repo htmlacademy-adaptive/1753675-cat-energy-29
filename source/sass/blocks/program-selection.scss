@@ -34,9 +34,14 @@
   color: var(--text-products);
 
   @include mixin.tablet {
+    max-width: 90%;
     font-size: 60px;
     line-height: 60px;
     margin-block-end: 54px;
+  }
+
+  @include mixin.desktop {
+    max-width: 80%;
   }
 }
 

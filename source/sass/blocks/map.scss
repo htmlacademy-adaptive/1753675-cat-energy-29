@@ -6,11 +6,11 @@
   background-color: var(--background-ternary);
 
   @include mixin.tablet {
-    height: 400px;
+    min-height: 400px;
   }
 
   @include mixin.desktop {
-    height: 400px;
+    height: 100%;
   }
 }
 

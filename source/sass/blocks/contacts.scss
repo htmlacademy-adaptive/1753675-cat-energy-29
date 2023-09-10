@@ -2,6 +2,12 @@
 
 .contacts {
   position: relative;
+
+  @include mixin.desktop {
+    display: grid;
+    align-items: start;
+    justify-items: start;
+  }
 }
 
 .contacts__container {
@@ -12,6 +18,10 @@
   }
 
   @include mixin.desktop {
+    grid-row: 1/1;
+    grid-column: 1/1;
+    z-index: 1;
+    margin-block: 95px;
     margin-inline: auto;
   }
 }
@@ -39,9 +49,6 @@
     max-width: 565px;
     padding-inline: 80px;
     padding-block: 60px 58px;
-    position: absolute;
-    z-index: 1;
-    top: 95px;
     background-color: var(--basic-white);
   }
 }
@@ -94,4 +101,9 @@
   @include mixin.desktop {
     margin-block-start: 19px;
   }
+}
+
+.contacts__map {
+  grid-row: 1/1;
+  grid-column: 1/1;
 }

@@ -126,6 +126,7 @@
 }
 
 .hero__product {
+  width: 100%;
   grid-row: 3/4;
   grid-column: 1/2;
   margin-inline: auto;
@@ -148,15 +149,17 @@
 
 .hero__product-image {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   object-fit: contain;
 
   @include mixin.tablet {
+    width: 709px;
     margin-block-start: -29px;
   }
 
   @include mixin.desktop {
+    width: 552px;
     margin-block-start: 0;
     margin-inline-start: 27px;
   }

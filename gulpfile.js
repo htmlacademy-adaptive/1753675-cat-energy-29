@@ -6,11 +6,14 @@ import autoprefixer from 'autoprefixer';
 import csso from "postcss-csso";
 import rename from "gulp-rename";
 import terser from "gulp-terser";
+import htmlmin from "gulp-htmlmin";
 import squoosh from "gulp-libsquoosh";
+import gulpAvif from "gulp-avif";
 import svgo from "gulp-svgmin";
 import { stacksvg } from "gulp-stacksvg";
 import del from "del";
 import browser from 'browser-sync';
+
 
 // Styles
 
@@ -31,6 +34,7 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
+  .pipe(htmlmin({ collapseWhitespace: true }))
   .pipe(gulp.dest('build'));
 }
 
@@ -39,6 +43,12 @@ const html = () => {
 const scripts = () => {
   return gulp.src('source/js/*.js')
   .pipe(terser())
+  .pipe(rename(
+    function(path) {
+      path.basename += '.min';
+      path.extname = '.js';
+    }
+  ))
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
 }
@@ -59,9 +69,11 @@ const copyImages = () => {
 // Webp
 
 const createWebp = () => {
-  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png'])
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png', '!source/img/backgrounds/**/*.jpg'])
   .pipe(squoosh({
-    webp: {}
+    webp: {
+      quality: 80,
+    }
   }))
   .pipe(gulp.dest('build/img'))
 }
@@ -69,10 +81,8 @@ const createWebp = () => {
 // Avif
 
 const createAvif = () => {
-  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png'])
-  .pipe(squoosh({
-    avif: {}
-  }))
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png', '!source/img/backgrounds/**/*.jpg'])
+  .pipe(gulpAvif())
   .pipe(gulp.dest('build/img'))
 }
 

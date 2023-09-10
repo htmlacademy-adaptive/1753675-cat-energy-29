@@ -2,7 +2,6 @@
 
 .developer {
   position: relative;
-  padding-block-start: 10px;
 }
 
 .developer__link {
@@ -18,16 +17,22 @@
   @include mixin.tablet {
     column-gap: 23px;
     justify-content: stretch;
+    max-width: 170px;
+    line-height: 20px;
+    padding-inline-end: 0;
+    margin-block-start: -8px;
   }
 
   &::after {
     @include mixin.pseudo(27px, 34px, var(--slider-control), initial);
     mask: url("../img/icons/sprite.svg#htmlacademy") no-repeat center;
-    margin-inline-end: -50px;
+    margin-inline-end: -55px;
+    margin-block-start: -3px;
     transition: background-color 0.5s;
 
     @include mixin.tablet {
       margin-inline-end: 0;
+      margin-block-start: -6px;
     }
   }
 

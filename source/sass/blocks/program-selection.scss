@@ -5,7 +5,7 @@
   border-top: 1px solid var(--border-color-2);
 
   @include mixin.tablet {
-    padding-block: 65px 60px;
+    padding-block: 58px 60px;
     border-top: none;
   }
 
@@ -16,23 +16,32 @@
 
 .program-selection__container {
   @include mixin.tablet {
-    padding-inline: 70px;
+    padding-inline: 40px;
+  }
+
+  @include mixin.desktop {
+    padding-inline: 0;
   }
 }
 
 .program-selection__title {
   margin: 0;
   margin-block-end: 37px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
   color: var(--text-products);
 
   @include mixin.tablet {
+    max-width: 90%;
     font-size: 60px;
     line-height: 60px;
     margin-block-end: 54px;
+  }
+
+  @include mixin.desktop {
+    max-width: 80%;
   }
 }
 
@@ -40,7 +49,7 @@
   max-width: 250px;
   margin: 0;
   margin-block-end: 39px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-weight: 400;
   text-transform: uppercase;
   color: var(--text-basic);

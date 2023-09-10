@@ -4,7 +4,7 @@
   padding-block: 20px 49px;
 
   @include mixin.tablet {
-    padding-block: 45px 47px;
+    padding-block: 42px 47px;
     border-bottom: 1px solid var(--border-color-2);
   }
 
@@ -17,19 +17,20 @@
 .features__title {
   margin: 0;
   margin-block-end: 40px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
   color: var(--text-basic);
 
   @include mixin.tablet {
+    max-width: 65%;
     font-size: 60px;
     line-height: 60px;
   }
 
   @include mixin.desktop {
-    margin-block-end: 32px;
+    margin-block-end: 40px;
   }
 }
 
@@ -43,15 +44,15 @@
   margin: 0;
 
   @include mixin.tablet {
-    flex-direction: row;
-    row-gap: 37px;
-    column-gap: 137px;
     counter-reset: numbering 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, max-content));
+    row-gap: 37px;
+    column-gap: 134px;
   }
 
-  @include mixin.tablet {
-    column-gap: 95px;
-    justify-content: space-between;
+  @include mixin.desktop {
+    column-gap: 79px;
   }
 }
 
@@ -73,43 +74,55 @@
       grid-column: 1 / 2;
       width: 80px;
       height: 80px;
-      margin-block-start: 40px;
+      margin-block-start: 32px;
     }
   }
 
   &--icon-leaf::before {
     background-image: url("../img/icons/sprite.svg#icon-leaf");
     background-size: 30px 32px;
+    background-position: 48% 52%;
   }
 
   &--icon-mixture::before {
     background-image: url("../img/icons/sprite.svg#icon-mixture");
     background-size: 27px 29px;
+    background-position: 50% 50%;
   }
 
   &--icon--cutlery::before {
     background-image: url("../img/icons/sprite.svg#icon-cutlery");
     background-size: 26px 30px;
+    background-position: 50% 50%;
   }
 
   &--icon-scales::before {
     background-image: url("../img/icons/sprite.svg#icon-scales");
     background-size: 27px 31px;
+    background-position: 50% 48%;
   }
 
   &::after {
     @include mixin.tablet {
-      @include mixin.pseudo(136px, 280px);
-      content: counter(numbering);
-      font-family: "Oswald", sans-serif;
+      @include mixin.pseudo(auto, 280px, transparent, absolute, counter(numbering));
+      // content: counter(numbering);
+      font-family: "Oswald", "Arial", "Helvetica", sans-serif;
       font-size: 280px;
       font-weight: 400;
       line-height: 280px;
       color: var(--background-secondary);
       z-index: -1;
-      top: 0;
-      right: 0;
+      top: -7px;
+      right: 1px;
     }
+
+    @include mixin.desktop {
+      right: -4px;
+    }
+  }
+
+  &:first-child::after {
+    right: 21px;
   }
 
   @include mixin.tablet {
@@ -121,10 +134,6 @@
     min-height: 280px;
     padding-inline-start: 0;
     counter-increment: numbering 1;
-  }
-
-  @include mixin.desktop {
-    max-width: 230px;
   }
 }
 

@@ -11,7 +11,7 @@
     min-height: 302px;
     grid-row: 1/4;
     grid-column: 1/2;
-    background-image: url("../img/hero/hero-bg-mobile.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
+    background-image: url("../img/backgrounds/hero/hero-bg-mobile.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -21,25 +21,24 @@
     }
 
     @include mixin.retina {
-      background-image: url("../img/hero/hero-bg-mobile@2x.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
+      background-image: url("../img/backgrounds/hero/hero-bg-mobile@2x.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
     }
   }
 
   @include mixin.tablet {
     background: var(--basic-white);
-    padding-block-start: 65px;
   }
 
   @include mixin.desktop {
-    min-height: 720px;
+    min-height: 694px;
     padding-block-start: 114px;
-    background-image: url("../img/hero/hero-bg-desktop.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
+    background-image: url("../img/backgrounds/hero/hero-bg-desktop.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: contain, 100%;
 
     @include mixin.retina {
-      background-image: url("../img/hero/hero-bg-desktop@2x.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
+      background-image: url("../img/backgrounds/hero/hero-bg-desktop@2x.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
     }
   }
 }
@@ -52,13 +51,14 @@
 
   @include mixin.tablet {
     justify-content: start;
+    padding-block-start: 30px;
     padding-inline-start: 90px;
   }
 
-  @include mixin.tablet {
+  @include mixin.desktop {
     grid-template-columns: max-content 1fr;
     grid-auto-rows: min-content;
-    padding-block-start: 32px;
+    padding-inline-start: 80px;
   }
 }
 
@@ -69,7 +69,7 @@
   margin: 0;
   margin-block: 27px 25px;
   margin-inline: auto;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -88,7 +88,7 @@
 
   @include mixin.desktop {
     max-width: 500px;
-    margin-block: 78px 40px;
+    margin-block: 81px 40px;
     z-index: 1;
   }
 }
@@ -100,7 +100,7 @@
   margin: 0;
   margin-block-end: 29px;
   margin-inline: auto;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 14px;
   line-height: 14px;
   font-weight: 400;
@@ -126,6 +126,7 @@
 }
 
 .hero__product {
+  width: 100%;
   grid-row: 3/4;
   grid-column: 1/2;
   margin-inline: auto;
@@ -148,8 +149,20 @@
 
 .hero__product-image {
   display: block;
-  width: 100%;
+  max-width: 100%;
   height: auto;
+  object-fit: contain;
+
+  @include mixin.tablet {
+    width: 709px;
+    margin-block-start: -29px;
+  }
+
+  @include mixin.desktop {
+    width: 552px;
+    margin-block-start: 0;
+    margin-inline-start: 27px;
+  }
 }
 
 .hero__button {
@@ -158,7 +171,11 @@
   margin-inline: auto;
 
   @include mixin.tablet {
+    width: 244px;
     grid-row: 3/4;
     margin-inline: 0;
+    font-size: 20px;
+    line-height: 26px;
+    padding-block: 14px;
   }
 }

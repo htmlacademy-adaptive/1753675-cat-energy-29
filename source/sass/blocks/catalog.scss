@@ -6,7 +6,7 @@
   border-bottom: 1px solid var(--border-color-2);
 
   @include mixin.tablet {
-    padding-block: 65px 70px;
+    padding-block: 57px 70px;
     border: none;
   }
 
@@ -18,7 +18,7 @@
 .catalog__title {
   margin: 0;
   margin-block-end: 41px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 36px;
   line-height: 36px;
   font-weight: 400;
@@ -33,9 +33,6 @@
 
 .catalog__products {
   display: grid;
-  list-style: none;
-  padding: 0;
-  margin: 0;
   margin-inline: -20px;
   border-top: 1px solid var(--border-color-2);
 

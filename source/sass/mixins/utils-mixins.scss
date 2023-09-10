@@ -1,6 +1,6 @@
 // Псевдоэлементы
-@mixin pseudo($width: 0, $height: 0, $color: transparent, $position: absolute) {
-  content: "";
+@mixin pseudo($width: 0, $height: 0, $color: transparent, $position: absolute, $content: "") {
+  content: $content;
   display: block;
   position: $position;
   width: $width;

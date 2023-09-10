@@ -4,7 +4,7 @@
   box-sizing: border-box;
 
   @include mixin.tablet {
-    padding-block-start: 25px;
+    padding-block-start: 18px;
   }
 
   @include mixin.desktop {
@@ -13,6 +13,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 3;
     background-color: transparent;
   }
 }
@@ -23,7 +24,7 @@
   @include mixin.tablet {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -36,6 +37,10 @@
   position: relative;
   z-index: 3;
   background-color: var(--basic-white);
+
+  @include mixin.tablet {
+    padding-inline: 0;
+  }
 
   @include mixin.desktop {
     background-color: transparent;

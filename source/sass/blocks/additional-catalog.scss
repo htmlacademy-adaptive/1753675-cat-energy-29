@@ -1,7 +1,7 @@
 @use "../global/mixins" as mixin;
 
 .additional-catalog {
-  padding-block-start: 25px;
+  padding-block-start: 23px;
 
   @include mixin.tablet {
     padding-block-start: 0;
@@ -28,11 +28,15 @@
 
   &::before {
     @include mixin.pseudo(200%, 2px, var(--accent-color));
-    top: 16px;
+    top: 15px;
     left: 0;
     right: 0;
     z-index: -1;
     margin-inline-start: -50%;
+
+    @include mixin.tablet {
+      top: 22px;
+    }
   }
 }
 
@@ -41,7 +45,7 @@
   margin-block-end: 36px;
   margin-inline-start: -20px;
   padding-inline: 20px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -49,9 +53,16 @@
   background-color: var(--basic-white);
 
   @include mixin.tablet {
+    max-width: 50%;
     margin-block-end: 80px;
     font-size: 36px;
     line-height: 36px;
+    padding-inline: 40px 40px;
+    margin-inline-start: 0;
+  }
+
+  @include mixin.desktop {
+    margin-inline-start: -40px;
   }
 }
 

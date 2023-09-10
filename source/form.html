@@ -3,7 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2" crossorigin>
+    <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2" crossorigin>
+    <link rel="preload" as="script" href="js/script.min.js">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml">
+    <link rel="manifest" href="manifest.webmanifest">
     <title>Cat Energy | Подбор программы</title>
   </head>
   <body class="page__body">
@@ -34,10 +41,10 @@
               <a class="site-menu__link" href="index.html">Главная</a>
             </li>
             <li class="site-menu__item">
-              <a class="site-menu__link" href="catalog.html">каталог продукции</a>
+              <a class="site-menu__link" href="catalog.html">каталог&nbsp;продукции</a>
             </li>
             <li class="site-menu__item site-menu__item--current">
-              <a class="site-menu__link">подбор программы</a>
+              <a class="site-menu__link">подбор&nbsp;программы</a>
             </li>
           </ul>
         </nav>
@@ -52,15 +59,15 @@
             <fieldset class="form__fieldset form__fieldset--cat-data">
               <legend class="visually-hidden">Данные вашего кота.</legend>
               <div class="form__field field">
-                <label class="field__label" for="cat-name">ИМЯ:*</label>
+                <label class="field__label field__label--text-input" for="cat-name">ИМЯ:*</label>
                 <input class="field__input" type="text" name="cat-name" id="cat-name" placeholder="Укажите имя кота" value="Барсик" required>
               </div>
               <div class="form__field field">
-                <label class="field__label" for="cat-weight">Вес (кг):*</label>
+                <label class="field__label field__label--text-input" for="cat-weight">Вес (кг):*</label>
                 <input class="field__input" type="text" name="cat-weight" id="cat-weight" placeholder="Укажите вес кота" value="7" required>
               </div>
               <div class="form__field field">
-                <label class="field__label" for="cat-age">Возраст (лет):</label>
+                <label class="field__label field__label--text-input" for="cat-age">Возраст (лет):</label>
                 <input class="field__input" type="text" name="cat-age" id="cat-age" placeholder="Укажите возраст кота" value="7">
               </div>
             </fieldset>
@@ -93,12 +100,12 @@
                 <span class="form__legend">Контактные данные (владельца кота)</span>
               </legend>
               <div class="form__wrapper">
-                <div class="form__field field">
-                  <label class="field__label" for="email">E-mail:*</label>
-                  <input class="field__input" type="email" name="email" id="email" placeholder="Укажите эл.почту" value="kuklachev@gmail.com" required>
+                <div class="form__field field field--email">
+                  <label class="field__label field__label--text-input" for="email">E-mail:*</label>
+                  <input class="field__input field__input--email" type="email" name="email" id="email" placeholder="Укажите эл.почту" value="kuklachev@gmail.com" required>
                 </div>
-                <div class="form__field field">
-                  <label class="field__label" for="phone-number">Телефон:*</label>
+                <div class="form__field field field--phone">
+                  <label class="field__label field__label--text-input" for="phone-number">Телефон:*</label>
                   <input class="field__input" type="tel" name="phone-number" id="phone-number" placeholder="Укажите номер" value="8 (960) 900-60-90" required>
                 </div>
               </div>
@@ -108,32 +115,34 @@
                 <p class="form__legend">Комментарий</p>
               </div>
               <label class="visually-hidden" for="comment">Поле для комментария:</label>
-              <textarea class="form__text-input" name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повАдках кота"></textarea>
+              <textarea class="form__text-input" name="comment" id="comment" cols="30" rows="5" placeholder="Расскажите обо всех повАдках кота"></textarea>
             </div>
             <fieldset class="form__fieldset form__fieldset--additionals">
               <legend class="form__heading">
-                <span class="form__legend">Дополнительно</span>
+                <span class="form__legend form__legend--additionals">Дополнительно</span>
               </legend>
-                <label class="form__label">
+              <div class="form__checkbox-group">
+                <label class="form__label form__label--checkbox">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="sweetener" checked>
                   <span class="form__control form__control--checkbox"></span>
                   сахарозаменитель
                 </label>
-                <label class="form__label">
+                <label class="form__label form__label--checkbox">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="drinking-water">
                   <span class="form__control form__control--checkbox"></span>
                   питьевая вода
                 </label>
-                <label class="form__label">
+                <label class="form__label form__label--checkbox">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="milk">
                   <span class="form__control form__control--checkbox"></span>
                   молоко
                 </label>
-                <label class="form__label">
+                <label class="form__label form__label--checkbox">
                   <input class="form__checkbox visually-hidden" type="checkbox" name="vitamins">
                   <span class="form__control form__control--checkbox"></span>
                   витамины
                 </label>
+              </div>
             </fieldset>
             <button class="form__button button button--primary" type="submit">отправить заявку</button>
             <p class="form__footnote">* — Обязательные поля</p>
@@ -144,7 +153,7 @@
         <h2 class="visually-hidden">Наши контакты.</h2>
         <div class="contacts__container container">
           <div class="contacts__wrapper">
-            <p class="contacts__description">приглашаем к сотрудничеству дилеров!</p>
+            <p class="contacts__description">приглашаем к&nbsp;сотрудничеству дилеров!</p>
             <address class="contacts__address">
               <span class="visually-hidden">Мы находимся по адресу.</span>
               ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span>
@@ -152,7 +161,18 @@
           </div>
         </div>
         <div class="contacts__map map">
-          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ca1fbac90ef6eb74745daca236be20b5f34b179a218395c70be810c513801&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+          <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ca1fbac90ef6eb74745daca236be20b5f34b179a218395c70be810c513801&amp;source=constructor"  height="400" title="Карта с локацией Cat Energy на пересечении ул. Большая Конюшенная и Волынский пер."></iframe>
+          <picture>
+            <source type="image/avif" media="(min-width: 1200px)" srcset="img/map/map-desktop.avif 1x, img/map/map-desktop@2x.avif 2x" width="1440" height="400">
+            <source type="image/avif" media="(min-width: 768px)" srcset="img/map/map-tablet.avif 1x, img/map/map-tablet@2x.avif 2x" width="768" height="400">
+            <source type="image/avif" srcset="img/map/map-mobile.avif 1x, img/map/map-mobile@2x.avif 2x" width="320" height="362">
+            <source type="image/webp" media="(min-width: 1200px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x" width="1440" height="400">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x" width="768" height="400">
+            <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x" width="320" height="362">
+            <source media="(min-width: 1200px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x" width="1440" height="400">
+            <source media="(min-width: 768px)" srcset="img/map/map-tablet.png 1x, img/map/map-tablet@2x.png 2x" width="768" height="400">
+            <img class="map__fallback-img" src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" width="320" height="362" alt="Карта с локацией Cat Energy на пересечении ул. Большая Конюшенная и Волынский пер.">
+          </picture>
         </div>
     </section>
   </main>
@@ -189,6 +209,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
   </body>
 </html>

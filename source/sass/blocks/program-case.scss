@@ -16,15 +16,15 @@
     @include mixin.pseudo(50px, 50px, var(--accent-color), initial);
     grid-column: 1/2;
     grid-row: 1/2;
+    margin-block-start: 2px;
     border-radius: 50%;
-    background-repeat: no-repeat;
-    background-size: contain;
 
     @include mixin.tablet {
       grid-column: 2/3;
       grid-row: 1/4;
       width: 200px;
       height: 200px;
+      margin-block-start: 17px;
     }
 
     @include mixin.desktop {
@@ -32,6 +32,7 @@
       grid-row: 1/2;
       width: 100px;
       height: 100px;
+      margin-block-start: 12px;
     }
   }
 
@@ -43,6 +44,7 @@
     position: initial;
     background-repeat: no-repeat;
     background-size: contain;
+    align-self: start;
 
     @include mixin.tablet {
       grid-column: 2/3;
@@ -57,7 +59,6 @@
 
   &--slim::after {
     @include mixin.pseudo(36px, 50px);
-    margin-block-start: -3px;
     background-image: url("../img/icons/sprite.svg#cat-slim");
     background-size: contain;
     background-repeat: no-repeat;
@@ -66,19 +67,18 @@
     @include mixin.tablet {
       width: 140px;
       height: 194px;
-      margin-block-start: -60px;
+      margin-block-start: 6px;
     }
 
     @include mixin.desktop {
       width: 70px;
       height: 97px;
-      margin-block-start: 0;
     }
   }
 
   &--pro::after {
     @include mixin.pseudo(67px, 28px);
-    margin-inline-start: -5px;
+    margin-block-start: 14px;
     background-image: url("../img/icons/sprite.svg#cat-mass");
     background-size: contain;
     background-repeat: no-repeat;
@@ -87,38 +87,38 @@
     @include mixin.tablet {
       width: 268px;
       height: 112px;
-      margin-block-start: -20px;
+      margin-block-start: 60px;
     }
 
     @include mixin.desktop {
       width: 134px;
       height: 56px;
-      margin-block-start: 0;
+      margin-inline-start: -4px;
+      margin-block-start: 32px;
     }
   }
 
   @include mixin.tablet {
     grid-template-columns: 1fr max-content;
-    padding-block: 77px 53px;
+    padding-block: 72px 53px;
     padding-inline: 52px 63px;
   }
 
   @include mixin.desktop {
     grid-template-columns: max-content 1fr;
     justify-items: start;
-    flex-basis: 570px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    padding-block: 41px 53px;
+    padding-block: 35px 52px;
     padding-inline: 52px 61px;
   }
 }
 
 .program-case__title {
   grid-column: 2/3;
+  align-self: center;
   margin: 0;
   margin-inline-start: 20px;
-  font-family: "Oswald", sans-serif;
+  margin-block-start: 3px;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
@@ -137,6 +137,7 @@
     grid-column: 2/3;
     align-self: center;
     margin-inline-start: 62px;
+    margin-block-start: 8px;
   }
 }
 
@@ -159,17 +160,17 @@
   @include mixin.desktop {
     grid-column: 1/-1;
     max-width: 100%;
-    padding-block: 39px 25px;
+    padding-block: 39px 18px;
   }
 }
 
 .program-case__link {
   grid-column: 1/-1;
   display: inline-block;
-  margin-block-start: 11px;
+  margin-block-start: 8px;
   padding-block: 10px;
   padding-inline-end: 47px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -198,15 +199,19 @@
     @include mixin.pseudo(32px, 10px);
     background-image: url("../img/icons/sprite.svg#arrow-short");
     background-repeat: no-repeat;
-    right: 0;
+    right: 4px;
     top: 50%;
     transform: translateY(-50%);
+
+    @include mixin.tablet {
+      right: -5px;
+    }
   }
 
   @include mixin.tablet {
     grid-column: 1/2;
     grid-row: 3/4;
-    margin-block-start: 0;
+    margin-block-start: 2px;
     font-size: 20px;
     line-height: 24px;
   }

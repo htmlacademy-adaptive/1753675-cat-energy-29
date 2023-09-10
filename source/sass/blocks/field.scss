@@ -5,6 +5,7 @@
   align-items: center;
   column-gap: 13px;
   max-width: 280px;
+  position: relative;
 
   @include mixin.tablet {
     max-width: 100%;
@@ -13,10 +14,54 @@
   @include mixin.desktop {
     flex-grow: 1;
   }
+
+  &--email {
+    &::after {
+      @include mixin.pseudo(20px, 20px, var(--text-basic));
+      right: 16px;
+      mask-image: url("../img/icons/sprite.svg#email");
+    }
+
+    &:focus-within::after {
+      background-color: var(--accent-color);
+    }
+  }
+
+  &--phone {
+    &::after {
+      @include mixin.pseudo(20px, 20px, var(--text-basic));
+      right: 16px;
+      mask-image: url("../img/icons/sprite.svg#phone");
+    }
+
+    &:focus-within::after {
+      background-color: var(--accent-color);
+    }
+  }
+
+  // Модификатор отображающий состояние ошибки
+  &--error {
+    .field__input {
+      border: 2px solid var(--status-error);
+    }
+
+    &::after {
+      background-color: var(--status-error);
+    }
+  }
 }
 
 .field__label {
   flex-shrink: 0;
+
+  @include mixin.tablet {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  &--text-input {
+    max-width: 35%;
+  }
 }
 
 .field__input {
@@ -24,8 +69,8 @@
   width: 100%;
   flex-grow: 1;
   padding-block: 13px;
-  padding-inline-start: 15px;
-  font-family: "Oswald", sans-serif;
+  padding-inline: 15px 40px;
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 18px;
   font-weight: 400;
@@ -38,28 +83,12 @@
   }
 
   &:focus {
-    outline: none;
-    border: 2px solid var(--text-secondary);
-  }
-
-  // Модификатор отображающий состояние ошибки
-  &--error {
-    border: 2px solid var(--status-error);
+    outline: 2px solid var(--text-secondary);
   }
 
   @include mixin.tablet {
     font-size: 20px;
     max-height: 52px;
-  }
-}
-
-.form__wrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 14px;
-  column-gap: 80px;
-
-  @include mixin.desktop {
-    flex-direction: row;
+    padding-inline-start: 20px;
   }
 }

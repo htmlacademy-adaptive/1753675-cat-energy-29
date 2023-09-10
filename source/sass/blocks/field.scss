@@ -83,8 +83,7 @@
   }
 
   &:focus {
-    outline: none;
-    border: 2px solid var(--text-secondary);
+    outline: 2px solid var(--text-secondary);
   }
 
   @include mixin.tablet {

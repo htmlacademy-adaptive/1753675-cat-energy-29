@@ -104,8 +104,8 @@
 
   &::after {
     @include mixin.tablet {
-      @include mixin.pseudo(auto, 280px);
-      content: counter(numbering);
+      @include mixin.pseudo(auto, 280px, transparent, absolute, counter(numbering));
+      // content: counter(numbering);
       font-family: "Oswald", "Arial", "Helvetica", sans-serif;
       font-size: 280px;
       font-weight: 400;

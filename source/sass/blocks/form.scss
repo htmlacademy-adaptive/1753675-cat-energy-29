@@ -189,8 +189,7 @@
   }
 
   &:focus {
-    outline: none;
-    border: 2px solid var(--text-secondary);
+    outline: 2px solid var(--text-secondary);
   }
 
   // Модификатор отображающий состояние ошибки
@@ -281,6 +280,7 @@
   column-gap: 15px;
   align-items: center;
   flex-shrink: 0;
+  cursor: pointer;
 
   @include mixin.tablet {
     font-size: 20px;

@@ -3,6 +3,7 @@
 .logo-header {
   display: block;
   transition: opacity 0.3s;
+  contain: content;
 
   @include mixin.tablet {
     display: flex;

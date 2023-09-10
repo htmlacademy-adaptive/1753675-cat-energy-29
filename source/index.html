@@ -6,7 +6,6 @@
     <link rel="preload" as="font" href="fonts/oswald/oswaldregular.woff2" crossorigin>
     <link rel="preload" as="font" href="fonts/lato/Lato-Regular.woff2" crossorigin>
     <link rel="preload" as="script" href="js/script.min.js">
-    <link rel="preload" as="image" href="/img/hero/hero-bg-mobile.jpg">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
     <link rel="icon" href="favicon.ico" sizes="any">
@@ -61,6 +60,7 @@
               <source type="image/avif" media="(min-width: 1200px)" srcset="img/hero/hero-product-desktop.avif 1x, img/hero/hero-product-desktop@2x.avif 2x">
               <source type="image/avif" media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.avif 1x, img/hero/hero-product-tablet@2x.avif 2x">
               <source type="image/avif" srcset="img/hero/hero-product-mobile.avif 1x, img/hero/hero-product-mobile@2x.avif 2x">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/hero/hero-product-desktop.webp 1x, img/hero/hero-product-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/hero/hero-product-tablet.webp 1x, img/hero/hero-product-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/hero/hero-product-mobile.webp 1x, img/hero/hero-product-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/hero/hero-product-desktop.png 1x, img/hero/hero-product-desktop@2x.png 2x" width="552" height="499">
@@ -169,9 +169,15 @@
           <div class="contacts__map map">
             <iframe class="map__iframe" src="https://yandex.ru/map-widget/v1/?um=constructor%3A287ca1fbac90ef6eb74745daca236be20b5f34b179a218395c70be810c513801&amp;source=constructor" width="100%" height="400" frameborder="0" title="Карта с локацией Cat Energy на пересечении ул. Большая Конюшенная и Волынский пер."></iframe>
             <picture>
-              <source media="(min-width: 1200px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2.png 2x" width="1440" height="400">
-              <source media="(min-width: 768px)" srcset="img/map/map-tablet.png 1x, img/map/map-tablet@2.png 2x" width="768" height="400">
-              <img class="map__fallback-img" src="img/map/map-mobile.png" srcset="img/map/map-mobile@2.png 2x" width="320" height="362" alt="Карта с локацией Cat Energy на пересечении ул. Большая Конюшенная и Волынский пер.">
+              <source type="image/avif" media="(min-width: 1200px)" srcset="img/map/map-desktop.avif 1x, img/map/map-desktop@2x.avif 2x" width="1440" height="400">
+              <source type="image/avif" media="(min-width: 768px)" srcset="img/map/map-tablet.avif 1x, img/map/map-tablet@2x.avif 2x" width="768" height="400">
+              <source type="image/avif" srcset="img/map/map-mobile.avif 1x, img/map/map-mobile@2x.avif 2x" width="320" height="362">
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x" width="1440" height="400">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x" width="768" height="400">
+              <source type="image/webp" srcset="img/map/map-mobile.webp 1x, img/map/map-mobile@2x.webp 2x" width="320" height="362">
+              <source media="(min-width: 1200px)" srcset="img/map/map-desktop.png 1x, img/map/map-desktop@2x.png 2x" width="1440" height="400">
+              <source media="(min-width: 768px)" srcset="img/map/map-tablet.png 1x, img/map/map-tablet@2x.png 2x" width="768" height="400">
+              <img class="map__fallback-img" src="img/map/map-mobile.png" srcset="img/map/map-mobile@2x.png 2x" width="320" height="362" alt="Карта с локацией Cat Energy на пересечении ул. Большая Конюшенная и Волынский пер.">
             </picture>
           </div>
       </section>
@@ -210,5 +216,6 @@
       </div>
     </footer>
     <script src="js/script.min.js"></script>
+    <script src="js/slider.min.js"></script>
   </body>
 </html>

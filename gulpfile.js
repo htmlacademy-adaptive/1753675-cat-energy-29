@@ -40,9 +40,14 @@ const html = () => {
 // JS
 
 const scripts = () => {
-  return gulp.src('source/js/script.js')
+  return gulp.src('source/js/*.js')
   .pipe(terser())
-  .pipe(rename('script.min.js'))
+  .pipe(rename(
+    function(path) {
+      path.basename += '.min';
+      path.extname = '.js';
+    }
+  ))
   .pipe(gulp.dest('build/js'))
   .pipe(browser.stream());
 }

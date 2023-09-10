@@ -19,6 +19,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: min-content;
+    justify-items: start;
+    align-items: start;
   }
 }
 
@@ -32,6 +34,7 @@
   color: var(--text-basic);
 
   @include mixin.tablet {
+    max-width: 65%;
     margin-block-end: 60px;
     font-size: 60px;
     line-height: 60px;
@@ -62,8 +65,9 @@
 }
 
 .live-demo__statistics {
+  max-width: 100%;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   row-gap: 20px;
   column-gap: 32px;
   margin: 0;
@@ -71,6 +75,7 @@
   margin-block-start: -7px;
 
   @include mixin.tablet {
+    max-width: 60%;
     column-gap: 42px;
     margin-block-end: 0;
     font-size: 20px;
@@ -78,6 +83,7 @@
   }
 
   @include mixin.desktop {
+    max-width: 100%;
     column-gap: 42px;
     margin-block-end: 46px;
   }
@@ -102,26 +108,30 @@
   }
 
   @include mixin.desktop {
-    max-width: 100%;
+    display: flex;
+    max-width: 75%;
   }
 }
 
 .live-demo__item {
   box-sizing: border-box;
-  min-width: 124px;
+  width: 124px;
+  display: grid;
+  grid-auto-rows: max-content;
   padding-block: 14px 16px;
   border: 1px solid var(--border-color-1);
   border-radius: 5px;
   position: relative;
 
   @include mixin.tablet {
-    min-width: 162px;
+    width: 162px;
     padding-block: 15px 20px;
-    padding-inline: 30px;
+    padding-inline: 10px;
   }
 }
 
 .live-demo__value {
+  padding-inline: 10px;
   font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 24px;
   line-height: 24px;
@@ -136,6 +146,7 @@
 }
 
 .live-demo__declaration {
+  grid-row: 2/4;
   max-width: 87px;
   margin: 0;
   margin-inline: auto;
@@ -144,7 +155,7 @@
   line-height: 12px;
   text-align: center;
   position: absolute;
-  bottom: -17px;
+  top: 50%;
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--background-ternary);

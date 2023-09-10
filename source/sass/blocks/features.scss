@@ -24,6 +24,7 @@
   color: var(--text-basic);
 
   @include mixin.tablet {
+    max-width: 65%;
     font-size: 60px;
     line-height: 60px;
   }
@@ -103,7 +104,7 @@
 
   &::after {
     @include mixin.tablet {
-      @include mixin.pseudo(136px, 280px);
+      @include mixin.pseudo(auto, 280px);
       content: counter(numbering);
       font-family: "Oswald", "Arial", "Helvetica", sans-serif;
       font-size: 280px;
@@ -118,6 +119,10 @@
     @include mixin.desktop {
       right: -4px;
     }
+  }
+
+  &:first-child::after {
+    right: 21px;
   }
 
   @include mixin.tablet {

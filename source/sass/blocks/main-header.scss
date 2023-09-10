@@ -13,6 +13,7 @@
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 3;
     background-color: transparent;
   }
 }
@@ -23,7 +24,7 @@
   @include mixin.tablet {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 

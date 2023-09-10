@@ -44,6 +44,7 @@
     position: initial;
     background-repeat: no-repeat;
     background-size: contain;
+    align-self: start;
 
     @include mixin.tablet {
       grid-column: 2/3;
@@ -58,7 +59,6 @@
 
   &--slim::after {
     @include mixin.pseudo(36px, 50px);
-    margin-block-start: -3px;
     background-image: url("../img/icons/sprite.svg#cat-slim");
     background-size: contain;
     background-repeat: no-repeat;
@@ -67,19 +67,18 @@
     @include mixin.tablet {
       width: 140px;
       height: 194px;
-      margin-block-start: -42px;
+      margin-block-start: 6px;
     }
 
     @include mixin.desktop {
       width: 70px;
       height: 97px;
-      margin-block-start: -4px;
     }
   }
 
   &--pro::after {
     @include mixin.pseudo(67px, 28px);
-    margin-block-start: 3px;
+    margin-block-start: 14px;
     background-image: url("../img/icons/sprite.svg#cat-mass");
     background-size: contain;
     background-repeat: no-repeat;
@@ -88,14 +87,14 @@
     @include mixin.tablet {
       width: 268px;
       height: 112px;
-      margin-block-start: -16px;
+      margin-block-start: 60px;
     }
 
     @include mixin.desktop {
       width: 134px;
       height: 56px;
-      margin-block-start: 8px;
       margin-inline-start: -4px;
+      margin-block-start: 32px;
     }
   }
 
@@ -108,9 +107,6 @@
   @include mixin.desktop {
     grid-template-columns: max-content 1fr;
     justify-items: start;
-    flex-basis: 570px;
-    flex-grow: 1;
-    flex-shrink: 1;
     padding-block: 35px 52px;
     padding-inline: 52px 61px;
   }

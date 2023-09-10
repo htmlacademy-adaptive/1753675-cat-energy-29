@@ -17,15 +17,24 @@
   @include mixin.tablet {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
 .main-footer__logo-footer {
-  margin-block-end: 10px;
+  margin-block: 5px 10px;
   margin-inline: auto;
 
   @include mixin.tablet {
-    margin: 0;
+    margin-block: 11px 0;
+    margin-inline: 0;
+  }
+}
+
+.main-footer__developer {
+  margin-block-start: 11px;
+
+  @include mixin.tablet {
+    margin-block-start: 15px;
   }
 }

@@ -150,6 +150,7 @@
   display: block;
   width: 100%;
   height: auto;
+  object-fit: contain;
 
   @include mixin.tablet {
     margin-block-start: -29px;

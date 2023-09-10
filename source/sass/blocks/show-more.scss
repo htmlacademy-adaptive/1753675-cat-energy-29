@@ -7,6 +7,7 @@
   border-top: 1px solid var(--border-color-2);
 
   @include mixin.tablet {
+    display: flex;
     padding-block-start: 81px;
     border-top: none;
   }

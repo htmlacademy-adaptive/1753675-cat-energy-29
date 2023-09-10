@@ -100,7 +100,7 @@
     justify-content: center;
     align-items: flex-end;
     max-width: 324px;
-    max-height: 430px;
+    min-height: 430px;
     padding-block: 0 40px;
     padding-inline: 37px;
     background-color: var(--background-secondary);
@@ -137,8 +137,14 @@
   }
 }
 
+.product-card__definition {
+  max-width: 50%;
+}
+
 .product-card__value {
+  max-width: 50%;
   margin: 0;
+  text-align: end;
 }
 
 .product-card__button {

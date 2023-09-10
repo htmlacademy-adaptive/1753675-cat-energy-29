@@ -27,13 +27,13 @@
   line-height: 20px;
   text-align: center;
   background-color: var(--accent-color);
-  background-image: url("../img/gift/gift-mobile.jpg");
+  background-image: url("../img/backgrounds/gift/gift-mobile.jpg");
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 
   @include mixin.retina {
-    background-image: url("../img/gift/gift-mobile@2x.jpg");
+    background-image: url("../img/backgrounds/gift/gift-mobile@2x.jpg");
   }
 
   @include mixin.tablet {
@@ -41,10 +41,10 @@
     min-height: 200px;
     padding-block: 57px;
     padding-inline: 79px 106px;
-    background-image: url("../img/gift/gift-tablet.jpg");
+    background-image: url("../img/backgrounds/gift/gift-tablet.jpg");
 
     @include mixin.retina {
-      background-image: url("../img/gift/gift-tablet@2x.jpg");
+      background-image: url("../img/backgrounds/gift/gift-tablet@2x.jpg");
     }
   }
 
@@ -53,10 +53,10 @@
     flex-direction: column;
     padding-block: 56px 43px;
     padding-inline: 42px;
-    background-image: url("../img/gift/gift-desktop.jpg");
+    background-image: url("../img/backgrounds/gift/gift-desktop.jpg");
 
     @include mixin.retina {
-      background-image: url("../img/gift/gift-desktop@2x.jpg");
+      background-image: url("../img/backgrounds/gift/gift-desktop@2x.jpg");
     }
   }
 }

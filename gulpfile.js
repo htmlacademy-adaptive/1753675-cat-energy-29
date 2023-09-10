@@ -8,6 +8,7 @@ import rename from "gulp-rename";
 import terser from "gulp-terser";
 import htmlmin from "gulp-htmlmin";
 import squoosh from "gulp-libsquoosh";
+import gulpAvif from "gulp-avif";
 import svgo from "gulp-svgmin";
 import { stacksvg } from "gulp-stacksvg";
 import del from "del";
@@ -68,7 +69,7 @@ const copyImages = () => {
 // Webp
 
 const createWebp = () => {
-  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png'])
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png', '!source/img/backgrounds/**/*.jpg'])
   .pipe(squoosh({
     webp: {
       quality: 80,
@@ -80,12 +81,8 @@ const createWebp = () => {
 // Avif
 
 const createAvif = () => {
-  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png'])
-  .pipe(squoosh({
-    avif: {
-      cqLevel: 10,
-    }
-  }))
+  return gulp.src(['source/img/**/*.{png,jpg}', '!source/img/favicon/*.png', '!source/img/backgrounds/**/*.jpg'])
+  .pipe(gulpAvif())
   .pipe(gulp.dest('build/img'))
 }
 

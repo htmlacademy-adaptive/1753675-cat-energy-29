@@ -11,7 +11,7 @@
     min-height: 302px;
     grid-row: 1/4;
     grid-column: 1/2;
-    background-image: url("../img/hero/hero-bg-mobile.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
+    background-image: url("../img/backgrounds/hero/hero-bg-mobile.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
     background-position: top;
     background-size: contain;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@
     }
 
     @include mixin.retina {
-      background-image: url("../img/hero/hero-bg-mobile@2x.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
+      background-image: url("../img/backgrounds/hero/hero-bg-mobile@2x.jpg"), linear-gradient(to right, var(--hero-green-1), var(--hero-green-2));
     }
   }
 
@@ -32,13 +32,13 @@
   @include mixin.desktop {
     min-height: 694px;
     padding-block-start: 114px;
-    background-image: url("../img/hero/hero-bg-desktop.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
+    background-image: url("../img/backgrounds/hero/hero-bg-desktop.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
     background-repeat: no-repeat;
     background-position: bottom right;
     background-size: contain, 100%;
 
     @include mixin.retina {
-      background-image: url("../img/hero/hero-bg-desktop@2x.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
+      background-image: url("../img/backgrounds/hero/hero-bg-desktop@2x.jpg"), linear-gradient(to right, var(--basic-white) 50%, var(--hero-green-2) 50%);
     }
   }
 }

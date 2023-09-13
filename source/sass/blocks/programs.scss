@@ -22,12 +22,3 @@
     row-gap: 80px;
   }
 }
-
-.programs__program-case {
-  @include mixin.desktop {
-    flex-basis: 570px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    display: flex;
-  }
-}

@@ -86,8 +86,12 @@
   padding-inline: 10px;
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
+  cursor: default;
   transition: opacity 0.3s;
+
+  &[href] {
+    cursor: pointer;
+  }
 
   &[href]:hover,
   &[href]:focus {

@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   column-gap: 13px;
-  max-width: 280px;
   position: relative;
 
   @include mixin.tablet {
@@ -18,7 +17,7 @@
   &--email {
     &::after {
       @include mixin.pseudo(20px, 20px, var(--text-basic));
-      right: 16px;
+      right: 13px;
       mask-image: url("../img/icons/sprite.svg#email");
     }
 
@@ -30,7 +29,7 @@
   &--phone {
     &::after {
       @include mixin.pseudo(20px, 20px, var(--text-basic));
-      right: 16px;
+      right: 14px;
       mask-image: url("../img/icons/sprite.svg#phone");
     }
 

@@ -87,30 +87,6 @@
   }
 }
 
-.form__heading {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  position: relative;
-
-  &::before {
-    @include mixin.pseudo(200%, 2px, var(--accent-color));
-    top: 16px;
-    left: 0;
-    right: 0;
-    z-index: -1;
-    margin-inline-start: -50%;
-
-    @include mixin.tablet {
-      top: 22px;
-    }
-  }
-
-  @include mixin.tablet {
-    grid-column: 1/-1;
-  }
-}
-
 .form__wrapper {
   display: flex;
   flex-direction: column;
@@ -140,8 +116,10 @@
   text-transform: none;
   background-color: var(--basic-white);
   color: var(--text-basic);
+  position: relative;
 
   @include mixin.tablet {
+    grid-column: 1/-1;
     max-width: max-content;
     padding-inline: 40px;
     margin-inline-start: -40px;
@@ -151,12 +129,29 @@
   }
 
   @include mixin.desktop {
-    max-width: 40%;
+    max-width: fit-content;
   }
 
   &--additionals {
     @include mixin.tablet {
       margin-block-end: 54px;
+    }
+  }
+
+  &--comment {
+    max-width: fit-content;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -100vw;
+    z-index: -1;
+    width: 200vw;
+    box-shadow: 0 16px 0 1px var(--accent-color);
+
+    @include mixin.tablet {
+      box-shadow: 0 23px 0 1px var(--accent-color);
     }
   }
 }

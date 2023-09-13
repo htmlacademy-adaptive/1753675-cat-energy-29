@@ -105,6 +105,8 @@
   }
 
   @include mixin.desktop {
+    max-width: 50%;
+    flex-basis: 570px;
     grid-template-columns: max-content 1fr;
     justify-items: start;
     padding-block: 35px 52px;

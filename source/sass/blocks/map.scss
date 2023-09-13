@@ -18,11 +18,13 @@
   width: 100%;
   height: 100%;
   border: none;
+  position: relative;
+  z-index: 1;
 }
 
 .map__fallback-img {
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   left: 50%;
   transform: translateX(-50%);
 }
